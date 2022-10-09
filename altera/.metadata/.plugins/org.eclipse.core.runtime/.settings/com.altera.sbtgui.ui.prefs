@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+newSoftwareExampleWizardPage.defaultLocation=C\:\\JBL\\DE2_VGA\\altera\\software\\app_uart
+newSoftwareExampleWizardPage.sopcinfoFile=C\:\\JBL\\DE2_VGA\\altera\\nios2.sopcinfo
+newSoftwareExampleWizardPage2.newBspLocation=C\:\\JBL\\DE2_VGA\\altera\\software\\app_uart_bsp

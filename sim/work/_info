@@ -1,0 +1,187 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/JBL/DE2_VGA/sim
+Elcd_controller
+Z1 w1665130107
+Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R0
+Z6 8C:/JBL/DE2_VGA/sim/test_lcd.vhd
+Z7 FC:/JBL/DE2_VGA/sim/test_lcd.vhd
+l0
+L214 1
+VlK4VDQ>6mTMWZUHR>K5VL2
+!s100 BGVn]M7Me@T9TeY@i<lg?1
+Z8 OV;C;2020.1;71
+32
+Z9 !s110 1665276261
+!i10b 1
+Z10 !s108 1665276261.000000
+Z11 !s90 -reportprogress|300|C:/JBL/DE2_VGA/sim/test_lcd.vhd|
+!s107 C:/JBL/DE2_VGA/sim/test_lcd.vhd|
+!i113 1
+Z12 tExplicit 1 CvgOpt 0
+Acontroller
+R2
+R3
+R4
+R5
+DEx4 work 14 lcd_controller 0 22 lK4VDQ>6mTMWZUHR>K5VL2
+!i122 0
+l232
+L227 141
+Vk5F_N0BT:Tizf1LC0[b>Y3
+!s100 KXgmXHPm?3SKUcfGW_M0S2
+R8
+32
+R9
+!i10b 1
+R10
+R11
+Z13 !s107 C:/JBL/DE2_VGA/sim/test_lcd.vhd|
+!i113 1
+R12
+Elcd_user_logic
+R1
+R2
+R3
+R4
+R5
+!i122 0
+R0
+R6
+R7
+l0
+L111 1
+V<;?2:6Yz;M2Yl]7AiY@<d1
+!s100 EXbm<?fmM6J[nz20YJPe`0
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R13
+!i113 1
+R12
+Abehavior
+R2
+R3
+R4
+R5
+DEx4 work 14 lcd_user_logic 0 22 <;?2:6Yz;M2Yl]7AiY@<d1
+!i122 0
+l128
+L126 43
+VLG[L=CZQ]Qi4TOdR@64O:0
+!s100 _MPiAXB=i9kAIS86BTCX>3
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R13
+!i113 1
+R12
+Etest_lcd
+R1
+Z14 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R3
+R2
+R4
+R5
+!i122 0
+R0
+R6
+R7
+l0
+L383 1
+V31B9A8BRmRkY04A[EX^>=0
+!s100 B;ONE^UkZ0YiiIVmfcAQ`1
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R13
+!i113 1
+R12
+Atest_lcd
+R14
+R3
+R2
+R4
+R5
+DEx4 work 8 test_lcd 0 22 31B9A8BRmRkY04A[EX^>=0
+!i122 0
+l436
+L390 77
+VaR8YMYmYhkMG1<YT=h<oG2
+!s100 _;kTS^ORaEHjkYijWXI2@1
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R13
+!i113 1
+R12
+Etestsub_lcd
+R1
+R14
+R3
+R2
+R4
+R5
+!i122 0
+R0
+R6
+R7
+l0
+L60 1
+V4P5=blGfj8<NmM9:27gmz1
+!s100 5KX;6M]K]K9kYz;z<KDAP1
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R13
+!i113 1
+R12
+Atestsub_lcd_a
+R14
+R3
+R2
+R4
+R5
+DEx4 work 11 testsub_lcd 0 22 4P5=blGfj8<NmM9:27gmz1
+!i122 0
+l77
+L76 14
+VUz6KJeaV_Ql7]bJ_DF]351
+!s100 i80I4P[JGezSo104zFKS>0
+R8
+32
+R9
+!i10b 1
+R10
+R11
+R13
+!i113 1
+R12
