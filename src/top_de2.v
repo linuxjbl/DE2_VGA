@@ -50,8 +50,9 @@ module top_de2 (AUD_ADCDAT, AUD_ADCLRCK, AUD_BCLK, AUD_DACDAT, AUD_DACLRCK,
                 SD_CLK, SD_CMD, SD_DAT, SD_DAT3, SRAM_ADDR, SRAM_CE_N, SRAM_DQ,
                 SRAM_LB_N, SRAM_OE_N, SRAM_UB_N, SRAM_WE_N, SW, TCK, TCS, TDI,
                 TDO, TD_DATA, TD_HS, TD_RESET, TD_VS, UART_RXD, UART_TXD,
-                VGA_B, VGA_BLANK, VGA_CLK, VGA_G, VGA_HS, VGA_R, VGA_SYNC,
-                VGA_VS);
+                VGA_B, VGA_BLANK, VGA_CLK, VGA_G, VGA_HS, VGA_R, VGA_SYNC, VGA_VS,
+               	XCLK, SCL, SDA, CamHsync, CamVsync, PCLK, CamData, CAM_RESET
+                );
  
   input AUD_ADCDAT;
   output AUD_ADCLRCK;
@@ -87,7 +88,7 @@ module top_de2 (AUD_ADCDAT, AUD_ADCLRCK, AUD_BCLK, AUD_DACDAT, AUD_DACLRCK,
   output FL_OE_N;
   output FL_RST_N;
   output FL_WE_N;
-  input [35:0] GPIO_0; wire [35:0] GPIO_0;
+  input [20:0] GPIO_0; wire [20:0] GPIO_0;
   input [35:0] GPIO_1; wire [35:0] GPIO_1;
   output [6:0] HEX0; wire [6:0] HEX0;
   output [6:0] HEX1; wire [6:0] HEX1;
@@ -157,6 +158,15 @@ module top_de2 (AUD_ADCDAT, AUD_ADCLRCK, AUD_BCLK, AUD_DACDAT, AUD_DACLRCK,
   output [9:0] VGA_R; wire [9:0] VGA_R;
   output VGA_SYNC;
   output VGA_VS;
+
+  output	    XCLK;
+  output        SCL, SDA;
+  input	        CamHsync;
+  input         CamVsync;
+  input         PCLK;
+  input [7:0]   CamData;
+  output        CAM_RESET;
+
   wire [2:0] clk_toggle;
   wire rstn;
   wire s_clk_toggle0;
@@ -174,6 +184,10 @@ module top_de2 (AUD_ADCDAT, AUD_ADCLRCK, AUD_BCLK, AUD_DACDAT, AUD_DACLRCK,
   wire [7:0]     w_hex02;
   wire [7:0]     w_hex03;
   wire [2:0]     w_disp_RGB;
+  wire [7:0]     w_VgaDataR;
+  wire [7:0]     w_VgaDataG;
+  wire [7:0]     w_VgaDataB;
+  wire [35:0]    w_GPIO_0;
 
   assign LEDG[8:0] =  w_LEDG[8:0];
   assign LEDR[17:0] =  {w_LEDR[17:8], w_PwmLED};
@@ -289,9 +303,11 @@ module top_de2 (AUD_ADCDAT, AUD_ADCLRCK, AUD_BCLK, AUD_DACDAT, AUD_DACLRCK,
      .ENET_RD_N(ENET_RD_N),
      .ENET_WR_N(ENET_WR_N),
      .ENET_RST_N(ENET_RST_N),
-     .GPIO_0(GPIO_0[35:0]),
+     .GPIO_0(w_GPIO_0),
      .GPIO_1(GPIO_1[35:0]));
  
+     assign w_GPIO_0 = {15'h0, GPIO_0};
+
   clk_event_50m  C1
     (
      .clk50m(CLOCK_50),
@@ -426,12 +442,42 @@ lcd_test00 lcd_inst0 (
         .clock      (CLOCK_50),
         .switch     ({KEY[3], KEY[2]}),
         .disp_RGB    (w_disp_RGB),
-        .hsync       (VGA_HS),
-        .vsync       (VGA_VS)
+        //.hsync       (VGA_HS),
+        //.vsync       (VGA_VS)
+        .hsync       (),
+        .vsync       ()
     );
  
-    assign VGA_R = {w_disp_RGB[2], 9'h0};
-    assign VGA_G = {w_disp_RGB[1], 9'h0};
-    assign VGA_B = {w_disp_RGB[0], 9'h0};
+    //assign VGA_R = {w_disp_RGB[2], 9'h0};
+    //assign VGA_G = {w_disp_RGB[1], 9'h0};
+    //assign VGA_B = {w_disp_RGB[0], 9'h0};
+
+ //////////////////////////////////////
+ // CAM VGA      ov7670
+ //////////////////////////////////////
+    VideoProc VideoProc00(
+       	.CLK        (CLOCK_50),
+	    .RST_N      (rstn),
+	    .XCLK       (XCLK),
+    	.SCL        (SCL),
+    	.SDA        (SDA),
+    	.CamHsync       (CamHsync),
+    	.CamVsync       (CamVsync),
+    	.PCLK           (PCLK),
+        .CamData        (CamData),
+    	.VgaVsync       (VGA_VS),
+    	.VgaHsync       (VGA_HS),
+    	.SW0            (KEY[2]),
+    	.SW1            (KEY[3]),
+        .VgaDataR       (w_VgaDataR),
+        .VgaDataG       (w_VgaDataG),
+        .VgaDataB       (w_VgaDataB)	
+    );
+
+    assign VGA_R = {w_VgaDataR, 2'h0};
+    assign VGA_G = {w_VgaDataG, 2'h0};
+    assign VGA_B = {w_VgaDataB, 2'h0};
+    assign CAM_RESET = 1'b0;
+
 endmodule
 

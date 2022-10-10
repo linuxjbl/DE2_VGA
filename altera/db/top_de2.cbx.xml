@@ -4,6 +4,8 @@
 		<CBX_INST_ENTRY INSTANCE_NAME="|top_de2|PwmCtrl:PwmCtrl0|nios2:u0|nios2_nios2_qsys_0:nios2_qsys_0|nios2_nios2_qsys_0_nios2_oci:the_nios2_nios2_qsys_0_nios2_oci|nios2_nios2_qsys_0_nios2_ocimem:the_nios2_nios2_qsys_0_nios2_ocimem|nios2_nios2_qsys_0_ociram_sp_ram_module:nios2_nios2_qsys_0_ociram_sp_ram|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_v081.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|top_de2|PwmCtrl:PwmCtrl0|nios2:u0|nios2_nios2_qsys_0:nios2_qsys_0|nios2_nios2_qsys_0_register_bank_a_module:nios2_nios2_qsys_0_register_bank_a|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_rjg1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|top_de2|PwmCtrl:PwmCtrl0|nios2:u0|nios2_nios2_qsys_0:nios2_qsys_0|nios2_nios2_qsys_0_register_bank_b_module:nios2_nios2_qsys_0_register_bank_b|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_sjg1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_de2|VideoProc:VideoProc00|VideoProcCore:VideoProcCore_inst|LINEIN_CTRL:LINEIN_CTRL_inst|SRAM:SRAM_B|altsyncram:RAMDATA_rtl_0" CBX_FILE_NAME="altsyncram_s0h1.tdf"/>
 		<CBX_INST_ENTRY INSTANCE_NAME="|top_de2|PwmCtrl:PwmCtrl0|nios2:u0|nios2_onchip_memory2_0:onchip_memory2_0|altsyncram:the_altsyncram" CBX_FILE_NAME="altsyncram_jmc1.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|top_de2|VideoProc:VideoProc00|VideoProcCore:VideoProcCore_inst|LINEIN_CTRL:LINEIN_CTRL_inst|SRAM:SRAM_A|altsyncram:RAMDATA_rtl_0" CBX_FILE_NAME="altsyncram_s0h1.tdf"/>
 	</PROJECT>
 </LOG_ROOT>
