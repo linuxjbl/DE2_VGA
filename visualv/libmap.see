@@ -1,0 +1,16 @@
+ver 01 
+{ 
+lang VERILOG 
+{ 
+unit VGA p0 VMODUNIT 
+} 
+{ 
+unit system_DE2 p1 BLKUNIT 
+} 
+{ 
+unit test_VGA p3 BLKUNIT 
+} 
+{ 
+unit testsub_VGA p2 VMODUNIT 
+} 
+} 

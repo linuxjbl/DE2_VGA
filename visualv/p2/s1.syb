@@ -1,0 +1,76 @@
+02.00 00 04 
+0000003A 
+0000071F 
+00000000 
+00000000 
+ attrib {  plist 2 
+{ @pdecl { { @n switch @t reg @bnd { @cnt 1 { @f 1
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv switch
+} @gr DEF @idx -1 } { @pdecl { { @n clock @t reg @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv clock
+} @gr DEF @idx -1 } L { @bl 15 @el 15 @il 21 @nvis } !
+ flags 29  } #idit - save unit (named untitled01 while saving) on Mon Oct 10 09:21:18 2022
+version: 9 
+symbolel { compsym { comptype 0 macDesign 0 behav Normal macrodir UpDown scheme SIM flat TRUE macroinit 0 doset { textbox { rect { 112 -176 76 16 } 
+fmttext { 113 -171 1 
+testsub_VGA 
+angle 0 fn 0 0 0 2 5 0 0 0 0 }
+ vis }  { fiv  @kind 9 
+ } 
+groupobj { doset { rect { 100 -180 80 100 } 
+ } 
+clshapes { closeShape { lines { line { 100 -180 180 -180 } 
+line { 180 -180 180 -80 } 
+line { 180 -80 100 -80 } 
+line { 100 -80 100 -180 } 
+} 
+arcs { } 
+bcol shape  } 
+ } 
+ } 
+ } 
+pinset { sympinel {  text { 120 -123 1 switch[1:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 180 -120 } 
+ {  end  200 -120  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n switch @t reg @bnd { @cnt 1 { @f 1
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv switch
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 146 -143 1 clock
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 180 -140 } 
+ {  end  200 -140  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n clock @t reg @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv clock
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+ } 
+angle 0  } 
+ } 
+!
+0 22 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 !

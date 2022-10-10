@@ -61,16 +61,13 @@ module top_de2 (AUD_ADCDAT, AUD_ADCLRCK, AUD_BCLK, AUD_DACDAT, AUD_DACLRCK,
   output AUD_XCK;
   input CLOCK_27;
   input CLOCK_50;
-  output [11:0] DRAM_ADDR;
-  wire [11:0] DRAM_ADDR;
-  output [1:0] DRAM_BA;
-  wire [1:0] DRAM_BA;
+  output [11:0] DRAM_ADDR; wire [11:0] DRAM_ADDR;
+  output [1:0] DRAM_BA; wire [1:0] DRAM_BA;
   output DRAM_CAS_N;
   output DRAM_CKE;
   output DRAM_CLK;
   output DRAM_CS_N;
-  inout [15:0] DRAM_DQ;
-  wire [15:0] DRAM_DQ;
+  inout [15:0] DRAM_DQ; wire [15:0] DRAM_DQ;
   output DRAM_LDQM;
   output DRAM_RAS_N;
   output DRAM_UDQM;
@@ -78,70 +75,48 @@ module top_de2 (AUD_ADCDAT, AUD_ADCLRCK, AUD_BCLK, AUD_DACDAT, AUD_DACLRCK,
   output ENET_CLK;
   output ENET_CMD;
   output ENET_CS_N;
-  inout [15:0] ENET_DATA;
-  wire [15:0] ENET_DATA;
+  inout [15:0] ENET_DATA; wire [15:0] ENET_DATA;
   input ENET_INT;
   output ENET_RD_N;
   output ENET_RST_N;
   output ENET_WR_N;
   input EXT_CLOCK;
-  output [21:0] FL_ADDR;
-  wire [21:0] FL_ADDR;
+  output [21:0] FL_ADDR; wire [21:0] FL_ADDR;
   output FL_CE_N;
-  inout [7:0] FL_DQ;
-  wire [7:0] FL_DQ;
+  inout [7:0] FL_DQ; wire [7:0] FL_DQ;
   output FL_OE_N;
   output FL_RST_N;
   output FL_WE_N;
-  input [35:0] GPIO_0;
-  wire [35:0] GPIO_0;
-  input [35:0] GPIO_1;
-  wire [35:0] GPIO_1;
-  output [6:0] HEX0;
-  wire [6:0] HEX0;
-  output [6:0] HEX1;
-  wire [6:0] HEX1;
-  output [6:0] HEX2;
-  wire [6:0] HEX2;
-  output [6:0] HEX3;
-  wire [6:0] HEX3;
-  output [6:0] HEX4;
-  wire [6:0] HEX4;
-  output [6:0] HEX5;
-  wire [6:0] HEX5;
-  output [6:0] HEX6;
-  wire [6:0] HEX6;
-  output [6:0] HEX7;
-  wire [6:0] HEX7;
+  input [35:0] GPIO_0; wire [35:0] GPIO_0;
+  input [35:0] GPIO_1; wire [35:0] GPIO_1;
+  output [6:0] HEX0; wire [6:0] HEX0;
+  output [6:0] HEX1; wire [6:0] HEX1;
+  output [6:0] HEX2; wire [6:0] HEX2;
+  output [6:0] HEX3; wire [6:0] HEX3;
+  output [6:0] HEX4; wire [6:0] HEX4;
+  output [6:0] HEX5; wire [6:0] HEX5;
+  output [6:0] HEX6; wire [6:0] HEX6;
+  output [6:0] HEX7; wire [6:0] HEX7;
   output I2C_SCLK;
   inout I2C_SDAT;
   input IRDA_RXD;
   output IRDA_TXD;
-  input [3:0] KEY;
-  wire [3:0] KEY;
+  input [3:0] KEY; wire [3:0] KEY;
   output LCD_BLON;
-  output [7:0] LCD_DATA;
-  wire [7:0] LCD_DATA;
+  output [7:0] LCD_DATA; wire [7:0] LCD_DATA;
   output LCD_EN;
   output LCD_ON;
   output LCD_RS;
   output LCD_RW;
-  output [8:0] LEDG;
-  wire [8:0] LEDG;
-  output [17:0] LEDR;
-  wire [17:0] LEDR;
-  output [1:0] OTG_ADDR;
-  wire [1:0] OTG_ADDR;
+  output [8:0] LEDG; wire [8:0] LEDG;
+  output [17:0] LEDR; wire [17:0] LEDR;
+  output [1:0] OTG_ADDR; wire [1:0] OTG_ADDR;
   output OTG_CS_N;
-  output [1:0] OTG_DACK_N;
-  wire [1:0] OTG_DACK_N;
-  inout [15:0] OTG_DATA;
-  wire [15:0] OTG_DATA;
-  input [1:0] OTG_DREQ;
-  wire [1:0] OTG_DREQ;
+  output [1:0] OTG_DACK_N; wire [1:0] OTG_DACK_N;
+  inout [15:0] OTG_DATA; wire [15:0] OTG_DATA;
+  input [1:0] OTG_DREQ; wire [1:0] OTG_DREQ;
   inout OTG_FSPEED;
-  input [1:0] OTG_INT;
-  wire [1:0] OTG_INT;
+  input [1:0] OTG_INT; wire [1:0] OTG_INT;
   inout OTG_LSPEED;
   output OTG_RD_N;
   output OTG_RST_N;
@@ -174,15 +149,12 @@ module top_de2 (AUD_ADCDAT, AUD_ADCLRCK, AUD_BCLK, AUD_DACDAT, AUD_DACLRCK,
   input TD_VS;
   input UART_RXD;
   output UART_TXD;
-  output [9:0] VGA_B;
-  wire [9:0] VGA_B;
+  output [9:0] VGA_B; wire [9:0] VGA_B;
   output VGA_BLANK;
   output VGA_CLK;
-  output [9:0] VGA_G;
-  wire [9:0] VGA_G;
+  output [9:0] VGA_G; wire [9:0] VGA_G;
   output VGA_HS;
-  output [9:0] VGA_R;
-  wire [9:0] VGA_R;
+  output [9:0] VGA_R; wire [9:0] VGA_R;
   output VGA_SYNC;
   output VGA_VS;
   wire [2:0] clk_toggle;
@@ -201,6 +173,7 @@ module top_de2 (AUD_ADCDAT, AUD_ADCLRCK, AUD_BCLK, AUD_DACDAT, AUD_DACLRCK,
   wire [7:0]     w_hex01;
   wire [7:0]     w_hex02;
   wire [7:0]     w_hex03;
+  wire [2:0]     w_disp_RGB;
 
   assign LEDG[8:0] =  w_LEDG[8:0];
   assign LEDR[17:0] =  {w_LEDR[17:8], w_PwmLED};
@@ -214,6 +187,7 @@ module top_de2 (AUD_ADCDAT, AUD_ADCLRCK, AUD_BCLK, AUD_DACDAT, AUD_DACLRCK,
 
   etc_de2  C0
     (
+     .clk50m(CLOCK_50),
      .clk_toggle(clk_toggle[2:0]),
      .SW(SW[17:0]),
      .DRAM_ADDR(DRAM_ADDR),
@@ -288,13 +262,18 @@ module top_de2 (AUD_ADCDAT, AUD_ADCLRCK, AUD_BCLK, AUD_DACDAT, AUD_DACLRCK,
      .TD_HS(TD_HS),
      .TD_VS(TD_VS),
      .TD_RESET(TD_RESET),
-     .VGA_R(VGA_R[9:0]),
-     .VGA_G(VGA_G[9:0]),
-     .VGA_B(VGA_B[9:0]),
+     //.VGA_R(VGA_R[9:0]),
+     //.VGA_G(VGA_G[9:0]),
+     //.VGA_B(VGA_B[9:0]),
+     .VGA_R(),
+     .VGA_G(),
+     .VGA_B(),
      .VGA_CLK(VGA_CLK),
      .VGA_BLANK(VGA_BLANK),
-     .VGA_HS(VGA_HS),
-     .VGA_VS(VGA_VS),
+     //.VGA_HS(VGA_HS),
+     //.VGA_VS(VGA_VS),
+     .VGA_HS(),
+     .VGA_VS(),
      .VGA_SYNC(VGA_SYNC),
      .AUD_ADCLRCK(AUD_ADCLRCK),
      .AUD_ADCDAT(AUD_ADCDAT),
@@ -440,6 +419,19 @@ lcd_test00 lcd_inst0 (
   assign clk_toggle[1] = s_clk_toggle1;
   assign clk_toggle[0] = s_clk_toggle0;
  
+ //////////////////////////////////////
+ // VGA for Testing monitor
+ //////////////////////////////////////
+    VGA VGA00(
+        .clock      (CLOCK_50),
+        .switch     ({KEY[3], KEY[2]}),
+        .disp_RGB    (w_disp_RGB),
+        .hsync       (VGA_HS),
+        .vsync       (VGA_VS)
+    );
  
+    assign VGA_R = {w_disp_RGB[2], 9'h0};
+    assign VGA_G = {w_disp_RGB[1], 9'h0};
+    assign VGA_B = {w_disp_RGB[0], 9'h0};
 endmodule
 

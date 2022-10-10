@@ -1,0 +1,157 @@
+02.00 00 04 
+0000003A 
+00000E25 
+00000000 
+00000000 
+ attrib {  plist 5 
+{ @pdecl { { @n clock @t - @bnd -
+@das -
+@com_at 1 ù˙4Y¬ 50MHz 
+
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv clock
+} @gr DEF @idx -1 } { @pdecl { { @n switch @t - @bnd { @cnt 1 { @f 1
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv switch
+} @gr DEF @idx -1 } { @pdecl { { @n disp_RGB @t - @bnd { @cnt 1 { @f 2
+@d downto @t 0
+} } @das -
+@com_at 1 VGARt4î 
+
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv disp_RGB
+} @gr DEF @idx -1 } { @pdecl { { @n hsync @t wire @bnd -
+@das -
+@com_at 1 VGA	? §@ 
+
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv hsync
+} @gr DEF @idx -1 } { @pdecl { { @n vsync @t wire @bnd -
+@das -
+@com_at 1 VGA]? §@ 
+
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv vsync
+} @gr DEF @idx -1 } L { @bl 8 @el 13 @il 35 @nvis } !
+ flags 29  } #idit - save unit (named untitled01 while saving) on Mon Oct 10 08:52:57 2022
+version: 9 
+symbolel { compsym { comptype 0 macDesign 0 behav Normal macrodir UpDown scheme SIM flat TRUE macroinit 0 doset { textbox { rect { 162 -196 34 16 } 
+fmttext { 163 -191 1 
+VGA 
+angle 0 fn 0 0 0 2 5 0 0 0 0 }
+ vis }  { fiv  @kind 9 
+ } 
+groupobj { doset { rect { 120 -210 130 150 } 
+ } 
+clshapes { closeShape { lines { line { 120 -210 250 -210 } 
+line { 250 -210 250 -60 } 
+line { 250 -60 120 -60 } 
+line { 120 -60 120 -210 } 
+} 
+arcs { } 
+bcol shape  } 
+ } 
+ } 
+ } 
+pinset { sympinel {  text { 170 -103 1 disp_RGB[2:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 250 -100 } 
+ {  end  270 -100  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n disp_RGB @t - @bnd { @cnt 1 { @f 2
+@d downto @t 0
+} } @das -
+@com_at 1 VGARt4î 
+
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv disp_RGB
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 213 -123 1 hsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 250 -120 } 
+ {  end  270 -120  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n hsync @t wire @bnd -
+@das -
+@com_at 1 VGA	? §@ 
+
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv hsync
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 213 -143 1 vsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 250 -140 } 
+ {  end  270 -140  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n vsync @t wire @bnd -
+@das -
+@com_at 1 VGA]? §@ 
+
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv vsync
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 127 -163 1 clock
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 120 -160 } 
+ {  end  100 -160  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n clock @t - @bnd -
+@das -
+@com_at 1 ù˙4Y¬ 50MHz 
+
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv clock
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 127 -123 1 switch[1:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 120 -120 } 
+ {  end  100 -120  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n switch @t - @bnd { @cnt 1 { @f 1
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv switch
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+ } 
+angle 0  } 
+ } 
+!
+0 22 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 !

@@ -18,6 +18,7 @@
 //////////////////////////////////////////
 //////////////////////////////////////////
 module  etc_de2 (
+    clk50m,
     clk_toggle,
     SW,
     DRAM_ADDR, DRAM_DQ, DRAM_BA, DRAM_LDQM, DRAM_UDQM,
@@ -44,6 +45,7 @@ module  etc_de2 (
     GPIO_0, GPIO_1 );
 
 
+    input            clk50m;
     input   [2:0]    clk_toggle;
     input   [17:0]   SW;
     output  [11:0]   DRAM_ADDR;
@@ -148,6 +150,7 @@ module  etc_de2 (
 
     wire w_gpio0;
     wire w_gpio1;
+    reg         r_VGA_CLK;
 ////
 
     assign     DRAM_ADDR = 12'd0;
@@ -217,8 +220,8 @@ module  etc_de2 (
     assign    VGA_R = 10'b0;
     assign    VGA_G = 10'b0;
     assign    VGA_B = 10'b0;
-    assign         VGA_CLK  = 1'b0;
-    assign         VGA_BLANK  = 1'b0;
+    assign         VGA_CLK  = r_VGA_CLK;
+    assign         VGA_BLANK  = 1'b1;
     assign         VGA_HS  = 1'b0;
     assign         VGA_VS  = 1'b0;
     assign         VGA_SYNC  = 1'b0;
@@ -239,4 +242,8 @@ module  etc_de2 (
     assign w_gpio0 = (GPIO_0 == 36'b0)? 1'b0 : 1'b1;
     assign w_gpio1 = (GPIO_1 == 36'b0)? 1'b0 : 1'b1;
 
+    always @(posedge clk50m)
+    begin
+        r_VGA_CLK <= ~r_VGA_CLK;
+    end
 endmodule

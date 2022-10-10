@@ -1,0 +1,10 @@
+ver 03 
+{ 
+dflt_n system_DE2 
+sts SUCMP 
+vendor visual_hdl 
+time 1665359739 0 
+{ 
+obj BLKOBJECT system_DE2 s0 
+} 
+} 

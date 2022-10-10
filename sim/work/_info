@@ -1,6 +1,7 @@
 m255
 K4
 z2
+!s11f MIXED_VERSIONS
 !s11e vcom 2020.1 2020.02, Feb 28 2020
 13
 !s112 1.1
@@ -29,9 +30,9 @@ Z9 !s110 1665276261
 !i10b 1
 Z10 !s108 1665276261.000000
 Z11 !s90 -reportprogress|300|C:/JBL/DE2_VGA/sim/test_lcd.vhd|
-!s107 C:/JBL/DE2_VGA/sim/test_lcd.vhd|
+Z12 !s107 C:/JBL/DE2_VGA/sim/test_lcd.vhd|
 !i113 1
-Z12 tExplicit 1 CvgOpt 0
+Z13 tExplicit 1 CvgOpt 0
 Acontroller
 R2
 R3
@@ -49,9 +50,9 @@ R9
 !i10b 1
 R10
 R11
-Z13 !s107 C:/JBL/DE2_VGA/sim/test_lcd.vhd|
-!i113 1
 R12
+!i113 1
+R13
 Elcd_user_logic
 R1
 R2
@@ -72,9 +73,9 @@ R9
 !i10b 1
 R10
 R11
-R13
-!i113 1
 R12
+!i113 1
+R13
 Abehavior
 R2
 R3
@@ -92,9 +93,9 @@ R9
 !i10b 1
 R10
 R11
-R13
-!i113 1
 R12
+!i113 1
+R13
 Etest_lcd
 R1
 Z14 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
@@ -116,9 +117,9 @@ R9
 !i10b 1
 R10
 R11
-R13
-!i113 1
 R12
+!i113 1
+R13
 Atest_lcd
 R14
 R3
@@ -137,9 +138,32 @@ R9
 !i10b 1
 R10
 R11
-R13
-!i113 1
 R12
+!i113 1
+R13
+vtest_VGA
+Z15 !s110 1665365045
+!i10b 1
+!s100 9Jl_U_06hgNM40Z]A[i?=3
+Z16 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I7EQ37heK]S?L0IU^F[l_>2
+Z17 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z18 w1665365032
+Z19 8C:/JBL/DE2_VGA/sim/test_VGA.v
+Z20 FC:/JBL/DE2_VGA/sim/test_VGA.v
+!i122 4
+L0 235 19
+Z21 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z22 !s108 1665365045.000000
+!s107 C:/JBL/DE2_VGA/sim/test_VGA.v|
+Z23 !s90 -reportprogress|300|C:/JBL/DE2_VGA/sim/test_VGA.v|
+!i113 1
+Z24 tCvgOpt 0
+ntest_@v@g@a
 Etestsub_lcd
 R1
 R14
@@ -161,9 +185,9 @@ R9
 !i10b 1
 R10
 R11
-R13
-!i113 1
 R12
+!i113 1
+R13
 Atestsub_lcd_a
 R14
 R3
@@ -182,6 +206,52 @@ R9
 !i10b 1
 R10
 R11
-R13
-!i113 1
 R12
+!i113 1
+R13
+vtestsub_VGA
+R15
+!i10b 1
+!s100 ]_b3LRBa4Kl1z[H`WGz@=1
+R16
+Ib_O51GR03;PdW?d6AejoN3
+R17
+R0
+R18
+R19
+R20
+!i122 4
+L0 51 16
+R21
+r1
+!s85 0
+31
+R22
+Z25 !s107 C:/JBL/DE2_VGA/sim/test_VGA.v|
+R23
+!i113 1
+R24
+ntestsub_@v@g@a
+vVGA
+R15
+!i10b 1
+!s100 ^G0ZHa9Qf4`YfznWK>=Zd0
+R16
+ILzPk:ObY^A:TJN]doNAl70
+R17
+R0
+R18
+R19
+R20
+!i122 4
+L0 74 147
+R21
+r1
+!s85 0
+31
+R22
+R25
+R23
+!i113 1
+R24
+n@v@g@a

@@ -1,0 +1,10 @@
+ver 03 
+{ 
+sts SUCMP 
+vendor visual_hdl 
+time 1665365001 0 
+pref_sym VGA_s 
+{ 
+obj SYMOBJECT VGA_s s1 
+} 
+} 
