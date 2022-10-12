@@ -1,0 +1,376 @@
+02.00 00 04 
+0000003A 
+000023F1 
+00000000 
+00000000 
+ attrib {  plist 16 
+{ @pdecl { { @n CLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CLK
+} @gr DEF @idx -1 } { @pdecl { { @n RST_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv RST_N
+} @gr DEF @idx -1 } { @pdecl { { @n XCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv XCLK
+} @gr DEF @idx -1 } { @pdecl { { @n SCL @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv SCL
+} @gr DEF @idx -1 } { @pdecl { { @n SDA @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv SDA
+} @gr DEF @idx -1 } { @pdecl { { @n CamHsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamHsync
+} @gr DEF @idx -1 } { @pdecl { { @n CamVsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamVsync
+} @gr DEF @idx -1 } { @pdecl { { @n PCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv PCLK
+} @gr DEF @idx -1 } { @pdecl { { @n CamData @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamData
+} @gr DEF @idx -1 } { @pdecl { { @n VgaVsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaVsync
+} @gr DEF @idx -1 } { @pdecl { { @n VgaHsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaHsync
+} @gr DEF @idx -1 } { @pdecl { { @n SW0 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv SW0
+} @gr DEF @idx -1 } { @pdecl { { @n SW1 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv SW1
+} @gr DEF @idx -1 } { @pdecl { { @n VgaDataR @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaDataR
+} @gr DEF @idx -1 } { @pdecl { { @n VgaDataG @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaDataG
+} @gr DEF @idx -1 } { @pdecl { { @n VgaDataB @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaDataB
+} @gr DEF @idx -1 } L { @bl 1 @el 17 @il 34 @nvis } !
+ flags 29  } #idit - save unit (named untitled01 while saving) on Tue Oct 11 11:15:14 2022
+version: 9 
+symbolel { compsym { comptype 0 macDesign 0 behav Normal macrodir UpDown scheme SIM flat TRUE macroinit 0 doset { textbox { rect { 176 -290 62 16 } 
+fmttext { 177 -285 1 
+VideoProc 
+angle 0 fn 0 0 0 2 5 0 0 0 0 }
+ vis }  { fiv  @kind 9 
+ } 
+groupobj { doset { rect { 120 -300 180 240 } 
+ } 
+clshapes { closeShape { lines { line { 120 -300 300 -300 } 
+line { 300 -300 300 -60 } 
+line { 300 -60 120 -60 } 
+line { 120 -60 120 -300 } 
+} 
+arcs { } 
+bcol shape  } 
+ } 
+ } 
+ } 
+pinset { sympinel {  text { 263 -123 1 XCLK
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 300 -120 } 
+ {  end  320 -120  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n XCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv XCLK
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 271 -143 1 SCL
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 300 -140 } 
+ {  end  320 -140  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n SCL @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv SCL
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 269 -163 1 SDA
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 300 -160 } 
+ {  end  320 -160  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n SDA @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv SDA
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 241 -183 1 VgaVsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 300 -180 } 
+ {  end  320 -180  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n VgaVsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaVsync
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 241 -203 1 VgaHsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 300 -200 } 
+ {  end  320 -200  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n VgaHsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaHsync
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 221 -223 1 VgaDataR[7:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 300 -220 } 
+ {  end  320 -220  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n VgaDataR @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaDataR
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 220 -243 1 VgaDataG[7:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 300 -240 } 
+ {  end  320 -240  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n VgaDataG @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaDataG
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 221 -263 1 VgaDataB[7:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 300 -260 } 
+ {  end  320 -260  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n VgaDataB @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaDataB
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 127 -123 1 CLK
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 120 -120 } 
+ {  end  100 -120  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n CLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CLK
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 127 -143 1 RST_N
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 120 -140 } 
+ {  end  100 -140  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n RST_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv RST_N
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 127 -163 1 CamHsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 120 -160 } 
+ {  end  100 -160  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n CamHsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamHsync
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 127 -183 1 CamVsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 120 -180 } 
+ {  end  100 -180  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n CamVsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamVsync
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 127 -203 1 PCLK
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 120 -200 } 
+ {  end  100 -200  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n PCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv PCLK
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 127 -223 1 CamData[7:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 120 -220 } 
+ {  end  100 -220  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n CamData @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamData
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 127 -243 1 SW0
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 120 -240 } 
+ {  end  100 -240  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n SW0 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv SW0
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 127 -263 1 SW1
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 120 -260 } 
+ {  end  100 -260  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n SW1 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv SW1
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+ } 
+angle 0  } 
+ } 
+!
+0 22 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 !

@@ -10,248 +10,416 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/JBL/DE2_VGA/sim
+vCAM_CTRL
+Z1 !s110 1665456313
+!i10b 1
+!s100 >C>]2bF:VY6iHd48Xof;N0
+IZJ7COcXJLP>GzAm`b_`zY3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dD:/Study/FPGA/Altera/DE2/DE2_VGA/sim
+Z4 w1665456308
+Z5 8D:/Study/FPGA/Altera/DE2/DE2_VGA/sim/test_VideoProc.v
+Z6 FD:/Study/FPGA/Altera/DE2/DE2_VGA/sim/test_VideoProc.v
+L0 192
+Z7 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z8 !s108 1665456313.000000
+Z9 !s107 D:/Study/FPGA/Altera/DE2/DE2_VGA/sim/test_VideoProc.v|
+Z10 !s90 -reportprogress|300|D:/Study/FPGA/Altera/DE2/DE2_VGA/sim/test_VideoProc.v|
+!i113 1
+Z11 tCvgOpt 0
+n@c@a@m_@c@t@r@l
 Elcd_controller
-Z1 w1665130107
-Z2 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
-Z3 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z4 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z5 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z12 w1665130107
+Z13 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z14 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z15 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z16 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 !i122 0
 R0
-Z6 8C:/JBL/DE2_VGA/sim/test_lcd.vhd
-Z7 FC:/JBL/DE2_VGA/sim/test_lcd.vhd
+Z17 8C:/JBL/DE2_VGA/sim/test_lcd.vhd
+Z18 FC:/JBL/DE2_VGA/sim/test_lcd.vhd
 l0
 L214 1
 VlK4VDQ>6mTMWZUHR>K5VL2
 !s100 BGVn]M7Me@T9TeY@i<lg?1
-Z8 OV;C;2020.1;71
+Z19 OV;C;2020.1;71
 32
-Z9 !s110 1665276261
+Z20 !s110 1665276261
 !i10b 1
-Z10 !s108 1665276261.000000
-Z11 !s90 -reportprogress|300|C:/JBL/DE2_VGA/sim/test_lcd.vhd|
-Z12 !s107 C:/JBL/DE2_VGA/sim/test_lcd.vhd|
+Z21 !s108 1665276261.000000
+Z22 !s90 -reportprogress|300|C:/JBL/DE2_VGA/sim/test_lcd.vhd|
+Z23 !s107 C:/JBL/DE2_VGA/sim/test_lcd.vhd|
 !i113 1
-Z13 tExplicit 1 CvgOpt 0
+Z24 tExplicit 1 CvgOpt 0
 Acontroller
-R2
-R3
-R4
-R5
+R13
+R14
+R15
+R16
 DEx4 work 14 lcd_controller 0 22 lK4VDQ>6mTMWZUHR>K5VL2
 !i122 0
 l232
 L227 141
 Vk5F_N0BT:Tizf1LC0[b>Y3
 !s100 KXgmXHPm?3SKUcfGW_M0S2
-R8
+R19
 32
-R9
+R20
 !i10b 1
-R10
-R11
-R12
+R21
+R22
+R23
 !i113 1
-R13
+R24
 Elcd_user_logic
-R1
-R2
-R3
-R4
-R5
+R12
+R13
+R14
+R15
+R16
 !i122 0
 R0
-R6
-R7
+R17
+R18
 l0
 L111 1
 V<;?2:6Yz;M2Yl]7AiY@<d1
 !s100 EXbm<?fmM6J[nz20YJPe`0
-R8
+R19
 32
-R9
+R20
 !i10b 1
-R10
-R11
-R12
+R21
+R22
+R23
 !i113 1
-R13
+R24
 Abehavior
-R2
-R3
-R4
-R5
+R13
+R14
+R15
+R16
 DEx4 work 14 lcd_user_logic 0 22 <;?2:6Yz;M2Yl]7AiY@<d1
 !i122 0
 l128
 L126 43
 VLG[L=CZQ]Qi4TOdR@64O:0
 !s100 _MPiAXB=i9kAIS86BTCX>3
-R8
+R19
 32
-R9
+R20
 !i10b 1
-R10
-R11
-R12
+R21
+R22
+R23
 !i113 1
-R13
-Etest_lcd
+R24
+vLINEIN_CTRL
 R1
-Z14 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
-R3
+!i10b 1
+!s100 G9jHL@FYR[iW]PjBe4L`N0
+IFWYcT3kB=lDN?;B_nCL:c3
 R2
+R3
 R4
 R5
+R6
+L0 427
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+n@l@i@n@e@i@n_@c@t@r@l
+vSRAM
+R1
+!i10b 1
+!s100 >6j2L<j@XI1MQb0e=CX3_2
+IER55S>OCW@<4NM;0b[Jz30
+R2
+R3
+R4
+R5
+R6
+L0 373
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+n@s@r@a@m
+Etest_lcd
+R12
+Z25 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+R14
+R13
+R15
+R16
 !i122 0
 R0
-R6
-R7
+R17
+R18
 l0
 L383 1
 V31B9A8BRmRkY04A[EX^>=0
 !s100 B;ONE^UkZ0YiiIVmfcAQ`1
-R8
+R19
 32
-R9
+R20
 !i10b 1
-R10
-R11
-R12
+R21
+R22
+R23
 !i113 1
-R13
+R24
 Atest_lcd
+R25
 R14
-R3
-R2
-R4
-R5
+R13
+R15
+R16
 DEx4 work 8 test_lcd 0 22 31B9A8BRmRkY04A[EX^>=0
 !i122 0
 l436
 L390 77
 VaR8YMYmYhkMG1<YT=h<oG2
 !s100 _;kTS^ORaEHjkYijWXI2@1
-R8
+R19
 32
-R9
+R20
 !i10b 1
-R10
-R11
-R12
+R21
+R22
+R23
 !i113 1
-R13
+R24
 vtest_VGA
-Z15 !s110 1665365045
+Z26 !s110 1665365045
 !i10b 1
 !s100 9Jl_U_06hgNM40Z]A[i?=3
-Z16 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Z27 !s11b Dg1SIo80bB@j0V0VzS_@n1
 I7EQ37heK]S?L0IU^F[l_>2
-Z17 VDg1SIo80bB@j0V0VzS_@n1
+R2
 R0
-Z18 w1665365032
-Z19 8C:/JBL/DE2_VGA/sim/test_VGA.v
-Z20 FC:/JBL/DE2_VGA/sim/test_VGA.v
+Z28 w1665365032
+Z29 8C:/JBL/DE2_VGA/sim/test_VGA.v
+Z30 FC:/JBL/DE2_VGA/sim/test_VGA.v
 !i122 4
 L0 235 19
-Z21 OV;L;2020.1;71
+Z31 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z22 !s108 1665365045.000000
-!s107 C:/JBL/DE2_VGA/sim/test_VGA.v|
-Z23 !s90 -reportprogress|300|C:/JBL/DE2_VGA/sim/test_VGA.v|
+Z32 !s108 1665365045.000000
+Z33 !s107 C:/JBL/DE2_VGA/sim/test_VGA.v|
+Z34 !s90 -reportprogress|300|C:/JBL/DE2_VGA/sim/test_VGA.v|
 !i113 1
-Z24 tCvgOpt 0
+R11
 ntest_@v@g@a
-Etestsub_lcd
+vtest_VideoProc
 R1
-R14
-R3
+!i10b 1
+!s100 Gccb8zFZfE@Gogi990aJf3
+Ij[3TX2bmGb2699WgVOlaR1
 R2
+R3
 R4
 R5
+R6
+L0 770
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+ntest_@video@proc
+Etestsub_lcd
+R12
+R25
+R14
+R13
+R15
+R16
 !i122 0
 R0
-R6
-R7
+R17
+R18
 l0
 L60 1
 V4P5=blGfj8<NmM9:27gmz1
 !s100 5KX;6M]K]K9kYz;z<KDAP1
-R8
+R19
 32
-R9
+R20
 !i10b 1
-R10
-R11
-R12
+R21
+R22
+R23
 !i113 1
-R13
+R24
 Atestsub_lcd_a
+R25
 R14
-R3
-R2
-R4
-R5
+R13
+R15
+R16
 DEx4 work 11 testsub_lcd 0 22 4P5=blGfj8<NmM9:27gmz1
 !i122 0
 l77
 L76 14
 VUz6KJeaV_Ql7]bJ_DF]351
 !s100 i80I4P[JGezSo104zFKS>0
-R8
+R19
 32
-R9
+R20
 !i10b 1
-R10
-R11
-R12
+R21
+R22
+R23
 !i113 1
-R13
+R24
 vtestsub_VGA
-R15
+R26
 !i10b 1
 !s100 ]_b3LRBa4Kl1z[H`WGz@=1
-R16
+R27
 Ib_O51GR03;PdW?d6AejoN3
-R17
+R2
 R0
-R18
-R19
-R20
+R28
+R29
+R30
 !i122 4
 L0 51 16
-R21
+R31
 r1
 !s85 0
 31
-R22
-Z25 !s107 C:/JBL/DE2_VGA/sim/test_VGA.v|
-R23
+R32
+R33
+R34
 !i113 1
-R24
+R11
 ntestsub_@v@g@a
+vtestsub_VideoProc
+R1
+!i10b 1
+!s100 ORoan]meQBd_z[K6>R^3;0
+IS]`SACH2cgNlkg5nJKK8U2
+R2
+R3
+R4
+R5
+R6
+L0 701
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+ntestsub_@video@proc
 vVGA
-R15
+R26
 !i10b 1
 !s100 ^G0ZHa9Qf4`YfznWK>=Zd0
-R16
+R27
 ILzPk:ObY^A:TJN]doNAl70
-R17
+R2
 R0
-R18
-R19
-R20
+R28
+R29
+R30
 !i122 4
 L0 74 147
-R21
+R31
 r1
 !s85 0
 31
-R22
-R25
-R23
+R32
+R33
+R34
 !i113 1
-R24
+R11
 n@v@g@a
+vVGA_CTRL
+R1
+!i10b 1
+!s100 n[]YIRc7QV7hPT>97Mlf@3
+IE7go`FCSHSjF:JbhPNeHe2
+R2
+R3
+R4
+R5
+R6
+L0 37
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+n@v@g@a_@c@t@r@l
+vVideoProc
+R1
+!i10b 1
+!s100 Go@z[6FO87=D6_FcoNZ9Q1
+IRSC78`El9Z7SBO8mSfb002
+R2
+R3
+R4
+R5
+R6
+L0 630
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+n@video@proc
+vVideoProcCore
+R1
+!i10b 1
+!s100 [Y4`8V4P[eQ@o`f2]KE2D2
+IlA:L32Ygz?e[3GZ1e7DN;1
+R2
+R3
+R4
+R5
+R6
+L0 526
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
+n@video@proc@core

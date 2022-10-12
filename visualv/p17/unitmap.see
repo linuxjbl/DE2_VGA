@@ -1,0 +1,10 @@
+ver 03 
+{ 
+dflt_n CAM_CTRL_blk 
+sts NOCMP 
+vendor visual_hdl 
+time 1665455132 0 
+{ 
+obj BLKOBJECT CAM_CTRL_blk s0 
+} 
+} 

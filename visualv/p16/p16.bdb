@@ -1,0 +1,141 @@
+02.00 00 20 
+00000000 
+0000016E 
+00000000 
+000001B7 
+000006CD 
+00000000 
+00000000 
+00000000 
+00000B2F 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000B3F 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+0 22 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 !
+8 
+{ @pdecl { { @n CLK @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n RST_N @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n LB_WR_ADDR @t wire @bnd { @cnt 1 { @f 9
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n LB_WR_DATA @t wire @bnd { @cnt 1 { @f 15
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n LB_WR_N @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n VgaLineCount @t wire @bnd { @cnt 1 { @f 8
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n VgaPixCount @t wire @bnd { @cnt 1 { @f 9
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n buf_RGB @t reg @bnd { @cnt 1 { @f 15
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv -
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+9 { { @n ODDLINE @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n oddline_dly1 @t reg @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n oddline_dly2 @t reg @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n LB_RD_ADDR @t reg @bnd { @cnt 1 { @f 9
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n LB_RD_DATA_A @t wire @bnd { @cnt 1 { @f 15
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n LB_RD_DATA_B @t wire @bnd { @cnt 1 { @f 15
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n LB_WR_N_B @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n LB_WR_N_A @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n LB_CS_N @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} L { @nvis } !
+0 L { @nvis } !
+3 

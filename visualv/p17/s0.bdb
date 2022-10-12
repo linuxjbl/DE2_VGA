@@ -1,0 +1,2001 @@
+02.00 00 04 
+0000003A 
+000069E7 
+00006C44 
+00000000 
+ attrib {  globvis  {  blkunit  blk  {  prefix B  name 1  act 0  gen 0  prior 0  } 
+ sig  {  prefix S  name 1  act 1  } 
+ pin  {  prefix XXX  name 0  act 0  } 
+ comp  {  prefix C  name 1  gen 0  } 
+ tap  {  prefix T  name 0  act 0  } 
+ } 
+ page  { w 11000 h 11000 type vhdstd orient portr  } 
+ } #idit - save unit (named CAM_CTRL_blk while saving) on Tue Oct 11 11:25:32 2022
+version: 9 
+block { rect { 230 -350 40 100 } 
+text { 243 -306 1 B0
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm B0 @arch - @usl - @hrnm B0 work @dffs 0 0 @stt hier @cell -1 -17 @vis F @ptxt 17   // ///////////////////////////////////////////////////// 
+  always  
+    @( posedge CLK or negedge RST_N )  
+  begin 
+    if (RST_N == 1'b0) 
+    begin 
+      CamVsync_dly2 <= 0; 
+      CamVsync_dly1 <= 0; 
+    end 
+    else 
+    begin 
+      CamVsync_dly2 <= CamVsync_dly1; 
+      CamVsync_dly1 <= CamVsync; 
+    end 
+     
+  end 
+   
+@gnras @cnt 0
+@instype none @prtas 5 -
+0 sigIdx
+0 -
+-
+6 sigIdx
+0 -
+-
+24 sigIdx
+0 -
+-
+57 sigIdx
+0 -
+-
+59 sigIdx
+0 -
+
+block { rect { 230 -430 40 80 } 
+text { 243 -396 1 B1
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm B1 @arch - @usl - @hrnm B1 work @dffs 0 0 @stt hier @cell -1 -17 @vis F @ptxt 17   // ///////////////////////////////////////////////////// 
+  always  
+    @( posedge CLK or negedge RST_N )  
+  begin 
+    if (RST_N == 1'b0) 
+    begin 
+      CamHsync_dly2 <= 0; 
+      CamHsync_dly1 <= 0; 
+    end 
+    else 
+    begin 
+      CamHsync_dly2 <= CamHsync_dly1; 
+      CamHsync_dly1 <= CamHsync; 
+    end 
+     
+  end 
+   
+@gnras @cnt 0
+@instype none @prtas 5 -
+1 sigIdx
+0 -
+-
+7 sigIdx
+0 -
+-
+22 sigIdx
+0 -
+-
+49 sigIdx
+0 -
+-
+51 sigIdx
+0 -
+
+block { rect { 230 -530 40 80 } 
+text { 243 -496 1 B2
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm B2 @arch - @usl - @hrnm B2 work @dffs 0 0 @stt hier @cell -1 -17 @vis F @ptxt 15   // ///////////////////////////////////////////////////// 
+  always  
+    @( posedge PCLK or negedge RST_N or posedge CamHsync_edge_sig )  
+  begin 
+    if (RST_N == 1'b0 || CamHsync_edge_sig == 1'b1) 
+    begin 
+      PclkPixCount <= 0; 
+    end 
+    else 
+    begin 
+      PclkPixCount <= PclkPixCount + 1; 
+    end 
+     
+  end 
+   
+@gnras @cnt 0
+@instype none @prtas 4 -
+8 sigIdx
+0 -
+-
+17 sigIdx
+0 -
+-
+46 sigIdx
+0 -
+-
+53 sigIdx
+0 -
+
+block { rect { 360 -550 40 80 } 
+text { 373 -516 1 B3
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm B3 @arch - @usl - @hrnm B3 work @dffs 0 0 @stt hier @cell -1 -17 @vis F @ptxt 17   // ///////////////////////////////////////////////////// 
+  always  
+    @( posedge PCLK or negedge RST_N )  
+  begin 
+    if (RST_N == 1'b0) 
+    begin 
+      PclkPixCount_dly2 <= 0; 
+      PclkPixCount_dly1 <= 0; 
+    end 
+    else 
+    begin 
+      PclkPixCount_dly2 <= PclkPixCount_dly1; 
+      PclkPixCount_dly1 <= PclkPixCount[10:1]; 
+    end 
+     
+  end 
+   
+@gnras @cnt 0
+@instype none @prtas 5 -
+10 sigIdx
+0 -
+-
+18 sigIdx
+0 -
+-
+42 sigIdx
+0 -
+-
+47 sigIdx
+0 -
+-
+76 sigIdx
+0 -
+
+block { rect { 480 -650 170 360 } 
+text { 558 -476 1 B4
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm B4 @arch - @usl - @hrnm B4 work @dffs 0 0 @stt hier @cell -1 -17 @vis F @ptxt 19   // ///////////////////////////////////////////////////// 
+  assign Rg_dec = !(PclkPixCount[0]); 
+  assign gB_dec = PclkPixCount[0]; 
+  assign CamPixCount4x = CamPixCount4x_sig; 
+  // ///////////////////////////////////////////////////// 
+  assign LB_WR_N = (Rg_dec_dly1 == 1'b1 && Rg_dec_dly2 == 1'b0) ? 1'b0 : 1'b1; 
+  assign LB_WR_DATA = {Rg_latch, gB_latch}; 
+  assign LB_WR_ADDR = PclkPixCount_dly2; 
+  // ///////////////////////////////////////////////////// 
+  assign CamHsync_edge_sig = (CamHsync_dly1 == 1'b0 && CamHsync_dly2 == 1'b1) ? 1'b1 :  
+         1'b0; 
+  // ///////////////////////////////////////////////////// 
+  assign CamVsync_edge_sig = (CamVsync_dly1 == 1'b0 && CamVsync_dly2 == 1'b1) ? 1'b1 :  
+         1'b0; 
+  assign CamVsync_EDGE = CamVsync_edge_sig; 
+  // ///////////////////////////////////////////////////// 
+  assign CamLineCount = CamLineCount_sig; 
+  assign CamHsync_EDGE = CamHsync_edge_sig; 
+   
+@gnras @cnt 0
+@instype none @prtas 23 -
+28 sigIdx
+0 -
+-
+30 sigIdx
+0 -
+-
+32 sigIdx
+0 -
+-
+34 sigIdx
+0 -
+-
+36 sigIdx
+0 -
+-
+38 sigIdx
+0 -
+-
+40 sigIdx
+0 -
+-
+44 sigIdx
+0 -
+-
+48 sigIdx
+0 -
+-
+50 sigIdx
+0 -
+-
+52 sigIdx
+0 -
+-
+54 sigIdx
+0 -
+-
+58 sigIdx
+0 -
+-
+60 sigIdx
+0 -
+-
+61 sigIdx
+0 -
+-
+64 sigIdx
+0 -
+-
+66 sigIdx
+0 -
+-
+68 sigIdx
+0 -
+-
+70 sigIdx
+0 -
+-
+72 sigIdx
+0 -
+-
+74 sigIdx
+0 -
+-
+77 sigIdx
+0 -
+-
+78 sigIdx
+0 -
+
+block { rect { 900 -330 50 120 } 
+text { 918 -276 1 B5
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm B5 @arch - @usl - @hrnm B5 work @dffs 0 0 @stt hier @cell -1 -17 @vis F @ptxt 19   // ///////////////////////////////////////////////////// 
+  always  
+    @( posedge PCLK or negedge RST_N )  
+  begin 
+    if (RST_N == 1'b0) 
+    begin 
+      Rg_latch <= 0; 
+    end 
+    else 
+    begin 
+      if (Rg_dec == 1'b1) 
+      begin 
+        Rg_latch <= CamData; 
+      end 
+       
+    end 
+     
+  end 
+   
+@gnras @cnt 0
+@instype none @prtas 5 -
+11 sigIdx
+0 -
+-
+19 sigIdx
+0 -
+-
+26 sigIdx
+0 -
+-
+63 sigIdx
+0 -
+-
+73 sigIdx
+0 -
+
+block { rect { 900 -470 50 120 } 
+text { 918 -416 1 B6
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm B6 @arch - @usl - @hrnm B6 work @dffs 0 0 @stt hier @cell -1 -17 @vis F @ptxt 19   // ///////////////////////////////////////////////////// 
+  always  
+    @( posedge PCLK or negedge RST_N )  
+  begin 
+    if (RST_N == 1'b0) 
+    begin 
+      gB_latch <= 0; 
+    end 
+    else 
+    begin 
+      if (gB_dec == 1'b1) 
+      begin 
+        gB_latch <= CamData; 
+      end 
+       
+    end 
+     
+  end 
+   
+@gnras @cnt 0
+@instype none @prtas 5 -
+12 sigIdx
+0 -
+-
+20 sigIdx
+0 -
+-
+27 sigIdx
+0 -
+-
+67 sigIdx
+0 -
+-
+75 sigIdx
+0 -
+
+block { rect { 900 -610 50 120 } 
+text { 918 -556 1 B7
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm B7 @arch - @usl - @hrnm B7 work @dffs 0 0 @stt hier @cell -1 -17 @vis F @ptxt 17   // ///////////////////////////////////////////////////// 
+  always  
+    @( posedge CLK or negedge RST_N )  
+  begin 
+    if (RST_N == 1'b0) 
+    begin 
+      Rg_dec_dly2 <= 0; 
+      Rg_dec_dly1 <= 0; 
+    end 
+    else 
+    begin 
+      Rg_dec_dly2 <= Rg_dec_dly1; 
+      Rg_dec_dly1 <= Rg_dec; 
+    end 
+     
+  end 
+   
+@gnras @cnt 0
+@instype none @prtas 5 -
+3 sigIdx
+0 -
+-
+13 sigIdx
+0 -
+-
+65 sigIdx
+0 -
+-
+69 sigIdx
+0 -
+-
+71 sigIdx
+0 -
+
+block { rect { 900 -750 50 120 } 
+text { 918 -696 1 B8
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm B8 @arch - @usl - @hrnm B8 work @dffs 0 0 @stt hier @cell -1 -17 @vis F @ptxt 27   // ///////////////////////////////////////////////////// 
+  always  
+    @( posedge CLK or negedge RST_N )  
+  begin 
+    if (RST_N == 1'b0) 
+    begin 
+      CamLineCount_sig <= 0; 
+    end 
+    else 
+    begin 
+      if (CamVsync_edge_sig == 1'b1) 
+      begin 
+        CamLineCount_sig <= 0; 
+      end 
+      else 
+      begin 
+        if (CamHsync_edge_sig == 1'b1) 
+        begin 
+          CamLineCount_sig <= CamLineCount_sig + 1; 
+        end 
+         
+      end 
+       
+    end 
+     
+  end 
+   
+@gnras @cnt 0
+@instype none @prtas 5 -
+4 sigIdx
+0 -
+-
+14 sigIdx
+0 -
+-
+55 sigIdx
+0 -
+-
+62 sigIdx
+0 -
+-
+79 sigIdx
+0 -
+
+block { rect { 900 -870 50 100 } 
+text { 918 -826 1 B9
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm B9 @arch - @usl - @hrnm B9 work @dffs 0 0 @stt hier @cell -1 -17 @vis F @ptxt 23   // ///////////////////////////////////////////////////// 
+  always  
+    @( posedge CLK or negedge RST_N )  
+  begin 
+    if (RST_N == 1'b0) 
+    begin 
+      CamPixCount4x_sig <= 0; 
+    end 
+    else 
+    begin 
+      if (CamPixCount4x_sig == 3135 || CamHsync_edge_sig == 1'b1) 
+      begin 
+        CamPixCount4x_sig <= 0; 
+      end 
+      else 
+      begin 
+        CamPixCount4x_sig <= CamPixCount4x_sig + 1; 
+      end 
+       
+    end 
+     
+  end 
+   
+@gnras @cnt 0
+@instype none @prtas 4 -
+5 sigIdx
+0 -
+-
+15 sigIdx
+0 -
+-
+45 sigIdx
+0 -
+-
+56 sigIdx
+0 -
+
+connector { dummy  167 -423  conattr {
+int trans (null) } -
+}
+ connector { dummy  167 -703  conattr {
+int trans (null) } -
+}
+ connector { dummy  857 -703  conattr {
+int trans (null) } -
+}
+ connector { dummy  857 -743  conattr {
+int trans (null) } -
+}
+ connector { dummy  177 -403  conattr {
+int trans (null) } -
+}
+ connector { dummy  177 -503  conattr {
+int trans (null) } -
+}
+ connector { dummy  177 -683  conattr {
+int trans (null) } -
+}
+ connector { dummy  317 -683  conattr {
+int trans (null) } -
+}
+ connector { dummy  837 -683  conattr {
+int trans (null) } -
+}
+ connector { dummy  837 -463  conattr {
+int trans (null) } -
+}
+ connector { dummy  837 -583  conattr {
+int trans (null) } -
+}
+ connector { dummy  837 -723  conattr {
+int trans (null) } -
+}
+ connector { dummy  157 -243  conattr {
+int trans (null) } -
+}
+ connector { dummy  307 -283  conattr {
+int trans (null) } -
+}
+ connector { dummy  857 -303  conattr {
+int trans (null) } -
+}
+ connector { dummy  827 -323  conattr {
+int trans (null) } -
+}
+ connector { dummy  317 -483  conattr {
+int trans (null) } -
+}
+ connector { dummy  827 -723  conattr {
+int trans (null) } -
+}
+ connector { dummy  827 -713  conattr {
+int trans (null) } -
+}
+ connector { dummy  847 -453  conattr {
+int trans (null) } -
+}
+ signal { F nameset { text { 180 -698 1 CLK
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 170 -420  170 -300  230 -300 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 230 -300 } 
+ } 
+1 0 -1 -
+-
+
+
+ } 
+ SourceIdx 10 
+ DestIdx 0 
+ } 
+line90 { 0 1 2 170 -420  170 -420  230 -420 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 230 -420 } 
+ } 
+1 1 -1 -
+-
+
+
+ } 
+ SourceIdx 10 
+ DestIdx 1 
+ } 
+line90 { 0 1 2 40 -700  40 -700  170 -700 
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -700 } 
+ } 
+0 2 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 11 
+ } 
+line90 { 0 1 2 170 -700  170 -700  170 -420  SourceIdx 11 
+ DestIdx 10 
+ } 
+line90 { 0 1 2 170 -700  170 -700  860 -700  SourceIdx 11 
+ DestIdx 12 
+ } 
+line90 { 0 1 2 860 -700  860 -600  900 -600 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -600 } 
+ } 
+1 3 -1 -
+-
+
+
+ } 
+ SourceIdx 12 
+ DestIdx 7 
+ } 
+line90 { 0 1 2 860 -740  860 -740  900 -740 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -740 } 
+ } 
+1 4 -1 -
+-
+
+
+ } 
+ SourceIdx 13 
+ DestIdx 8 
+ } 
+line90 { 0 1 2 860 -740  860 -840  900 -840 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -840 } 
+ } 
+1 5 -1 -
+-
+
+
+ } 
+ SourceIdx 13 
+ DestIdx 9 
+ } 
+line90 { 0 1 2 860 -740  860 -740  860 -700  SourceIdx 13 
+ DestIdx 12 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+0 @attr
+CLK
+wire
+-
+1 
+signal { F nameset { text { 330 -678 1 RST_N
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 180 -400  180 -320  230 -320 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 230 -320 } 
+ } 
+1 6 -1 -
+-
+
+
+ } 
+ SourceIdx 14 
+ DestIdx 0 
+ } 
+line90 { 0 1 2 180 -400  180 -400  230 -400 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 230 -400 } 
+ } 
+1 7 -1 -
+-
+
+
+ } 
+ SourceIdx 14 
+ DestIdx 1 
+ } 
+line90 { 0 1 2 180 -500  180 -500  230 -500 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 230 -500 } 
+ } 
+1 8 -1 -
+-
+
+
+ } 
+ SourceIdx 15 
+ DestIdx 2 
+ } 
+line90 { 0 1 2 40 -680  40 -680  180 -680 
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -680 } 
+ } 
+0 9 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 16 
+ } 
+line90 { 0 1 2 180 -500  180 -500  180 -400  SourceIdx 15 
+ DestIdx 14 
+ } 
+line90 { 0 1 2 180 -680  180 -680  180 -500  SourceIdx 16 
+ DestIdx 15 
+ } 
+line90 { 0 1 2 180 -680  180 -680  320 -680  SourceIdx 16 
+ DestIdx 17 
+ } 
+line90 { 0 1 2 320 -680  320 -540  360 -540 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 360 -540 } 
+ } 
+1 10 -1 -
+-
+
+
+ } 
+ SourceIdx 17 
+ DestIdx 3 
+ } 
+line90 { 0 1 2 320 -680  320 -680  840 -680  SourceIdx 17 
+ DestIdx 18 
+ } 
+line90 { 0 1 2 840 -460  840 -240  900 -240 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -240 } 
+ } 
+1 11 -1 -
+-
+
+
+ } 
+ SourceIdx 19 
+ DestIdx 5 
+ } 
+line90 { 0 1 2 840 -460  840 -460  900 -460 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -460 } 
+ } 
+1 12 -1 -
+-
+
+
+ } 
+ SourceIdx 19 
+ DestIdx 6 
+ } 
+line90 { 0 1 2 840 -580  840 -580  900 -580 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -580 } 
+ } 
+1 13 -1 -
+-
+
+
+ } 
+ SourceIdx 20 
+ DestIdx 7 
+ } 
+line90 { 0 1 2 840 -720  840 -720  900 -720 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -720 } 
+ } 
+1 14 -1 -
+-
+
+
+ } 
+ SourceIdx 21 
+ DestIdx 8 
+ } 
+line90 { 0 1 2 840 -720  840 -860  900 -860 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -860 } 
+ } 
+1 15 -1 -
+-
+
+
+ } 
+ SourceIdx 21 
+ DestIdx 9 
+ } 
+line90 { 0 1 2 840 -580  840 -580  840 -460  SourceIdx 20 
+ DestIdx 19 
+ } 
+line90 { 0 1 2 840 -680  840 -680  840 -580  SourceIdx 18 
+ DestIdx 20 
+ } 
+line90 { 0 1 2 840 -720  840 -720  840 -680  SourceIdx 21 
+ DestIdx 18 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+1 @attr
+RST_N
+wire
+-
+1 
+signal { F nameset { text { 320 -278 1 PCLK
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 40 -240  40 -240  160 -240 
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -240 } 
+ } 
+0 16 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 22 
+ } 
+line90 { 0 1 2 160 -240  160 -480  230 -480 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 230 -480 } 
+ } 
+1 17 -1 -
+-
+
+
+ } 
+ SourceIdx 22 
+ DestIdx 2 
+ } 
+line90 { 0 1 2 160 -240  310 -240  310 -280  SourceIdx 22 
+ DestIdx 23 
+ } 
+line90 { 0 1 2 310 -280  310 -520  360 -520 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 360 -520 } 
+ } 
+1 18 -1 -
+-
+
+
+ } 
+ SourceIdx 23 
+ DestIdx 3 
+ } 
+line90 { 0 1 2 310 -280  860 -280  860 -300  SourceIdx 23 
+ DestIdx 24 
+ } 
+line90 { 0 1 2 860 -300  860 -300  900 -300 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -300 } 
+ } 
+1 19 -1 -
+-
+
+
+ } 
+ SourceIdx 24 
+ DestIdx 5 
+ } 
+line90 { 0 1 2 860 -300  860 -400  900 -400 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -400 } 
+ } 
+1 20 -1 -
+-
+
+
+ } 
+ SourceIdx 24 
+ DestIdx 6 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+2 @attr
+PCLK
+wire
+-
+1 
+signal { F nameset { text { 50 -378 1 CamHsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 40 -380  40 -380  230 -380 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 230 -380 } 
+ } 
+1 22 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -380 } 
+ } 
+0 21 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+3 @attr
+CamHsync
+wire
+-
+1 
+signal { F nameset { text { 50 -278 1 CamVsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 40 -280  40 -280  230 -280 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 230 -280 } 
+ } 
+1 24 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -280 } 
+ } 
+0 23 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 0 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+4 @attr
+CamVsync
+wire
+-
+1 
+signal { T nameset { text { 50 -217 1 CamData [7:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 2 40 -220  830 -220  830 -320 
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -220 } 
+ } 
+0 25 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 25 
+ } 
+line90 { 0 3 2 830 -320  830 -320  900 -320 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -320 } 
+ } 
+1 26 -1 -
+-
+
+
+ } 
+ SourceIdx 25 
+ DestIdx 5 
+ } 
+line90 { 0 3 2 830 -320  830 -380  900 -380 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -380 } 
+ } 
+1 27 -1 -
+-
+
+
+ } 
+ SourceIdx 25 
+ DestIdx 6 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+5 @attr
+CamData
+wire
+{ @cnt 1 { @f 7
+@d downto @t 0
+} } 1 
+signal { T nameset { text { 706 -137 1 LB_WR_ADDR [9:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 3 650 -380  720 -380  720 -140  1070 -140 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1070 -140 } 
+ } 
+1 29 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -380 } 
+ } 
+0 28 -1 -
+-
+
+
+ } 
+ SourceIdx 4 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+6 @attr
+LB_WR_ADDR
+wire
+{ @cnt 1 { @f 9
+@d downto @t 0
+} } 1 
+signal { T nameset { text { 671 -77 1 LB_WR_DATA [15:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 3 650 -320  690 -320  690 -80  1070 -80 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1070 -80 } 
+ } 
+1 31 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -320 } 
+ } 
+0 30 -1 -
+-
+
+
+ } 
+ SourceIdx 4 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+7 @attr
+LB_WR_DATA
+wire
+{ @cnt 1 { @f 15
+@d downto @t 0
+} } 1 
+signal { F nameset { text { 720 -118 1 LB_WR_N
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 3 650 -360  710 -360  710 -120  1070 -120 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1070 -120 } 
+ } 
+1 33 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -360 } 
+ } 
+0 32 -1 -
+-
+
+
+ } 
+ SourceIdx 4 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+8 @attr
+LB_WR_N
+wire
+-
+1 
+signal { F nameset { text { 710 -98 1 CamHsync_EDGE
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 3 650 -340  700 -340  700 -100  1070 -100 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1070 -100 } 
+ } 
+1 35 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -340 } 
+ } 
+0 34 -1 -
+-
+
+
+ } 
+ SourceIdx 4 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+9 @attr
+CamHsync_EDGE
+wire
+-
+1 
+signal { F nameset { text { 740 -158 1 CamVsync_EDGE
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 3 650 -400  730 -400  730 -160  1070 -160 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1070 -160 } 
+ } 
+1 37 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -400 } 
+ } 
+0 36 -1 -
+-
+
+
+ } 
+ SourceIdx 4 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+10 @attr
+CamVsync_EDGE
+wire
+-
+1 
+signal { T nameset { text { 736 -197 1 CamLineCount [8:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 3 650 -460  750 -460  750 -200  1070 -200 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1070 -200 } 
+ } 
+1 39 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -460 } 
+ } 
+0 38 -1 -
+-
+
+
+ } 
+ SourceIdx 4 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+11 @attr
+CamLineCount
+wire
+{ @cnt 1 { @f 8
+@d downto @t 0
+} } 1 
+signal { T nameset { text { 720 -177 1 CamPixCount4x [15:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 3 650 -420  740 -420  740 -180  1070 -180 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1070 -180 } 
+ } 
+1 41 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -420 } 
+ } 
+0 40 -1 -
+-
+
+
+ } 
+ SourceIdx 4 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+12 @attr
+CamPixCount4x
+wire
+{ @cnt 1 { @f 15
+@d downto @t 0
+} } 1 
+signal { T nameset { text { 426 -897 1 PclkPixCount_dly1 [9:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 3 400 -520  440 -520  440 -900  1070 -900 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1070 -900 } 
+ } 
+4 43 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 400 -520 } 
+ } 
+2 42 -1 -
+-
+
+
+ } 
+ SourceIdx 3 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+27 @attr
+PclkPixCount_dly1
+reg
+{ @cnt 1 { @f 9
+@d downto @t 0
+} } 1 
+signal { T nameset { text { 660 -617 1 CamPixCount4x_sig [15:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 3 650 -620  800 -620  800 -800  900 -800 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -800 } 
+ } 
+2 45 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -620 } 
+ } 
+1 44 -1 -
+-
+
+
+ } 
+ SourceIdx 4 
+ DestIdx 9 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+13 @attr
+CamPixCount4x_sig
+reg
+{ @cnt 1 { @f 15
+@d downto @t 0
+} } 1 
+signal { T nameset { text { 330 -397 1 PclkPixCount [10:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 2 270 -480  270 -480  320 -480 
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 270 -480 } 
+ } 
+2 46 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx 26 
+ } 
+line90 { 0 3 2 320 -480  320 -500  360 -500 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 360 -500 } 
+ } 
+1 47 -1 -
+-
+
+
+ } 
+ SourceIdx 26 
+ DestIdx 3 
+ } 
+line90 { 0 3 2 320 -480  320 -400  480 -400 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 480 -400 } 
+ } 
+1 48 -1 -
+-
+
+
+ } 
+ SourceIdx 26 
+ DestIdx 4 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+14 @attr
+PclkPixCount
+reg
+{ @cnt 1 { @f 10
+@d downto @t 0
+} } 1 
+signal { F nameset { text { 280 -378 1 CamHsync_dly1
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 270 -380  270 -380  480 -380 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 480 -380 } 
+ } 
+1 50 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 270 -380 } 
+ } 
+2 49 -1 -
+-
+
+
+ } 
+ SourceIdx 1 
+ DestIdx 4 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+15 @attr
+CamHsync_dly1
+reg
+-
+1 
+signal { F nameset { text { 280 -358 1 CamHsync_dly2
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 270 -360  270 -360  480 -360 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 480 -360 } 
+ } 
+1 52 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 270 -360 } 
+ } 
+0 51 -1 -
+-
+
+
+ } 
+ SourceIdx 1 
+ DestIdx 4 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+16 @attr
+CamHsync_dly2
+reg
+-
+1 
+signal { F nameset { text { 200 -718 1 CamHsync_edge_sig
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 3 230 -520  190 -520  190 -720  830 -720 
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 230 -520 } 
+ } 
+1 53 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx 27 
+ } 
+line90 { 0 1 2 650 -640  830 -640  830 -710 
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -640 } 
+ } 
+2 54 -1 -
+-
+
+
+ } 
+ SourceIdx 4 
+ DestIdx 28 
+ } 
+line90 { 0 1 2 830 -710  830 -710  900 -710 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -710 } 
+ } 
+1 55 -1 -
+-
+
+
+ } 
+ SourceIdx 28 
+ DestIdx 8 
+ } 
+line90 { 0 1 2 830 -720  830 -820  900 -820 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -820 } 
+ } 
+1 56 -1 -
+-
+
+
+ } 
+ SourceIdx 27 
+ DestIdx 9 
+ } 
+line90 { 0 1 2 830 -720  830 -720  830 -710  SourceIdx 27 
+ DestIdx 28 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+17 @attr
+CamHsync_edge_sig
+wire
+-
+1 
+signal { F nameset { text { 280 -338 1 CamVsync_dly1
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 270 -340  270 -340  480 -340 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 480 -340 } 
+ } 
+1 58 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 270 -340 } 
+ } 
+2 57 -1 -
+-
+
+
+ } 
+ SourceIdx 0 
+ DestIdx 4 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+18 @attr
+CamVsync_dly1
+reg
+-
+1 
+signal { F nameset { text { 280 -318 1 CamVsync_dly2
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 270 -320  270 -320  480 -320 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 480 -320 } 
+ } 
+1 60 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 270 -320 } 
+ } 
+0 59 -1 -
+-
+
+
+ } 
+ SourceIdx 0 
+ DestIdx 4 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+19 @attr
+CamVsync_dly2
+reg
+-
+1 
+signal { F nameset { text { 660 -598 1 CamVsync_edge_sig
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 3 650 -600  810 -600  810 -690  900 -690 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -690 } 
+ } 
+1 62 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -600 } 
+ } 
+2 61 -1 -
+-
+
+
+ } 
+ SourceIdx 4 
+ DestIdx 8 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+20 @attr
+CamVsync_edge_sig
+wire
+-
+1 
+signal { F nameset { text { 660 -448 1 Rg_dec
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 850 -450  850 -260  900 -260 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -260 } 
+ } 
+1 63 -1 -
+-
+
+
+ } 
+ SourceIdx 29 
+ DestIdx 5 
+ } 
+line90 { 0 1 2 650 -450  650 -450  850 -450 
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -450 } 
+ } 
+0 64 -1 -
+-
+
+
+ } 
+ SourceIdx 4 
+ DestIdx 29 
+ } 
+line90 { 0 1 2 850 -450  850 -560  900 -560 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -560 } 
+ } 
+1 65 -1 -
+-
+
+
+ } 
+ SourceIdx 29 
+ DestIdx 7 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+21 @attr
+Rg_dec
+wire
+-
+1 
+signal { F nameset { text { 660 -518 1 gB_dec
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 3 650 -520  780 -520  780 -440  900 -440 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -440 } 
+ } 
+1 67 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -520 } 
+ } 
+0 66 -1 -
+-
+
+
+ } 
+ SourceIdx 4 
+ DestIdx 6 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+22 @attr
+gB_dec
+wire
+-
+1 
+signal { F nameset { text { 660 -538 1 Rg_dec_dly1
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 3 650 -540  790 -540  790 -520  900 -520 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -520 } 
+ } 
+2 69 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -540 } 
+ } 
+1 68 -1 -
+-
+
+
+ } 
+ SourceIdx 4 
+ DestIdx 7 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+23 @attr
+Rg_dec_dly1
+reg
+-
+1 
+signal { F nameset { text { 660 -558 1 Rg_dec_dly2
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 3 650 -560  800 -560  800 -540  900 -540 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -540 } 
+ } 
+0 71 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -560 } 
+ } 
+1 70 -1 -
+-
+
+
+ } 
+ SourceIdx 4 
+ DestIdx 7 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+24 @attr
+Rg_dec_dly2
+reg
+-
+1 
+signal { T nameset { text { 770 -287 1 Rg_latch [7:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 3 650 -480  760 -480  760 -290  900 -290 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -290 } 
+ } 
+0 73 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -480 } 
+ } 
+1 72 -1 -
+-
+
+
+ } 
+ SourceIdx 4 
+ DestIdx 5 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+25 @attr
+Rg_latch
+reg
+{ @cnt 1 { @f 7
+@d downto @t 0
+} } 1 
+signal { T nameset { text { 780 -417 1 gB_latch [7:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 3 650 -500  770 -500  770 -420  900 -420 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -420 } 
+ } 
+0 75 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -500 } 
+ } 
+1 74 -1 -
+-
+
+
+ } 
+ SourceIdx 4 
+ DestIdx 6 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+26 @attr
+gB_latch
+reg
+{ @cnt 1 { @f 7
+@d downto @t 0
+} } 1 
+signal { T nameset { text { 410 -497 1 PclkPixCount_dly2 [9:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 2 400 -500  400 -500  480 -500 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 480 -500 } 
+ } 
+1 77 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 400 -500 } 
+ } 
+0 76 -1 -
+-
+
+
+ } 
+ SourceIdx 3 
+ DestIdx 4 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+28 @attr
+PclkPixCount_dly2
+reg
+{ @cnt 1 { @f 9
+@d downto @t 0
+} } 1 
+signal { T nameset { text { 660 -577 1 CamLineCount_sig [8:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 3 650 -580  820 -580  820 -660  900 -660 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 900 -660 } 
+ } 
+2 79 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -580 } 
+ } 
+1 78 -1 -
+-
+
+
+ } 
+ SourceIdx 4 
+ DestIdx 8 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+29 @attr
+CamLineCount_sig
+reg
+{ @cnt 1 { @f 8
+@d downto @t 0
+} } 1 
+!
+42 B0 18 B1 18 B2 18 B3 18 B4 18 B5 18 B6 18 B7 18 B8 18 B9 18 
+CLK 13 CamData 13 CamHsync 13 CamHsync_EDGE 13 CamHsync_dly1 13 CamHsync_dly2 13 CamHsync_edge_sig 13 CamLineCount 13 CamLineCount_sig 13 CamPixCount4x 13 
+CamPixCount4x_sig 13 CamVsync 13 CamVsync_EDGE 13 CamVsync_dly1 13 CamVsync_dly2 13 CamVsync_edge_sig 13 LB_WR_ADDR 13 LB_WR_DATA 13 LB_WR_N 13 PCLK 13 
+PclkPixCount 13 PclkPixCount_dly1 13 PclkPixCount_dly2 13 RST_N 13 Rg_dec 13 Rg_dec_dly1 13 Rg_dec_dly2 13 Rg_latch 13 always 18 assign 18 
+gB_dec 13 gB_latch 13 22 29 9 -1 -1 -1 -1 -1 -1 -1 -1 -1 79 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 !
+!

@@ -1,0 +1,1163 @@
+02.00 00 04 
+0000003A 
+00003FEF 
+00004159 
+00000000 
+ attrib {  globvis  {  blkunit  blk  {  prefix B  name 1  act 0  gen 0  prior 0  } 
+ sig  {  prefix S  name 1  act 1  } 
+ pin  {  prefix XXX  name 0  act 0  } 
+ comp  {  prefix C  name 1  gen 0  } 
+ tap  {  prefix T  name 0  act 0  } 
+ } 
+ page  { w 11000 h 11000 type vhdstd orient portr  } 
+ } #idit - save unit (named LINEIN_CTRL_blk while saving) on Tue Oct 11 11:25:31 2022
+version: 9 
+block { rect { 210 -230 40 80 } 
+text { 223 -196 1 B0
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm B0 @arch - @usl - @hrnm B0 work @dffs 0 0 @stt hier @cell -1 -17 @vis F @ptxt 15   // ///////////////////////////////////////////////////// 
+  always  
+    @( posedge CLK or negedge RST_N )  
+  begin 
+    if (RST_N == 1'b0) 
+    begin 
+      LB_RD_ADDR <= 0; 
+    end 
+    else 
+    begin 
+      LB_RD_ADDR <= VgaPixCount[9:0] + 20; 
+    end 
+     
+  end 
+   
+@gnras @cnt 0
+@instype none @prtas 4 -
+1 sigIdx
+0 -
+-
+6 sigIdx
+0 -
+-
+21 sigIdx
+0 -
+-
+31 sigIdx
+0 -
+
+block { rect { 210 -370 40 80 } 
+text { 223 -336 1 B1
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm B1 @arch - @usl - @hrnm B1 work @dffs 0 0 @stt hier @cell -1 -17 @vis F @ptxt 17   // ///////////////////////////////////////////////////// 
+  always  
+    @( posedge CLK or negedge RST_N )  
+  begin 
+    if (RST_N == 1'b0) 
+    begin 
+      oddline_dly2 <= 0; 
+      oddline_dly1 <= 0; 
+    end 
+    else 
+    begin 
+      oddline_dly2 <= oddline_dly1; 
+      oddline_dly1 <= ODDLINE; 
+    end 
+     
+  end 
+   
+@gnras @cnt 0
+@instype none @prtas 5 -
+2 sigIdx
+0 -
+-
+7 sigIdx
+0 -
+-
+24 sigIdx
+0 -
+-
+26 sigIdx
+0 -
+-
+29 sigIdx
+0 -
+
+block { rect { 370 -290 40 100 } 
+text { 383 -246 1 B2
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm B2 @arch - @usl - @hrnm B2 work @dffs 0 0 @stt hier @cell -1 -17 @vis F @ptxt 5   assign ODDLINE = VgaLineCount[1]; 
+  assign LB_WR_N_A = (oddline_dly2 == 0) ? LB_WR_N : 1; 
+  assign LB_WR_N_B = (oddline_dly2 == 1) ? LB_WR_N : 1; 
+  assign LB_CS_N = 0; 
+   
+@gnras @cnt 0
+@instype none @prtas 7 -
+17 sigIdx
+0 -
+-
+19 sigIdx
+0 -
+-
+27 sigIdx
+0 -
+-
+28 sigIdx
+0 -
+-
+38 sigIdx
+0 -
+-
+40 sigIdx
+0 -
+-
+43 sigIdx
+0 -
+
+block { rect { 540 -230 60 140 } 
+text { 547 -166 1 SRAM_B
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm SRAM_B @arch - @usl - @hrnm SRAM_blk DE2_VGA @dffs 0 0 @stt hier @gnras @cnt 0
+@portlist 7 
+{ @port { @pdecl { { @n CLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n CS_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n WR_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n WRADDR @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n RDADDR @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n WRDATA @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n RDDATA @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv -
+} @gr DEF @idx -1 } @blist 0 } !
+@instype none @prtas 7 -
+3 sigIdx
+0 CLK
+-
+11 sigIdx
+0 WRADDR
+-
+14 sigIdx
+0 WRDATA
+-
+32 sigIdx
+0 RDADDR
+-
+36 sigIdx
+0 RDDATA
+-
+39 sigIdx
+0 WR_N
+-
+42 sigIdx
+0 CS_N
+
+block { rect { 540 -390 60 140 } 
+text { 547 -326 1 SRAM_A
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm SRAM_A @arch - @usl - @hrnm SRAM_blk DE2_VGA @dffs 0 0 @stt hier @gnras @cnt 0
+@portlist 7 
+{ @port { @pdecl { { @n CLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n CS_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n WR_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n WRADDR @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n RDADDR @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n WRDATA @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n RDDATA @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv -
+} @gr DEF @idx -1 } @blist 0 } !
+@instype none @prtas 7 -
+4 sigIdx
+0 CLK
+-
+12 sigIdx
+0 WRADDR
+-
+15 sigIdx
+0 WRDATA
+-
+33 sigIdx
+0 RDADDR
+-
+34 sigIdx
+0 RDDATA
+-
+41 sigIdx
+0 WR_N
+-
+44 sigIdx
+0 CS_N
+
+block { rect { 700 -450 50 380 } 
+text { 718 -266 1 B5
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm B5 @arch - @usl - @hrnm B5 work @dffs 0 0 @stt hier @cell -1 -17 @vis F @ptxt 23   // ///////////////////////////////////////////////////// 
+  always  
+    @( posedge CLK or negedge RST_N )  
+  begin 
+    if (RST_N == 1'b0) 
+    begin 
+      buf_RGB <= 0; 
+    end 
+    else 
+    begin 
+      if (oddline_dly2 == 0) 
+      begin 
+        buf_RGB <= LB_RD_DATA_B; 
+      end 
+      else 
+      begin 
+        buf_RGB <= LB_RD_DATA_A; 
+      end 
+       
+    end 
+     
+  end 
+   
+@gnras @cnt 0
+@instype none @prtas 6 -
+5 sigIdx
+0 -
+-
+9 sigIdx
+0 -
+-
+22 sigIdx
+0 -
+-
+30 sigIdx
+0 -
+-
+35 sigIdx
+0 -
+-
+37 sigIdx
+0 -
+
+connector { dummy  157 -83  conattr {
+int trans (null) } -
+}
+ connector { dummy  157 -183  conattr {
+int trans (null) } -
+}
+ connector { dummy  457 -83  conattr {
+int trans (null) } -
+}
+ connector { dummy  457 -123  conattr {
+int trans (null) } -
+}
+ connector { dummy  167 -343  conattr {
+int trans (null) } -
+}
+ connector { dummy  167 -443  conattr {
+int trans (null) } -
+}
+ connector { dummy  477 -223  conattr {
+int trans (null) } -
+}
+ connector { dummy  467 -363  conattr {
+int trans (null) } -
+}
+ connector { dummy  327 -343  conattr {
+int trans (null) } -
+}
+ connector { dummy  497 -203  conattr {
+int trans (null) } -
+}
+ connector { dummy  487 -263  conattr {
+int trans (null) } -
+}
+ signal { F nameset { text { 170 -78 1 CLK
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 40 -80  40 -80  160 -80 
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -80 } 
+ } 
+0 0 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 6 
+ } 
+line90 { 0 1 2 160 -180  160 -180  210 -180 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 210 -180 } 
+ } 
+1 1 -1 -
+-
+
+
+ } 
+ SourceIdx 7 
+ DestIdx 0 
+ } 
+line90 { 0 1 2 160 -180  160 -320  210 -320 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 210 -320 } 
+ } 
+1 2 -1 -
+-
+
+
+ } 
+ SourceIdx 7 
+ DestIdx 1 
+ } 
+line90 { 0 1 2 160 -180  160 -180  160 -80  SourceIdx 7 
+ DestIdx 6 
+ } 
+line90 { 0 1 2 160 -80  160 -80  460 -80  SourceIdx 6 
+ DestIdx 8 
+ } 
+line90 { 0 1 2 460 -120  460 -120  540 -120 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 540 -120 } 
+ } 
+1 3 -1 -
+-
+
+
+ } 
+ SourceIdx 9 
+ DestIdx 3 
+ } 
+line90 { 0 1 2 460 -120  460 -380  540 -380 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 540 -380 } 
+ } 
+1 4 -1 -
+-
+
+
+ } 
+ SourceIdx 9 
+ DestIdx 4 
+ } 
+line90 { 0 1 2 460 -120  460 -120  460 -80  SourceIdx 9 
+ DestIdx 8 
+ } 
+line90 { 0 1 2 460 -80  460 -80  700 -80 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 700 -80 } 
+ } 
+1 5 -1 -
+-
+
+
+ } 
+ SourceIdx 8 
+ DestIdx 5 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+0 @attr
+CLK
+wire
+-
+1 
+signal { F nameset { text { 180 -438 1 RST_N
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 170 -340  170 -220  210 -220 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 210 -220 } 
+ } 
+1 6 -1 -
+-
+
+
+ } 
+ SourceIdx 10 
+ DestIdx 0 
+ } 
+line90 { 0 1 2 170 -340  170 -340  210 -340 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 210 -340 } 
+ } 
+1 7 -1 -
+-
+
+
+ } 
+ SourceIdx 10 
+ DestIdx 1 
+ } 
+line90 { 0 1 2 40 -440  40 -440  170 -440 
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -440 } 
+ } 
+0 8 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 11 
+ } 
+line90 { 0 1 2 170 -440  170 -440  170 -340  SourceIdx 11 
+ DestIdx 10 
+ } 
+line90 { 0 1 2 170 -440  170 -440  700 -440 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 700 -440 } 
+ } 
+1 9 -1 -
+-
+
+
+ } 
+ SourceIdx 11 
+ DestIdx 5 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+1 @attr
+RST_N
+wire
+-
+1 
+signal { T nameset { text { 50 -137 1 LB_WR_ADDR [9:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 2 40 -140  480 -140  480 -220 
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -140 } 
+ } 
+0 10 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 12 
+ } 
+line90 { 0 3 2 480 -220  480 -220  540 -220 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 540 -220 } 
+ } 
+1 11 -1 -
+-
+
+
+ } 
+ SourceIdx 12 
+ DestIdx 3 
+ } 
+line90 { 0 3 2 480 -220  480 -280  540 -280 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 540 -280 } 
+ } 
+1 12 -1 -
+-
+
+
+ } 
+ SourceIdx 12 
+ DestIdx 4 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+2 @attr
+LB_WR_ADDR
+wire
+{ @cnt 1 { @f 9
+@d downto @t 0
+} } 1 
+signal { T nameset { text { 50 -397 1 LB_WR_DATA [15:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 3 40 -400  310 -400  310 -360  470 -360 
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -400 } 
+ } 
+0 13 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 13 
+ } 
+line90 { 0 3 2 470 -360  470 -150  540 -150 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 540 -150 } 
+ } 
+1 14 -1 -
+-
+
+
+ } 
+ SourceIdx 13 
+ DestIdx 3 
+ } 
+line90 { 0 3 2 470 -360  470 -360  540 -360 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 540 -360 } 
+ } 
+1 15 -1 -
+-
+
+
+ } 
+ SourceIdx 13 
+ DestIdx 4 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+3 @attr
+LB_WR_DATA
+wire
+{ @cnt 1 { @f 15
+@d downto @t 0
+} } 1 
+signal { F nameset { text { 50 -258 1 LB_WR_N
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 3 40 -260  290 -260  290 -220  370 -220 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 370 -220 } 
+ } 
+1 17 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -260 } 
+ } 
+0 16 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 2 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+4 @attr
+LB_WR_N
+wire
+-
+1 
+signal { T nameset { text { 50 -277 1 VgaLineCount [8:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 3 40 -280  300 -280  300 -240  370 -240 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 370 -240 } 
+ } 
+1 19 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -280 } 
+ } 
+0 18 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 2 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+5 @attr
+VgaLineCount
+wire
+{ @cnt 1 { @f 8
+@d downto @t 0
+} } 1 
+signal { T nameset { text { 50 -197 1 VgaPixCount [9:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 2 40 -200  40 -200  210 -200 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 210 -200 } 
+ } 
+1 21 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -200 } 
+ } 
+0 20 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 0 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+6 @attr
+VgaPixCount
+wire
+{ @cnt 1 { @f 9
+@d downto @t 0
+} } 1 
+signal { T nameset { text { 730 -257 1 buf_RGB [15:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 2 750 -260  750 -260  870 -260 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 870 -260 } 
+ } 
+1 23 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 750 -260 } 
+ } 
+0 22 -1 -
+-
+
+
+ } 
+ SourceIdx 5 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+7 @attr
+buf_RGB
+reg
+{ @cnt 1 { @f 15
+@d downto @t 0
+} } 1 
+signal { F nameset { text { 330 -458 1 oddline_dly1
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 3 250 -370  320 -370  320 -460  870 -460 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 870 -460 } 
+ } 
+4 25 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 250 -370 } 
+ } 
+2 24 -1 -
+-
+
+
+ } 
+ SourceIdx 1 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+9 @attr
+oddline_dly1
+reg
+-
+1 
+signal { F nameset { text { 260 -318 1 ODDLINE
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 3 250 -320  310 -320  310 -260  370 -260 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 370 -260 } 
+ } 
+0 27 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 250 -320 } 
+ } 
+1 26 -1 -
+-
+
+
+ } 
+ SourceIdx 1 
+ DestIdx 2 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+8 @attr
+ODDLINE
+wire
+-
+1 
+signal { F nameset { text { 340 -418 1 oddline_dly2
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 330 -340  330 -280  370 -280 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 370 -280 } 
+ } 
+1 28 -1 -
+-
+
+
+ } 
+ SourceIdx 14 
+ DestIdx 2 
+ } 
+line90 { 0 1 2 250 -340  250 -340  330 -340 
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 250 -340 } 
+ } 
+0 29 -1 -
+-
+
+
+ } 
+ SourceIdx 1 
+ DestIdx 14 
+ } 
+line90 { 0 1 2 330 -340  330 -420  700 -420 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 700 -420 } 
+ } 
+1 30 -1 -
+-
+
+
+ } 
+ SourceIdx 14 
+ DestIdx 5 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+10 @attr
+oddline_dly2
+reg
+-
+1 
+signal { T nameset { text { 260 -177 1 LB_RD_ADDR [9:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 2 250 -180  500 -180  500 -200 
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 250 -180 } 
+ } 
+0 31 -1 -
+-
+
+
+ } 
+ SourceIdx 0 
+ DestIdx 15 
+ } 
+line90 { 0 3 2 500 -200  500 -200  540 -200 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 540 -200 } 
+ } 
+1 32 -1 -
+-
+
+
+ } 
+ SourceIdx 15 
+ DestIdx 3 
+ } 
+line90 { 0 3 2 500 -200  500 -300  540 -300 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 540 -300 } 
+ } 
+1 33 -1 -
+-
+
+
+ } 
+ SourceIdx 15 
+ DestIdx 4 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+11 @attr
+LB_RD_ADDR
+reg
+{ @cnt 1 { @f 9
+@d downto @t 0
+} } 1 
+signal { T nameset { text { 610 -277 1 LB_RD_DATA_A [15:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 2 600 -280  600 -280  700 -280 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 700 -280 } 
+ } 
+1 35 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 600 -280 } 
+ } 
+0 34 -1 -
+-
+
+
+ } 
+ SourceIdx 4 
+ DestIdx 5 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+12 @attr
+LB_RD_DATA_A
+wire
+{ @cnt 1 { @f 15
+@d downto @t 0
+} } 1 
+signal { T nameset { text { 610 -157 1 LB_RD_DATA_B [15:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 2 600 -160  600 -160  700 -160 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 700 -160 } 
+ } 
+1 37 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 600 -160 } 
+ } 
+0 36 -1 -
+-
+
+
+ } 
+ SourceIdx 3 
+ DestIdx 5 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+13 @attr
+LB_RD_DATA_B
+wire
+{ @cnt 1 { @f 15
+@d downto @t 0
+} } 1 
+signal { F nameset { text { 460 -188 1 LB_WR_N_B
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 3 410 -220  450 -220  450 -190  540 -190 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 540 -190 } 
+ } 
+1 39 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 410 -220 } 
+ } 
+0 38 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx 3 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+14 @attr
+LB_WR_N_B
+wire
+-
+1 
+signal { F nameset { text { 460 -338 1 LB_WR_N_A
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 3 410 -240  450 -240  450 -340  540 -340 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 540 -340 } 
+ } 
+1 41 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 410 -240 } 
+ } 
+0 40 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx 4 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+15 @attr
+LB_WR_N_A
+wire
+-
+1 
+signal { F nameset { text { 420 -258 1 LB_CS_N
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 490 -260  490 -160  540 -160 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 540 -160 } 
+ } 
+1 42 -1 -
+-
+
+
+ } 
+ SourceIdx 16 
+ DestIdx 3 
+ } 
+line90 { 0 1 2 410 -260  410 -260  490 -260 
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 410 -260 } 
+ } 
+0 43 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx 16 
+ } 
+line90 { 0 1 2 490 -260  490 -320  540 -320 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 540 -320 } 
+ } 
+1 44 -1 -
+-
+
+
+ } 
+ SourceIdx 16 
+ DestIdx 4 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+16 @attr
+LB_CS_N
+wire
+-
+1 
+!
+25 B0 18 B1 18 B2 18 B5 18 CLK 13 LB_CS_N 13 LB_RD_ADDR 13 LB_RD_DATA_A 13 LB_RD_DATA_B 13 LB_WR_ADDR 13 
+LB_WR_DATA 13 LB_WR_N 13 LB_WR_N_A 13 LB_WR_N_B 13 ODDLINE 13 RST_N 13 SRAM_A 18 SRAM_B 18 VgaLineCount 13 VgaPixCount 13 
+always 18 assign 18 buf_RGB 13 oddline_dly1 13 oddline_dly2 13 22 16 5 -1 -1 -1 -1 -1 -1 -1 -1 -1 44 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 !
+SRAM_B SRAM_blk DE2_VGA 0 
+SRAM_A SRAM_blk DE2_VGA 0 
+!

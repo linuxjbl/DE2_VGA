@@ -1,0 +1,218 @@
+02.00 00 20 
+00000000 
+0000016E 
+00000000 
+000001B7 
+0000098A 
+00000000 
+00000000 
+00000000 
+00001214 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00001224 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+0 22 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 !
+13 
+{ @pdecl { { @n CLK @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n RST_N @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n PCLK @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n CamHsync @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n CamVsync @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n CamData @t wire @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n LB_WR_ADDR @t wire @bnd { @cnt 1 { @f 9
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n LB_WR_DATA @t wire @bnd { @cnt 1 { @f 15
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n LB_WR_N @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n CamHsync_EDGE @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n CamVsync_EDGE @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n CamLineCount @t wire @bnd { @cnt 1 { @f 8
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n CamPixCount4x @t wire @bnd { @cnt 1 { @f 15
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv -
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+17 { { @n CamPixCount4x_sig @t reg @bnd { @cnt 1 { @f 15
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n PclkPixCount @t reg @bnd { @cnt 1 { @f 10
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n CamHsync_dly1 @t reg @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n CamHsync_dly2 @t reg @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n CamHsync_edge_sig @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n CamVsync_dly1 @t reg @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n CamVsync_dly2 @t reg @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n CamVsync_edge_sig @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n Rg_dec @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n gB_dec @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n Rg_dec_dly1 @t reg @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n Rg_dec_dly2 @t reg @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n Rg_latch @t reg @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n gB_latch @t reg @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n PclkPixCount_dly1 @t reg @bnd { @cnt 1 { @f 9
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n PclkPixCount_dly2 @t reg @bnd { @cnt 1 { @f 9
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n CamLineCount_sig @t reg @bnd { @cnt 1 { @f 8
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} L { @nvis } !
+0 L { @nvis } !
+3 

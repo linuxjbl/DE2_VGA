@@ -1,0 +1,117 @@
+02.00 00 20 
+00000000 
+0000016E 
+000001B7 
+00000222 
+00000000 
+00000000 
+00000000 
+00000000 
+00000A58 
+00000000 
+00000A68 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000A78 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+0 22 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 !
+LINEIN_CTRL_inst LINEIN_CTRL $NULL 0 
+CAM_CTRL_inst CAM_CTRL $NULL 0 
+VGA_CTRL_inst VGA_CTRL $NULL 0 
+!
+14 
+{ @pdecl { { @n CLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CLK
+} @gr DEF @idx -1 } { @pdecl { { @n RST_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv RST_N
+} @gr DEF @idx -1 } { @pdecl { { @n XCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv XCLK
+} @gr DEF @idx -1 } { @pdecl { { @n CamHsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamHsync
+} @gr DEF @idx -1 } { @pdecl { { @n CamVsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamVsync
+} @gr DEF @idx -1 } { @pdecl { { @n PCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv PCLK
+} @gr DEF @idx -1 } { @pdecl { { @n CamData @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamData
+} @gr DEF @idx -1 } { @pdecl { { @n VgaVsync @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaVsync
+} @gr DEF @idx -1 } { @pdecl { { @n VgaHsync @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaHsync
+} @gr DEF @idx -1 } { @pdecl { { @n SW0 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv SW0
+} @gr DEF @idx -1 } { @pdecl { { @n SW1 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv SW1
+} @gr DEF @idx -1 } { @pdecl { { @n VgaDataR @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaDataR
+} @gr DEF @idx -1 } { @pdecl { { @n VgaDataG @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaDataG
+} @gr DEF @idx -1 } { @pdecl { { @n VgaDataB @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaDataB
+} @gr DEF @idx -1 } L { @bl 1 @el 15 @il 42 @nvis } !
+0 L { @nvis } !
+0 L { @nvis } !
+3 

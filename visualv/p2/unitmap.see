@@ -2,9 +2,5 @@ ver 03
 { 
 sts SUCMP 
 vendor visual_hdl 
-time 1665362328 0 
-pref_sym testsub_VGA_s 
-{ 
-obj SYMOBJECT testsub_VGA_s s1 
-} 
+time 1665454078 0 
 } 

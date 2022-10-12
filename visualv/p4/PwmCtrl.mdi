@@ -1,0 +1,339 @@
+02.00 00 20 
+00000000 
+0000016E 
+000001B7 
+000001CC 
+00000000 
+00000000 
+00000000 
+00000000 
+00002245 
+00000000 
+00002255 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00002265 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+0 22 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 !
+u0 nios2 $NULL 0 
+!
+56 
+{ @pdecl { { @n HEX0A @t - @bnd -
+@das -
+@com_before 8 ///////////////////	Flash Interface		////////////////
+	FLASH Data bus 16 Bits
+	FLASH Address bus 22 Bits
+	FLASH Write Enable
+	FLASH Reset
+	FLASH Output Enable
+	FLASH Chip Enable
+======= PORT DEFINITION ================================================
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX0A
+} @gr DEF @idx -1 } { @pdecl { { @n HEX0B @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX0B
+} @gr DEF @idx -1 } { @pdecl { { @n HEX0C @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX0C
+} @gr DEF @idx -1 } { @pdecl { { @n HEX0D @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX0D
+} @gr DEF @idx -1 } { @pdecl { { @n HEX0E @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX0E
+} @gr DEF @idx -1 } { @pdecl { { @n HEX0F @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX0F
+} @gr DEF @idx -1 } { @pdecl { { @n HEX0G @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX0G
+} @gr DEF @idx -1 } { @pdecl { { @n HEX0DP @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX0DP
+} @gr DEF @idx -1 } { @pdecl { { @n HEX1A @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX1A
+} @gr DEF @idx -1 } { @pdecl { { @n HEX1B @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX1B
+} @gr DEF @idx -1 } { @pdecl { { @n HEX1C @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX1C
+} @gr DEF @idx -1 } { @pdecl { { @n HEX1D @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX1D
+} @gr DEF @idx -1 } { @pdecl { { @n HEX1E @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX1E
+} @gr DEF @idx -1 } { @pdecl { { @n HEX1F @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX1F
+} @gr DEF @idx -1 } { @pdecl { { @n HEX1G @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX1G
+} @gr DEF @idx -1 } { @pdecl { { @n HEX1DP @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX1DP
+} @gr DEF @idx -1 } { @pdecl { { @n HEX2A @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX2A
+} @gr DEF @idx -1 } { @pdecl { { @n HEX2B @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX2B
+} @gr DEF @idx -1 } { @pdecl { { @n HEX2C @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX2C
+} @gr DEF @idx -1 } { @pdecl { { @n HEX2D @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX2D
+} @gr DEF @idx -1 } { @pdecl { { @n HEX2E @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX2E
+} @gr DEF @idx -1 } { @pdecl { { @n HEX2F @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX2F
+} @gr DEF @idx -1 } { @pdecl { { @n HEX2G @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX2G
+} @gr DEF @idx -1 } { @pdecl { { @n HEX2DP @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX2DP
+} @gr DEF @idx -1 } { @pdecl { { @n HEX3A @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX3A
+} @gr DEF @idx -1 } { @pdecl { { @n HEX3B @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX3B
+} @gr DEF @idx -1 } { @pdecl { { @n HEX3C @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX3C
+} @gr DEF @idx -1 } { @pdecl { { @n HEX3D @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX3D
+} @gr DEF @idx -1 } { @pdecl { { @n HEX3E @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX3E
+} @gr DEF @idx -1 } { @pdecl { { @n HEX3F @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX3F
+} @gr DEF @idx -1 } { @pdecl { { @n HEX3G @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX3G
+} @gr DEF @idx -1 } { @pdecl { { @n HEX3DP @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX3DP
+} @gr DEF @idx -1 } { @pdecl { { @n PUSH0 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv PUSH0
+} @gr DEF @idx -1 } { @pdecl { { @n PUSH1 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv PUSH1
+} @gr DEF @idx -1 } { @pdecl { { @n LED0 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv LED0
+} @gr DEF @idx -1 } { @pdecl { { @n LED1 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv LED1
+} @gr DEF @idx -1 } { @pdecl { { @n LED2 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv LED2
+} @gr DEF @idx -1 } { @pdecl { { @n LED3 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv LED3
+} @gr DEF @idx -1 } { @pdecl { { @n LED4 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv LED4
+} @gr DEF @idx -1 } { @pdecl { { @n LED5 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv LED5
+} @gr DEF @idx -1 } { @pdecl { { @n LED6 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv LED6
+} @gr DEF @idx -1 } { @pdecl { { @n LED7 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv LED7
+} @gr DEF @idx -1 } { @pdecl { { @n FL_DQ @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@com_before 1 ///////////////////	Flash Interface		////////////////
+@com_at 1 	FLASH Data bus 16 Bits
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md inout @iv FL_DQ
+} @gr DEF @idx -1 } { @pdecl { { @n FL_ADDR @t - @bnd { @cnt 1 { @f 21
+@d downto @t 0
+} } @das -
+@com_at 1 	FLASH Address bus 22 Bits
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv FL_ADDR
+} @gr DEF @idx -1 } { @pdecl { { @n FL_WE_N @t - @bnd -
+@das -
+@com_at 1 	FLASH Write Enable
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv FL_WE_N
+} @gr DEF @idx -1 } { @pdecl { { @n FL_RST_N @t - @bnd -
+@das -
+@com_at 1 	FLASH Reset
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv FL_RST_N
+} @gr DEF @idx -1 } { @pdecl { { @n FL_OE_N @t - @bnd -
+@das -
+@com_at 1 	FLASH Output Enable
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv FL_OE_N
+} @gr DEF @idx -1 } { @pdecl { { @n FL_CE_N @t - @bnd -
+@das -
+@com_at 1 	FLASH Chip Enable
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv FL_CE_N
+} @gr DEF @idx -1 } { @pdecl { { @n CLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CLK
+} @gr DEF @idx -1 } { @pdecl { { @n RST_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv RST_N
+} @gr DEF @idx -1 } { @pdecl { { @n lcd_rs @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv lcd_rs
+} @gr DEF @idx -1 } { @pdecl { { @n lcd_rw @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv lcd_rw
+} @gr DEF @idx -1 } { @pdecl { { @n lcd_data @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md inout @iv lcd_data
+} @gr DEF @idx -1 } { @pdecl { { @n lcd_e @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv lcd_e
+} @gr DEF @idx -1 } { @pdecl { { @n uart_rx @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv uart_rx
+} @gr DEF @idx -1 } { @pdecl { { @n uart_tx @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv uart_tx
+} @gr DEF @idx -1 } L { @bl 1 @el 18 @il 43 @nvis } !
+0 L { @nvis } !
+0 L { @nvis } !
+3 

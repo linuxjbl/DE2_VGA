@@ -1,0 +1,110 @@
+02.00 00 20 
+00000000 
+0000016E 
+000001B7 
+000001B9 
+00000000 
+00000000 
+00000000 
+00000000 
+000009C8 
+00000000 
+000009D8 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+000009E8 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+0 22 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 !
+!
+13 
+{ @pdecl { { @n CLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CLK
+} @gr DEF @idx -1 } { @pdecl { { @n RST_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv RST_N
+} @gr DEF @idx -1 } { @pdecl { { @n PCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv PCLK
+} @gr DEF @idx -1 } { @pdecl { { @n CamHsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamHsync
+} @gr DEF @idx -1 } { @pdecl { { @n CamVsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamVsync
+} @gr DEF @idx -1 } { @pdecl { { @n CamData @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamData
+} @gr DEF @idx -1 } { @pdecl { { @n LB_WR_ADDR @t - @bnd { @cnt 1 { @f 9
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv LB_WR_ADDR
+} @gr DEF @idx -1 } { @pdecl { { @n LB_WR_DATA @t - @bnd { @cnt 1 { @f 15
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv LB_WR_DATA
+} @gr DEF @idx -1 } { @pdecl { { @n LB_WR_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv LB_WR_N
+} @gr DEF @idx -1 } { @pdecl { { @n CamHsync_EDGE @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv CamHsync_EDGE
+} @gr DEF @idx -1 } { @pdecl { { @n CamVsync_EDGE @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv CamVsync_EDGE
+} @gr DEF @idx -1 } { @pdecl { { @n CamLineCount @t - @bnd { @cnt 1 { @f 8
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv CamLineCount
+} @gr DEF @idx -1 } { @pdecl { { @n CamPixCount4x @t - @bnd { @cnt 1 { @f 15
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv CamPixCount4x
+} @gr DEF @idx -1 } L { @bl 1 @el 14 @il 27 @nvis } !
+0 L { @nvis } !
+0 L { @nvis } !
+3 

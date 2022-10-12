@@ -2,15 +2,66 @@ ver 01
 { 
 lang VERILOG 
 { 
-unit VGA p0 VMODUNIT 
+unit CAM_CTRL p0 VMODUNIT 
 } 
 { 
-unit system_DE2 p1 BLKUNIT 
+unit clk_event_50m p1 VMODUNIT 
 } 
 { 
-unit test_VGA p3 BLKUNIT 
+unit etc_de2 p2 VMODUNIT 
 } 
 { 
-unit testsub_VGA p2 VMODUNIT 
+unit LINEIN_CTRL p3 VMODUNIT 
+} 
+{ 
+unit PwmCtrl p4 VMODUNIT 
+} 
+{ 
+unit SRAM p5 VMODUNIT 
+} 
+{ 
+unit toggle0 p6 VMODUNIT 
+} 
+{ 
+unit top_de2 p7 VMODUNIT 
+} 
+{ 
+unit VGA p8 VMODUNIT 
+} 
+{ 
+unit VGA_CTRL p9 VMODUNIT 
+} 
+{ 
+unit VideoProc p10 VMODUNIT 
+} 
+{ 
+unit VideoProcCore p11 VMODUNIT 
+} 
+{ 
+unit system_de2_vga p12 BLKUNIT 
+} 
+{ 
+unit test_VideoProc p13 BLKUNIT 
+} 
+{ 
+unit testsub_VideoProc p14 VMODUNIT 
+} 
+{ 
+unit SRAM_blk p15 BLKUNIT 
+} 
+{ 
+unit LINEIN_CTRL_blk p16 BLKUNIT 
+} 
+{ 
+unit CAM_CTRL_blk p17 BLKUNIT 
+} 
+{ 
+unit VGA_CTRL_blk p18 BLKUNIT 
+} 
+{ 
+unit VideoProcCore_blk p19 BLKUNIT 
+} 
+{ 
+unit VideoProc_blk p20 BLKUNIT 
 } 
 } 

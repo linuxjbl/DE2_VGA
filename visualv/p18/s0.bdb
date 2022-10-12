@@ -1,0 +1,1725 @@
+02.00 00 04 
+0000003A 
+00005C50 
+00005E6C 
+00000000 
+ attrib {  globvis  {  blkunit  blk  {  prefix B  name 1  act 0  gen 0  prior 0  } 
+ sig  {  prefix S  name 1  act 1  } 
+ pin  {  prefix XXX  name 0  act 0  } 
+ comp  {  prefix C  name 1  gen 0  } 
+ tap  {  prefix T  name 0  act 0  } 
+ } 
+ page  { w 11000 h 11000 type vhdstd orient portr  } 
+ } #idit - save unit (named VGA_CTRL_blk while saving) on Tue Oct 11 11:25:32 2022
+version: 9 
+block { rect { 210 -470 40 60 } 
+text { 223 -446 1 B0
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm B0 @arch - @usl - @hrnm B0 work @dffs 0 0 @stt hier @cell -1 -17 @vis F @ptxt 15   // ///////////////////////////////////////////////////// 
+  always  
+    @( posedge CLK or negedge RST_N )  
+  begin 
+    if (RST_N == 1'b0) 
+    begin 
+      VgaPixCount_enb <= 0; 
+    end 
+    else 
+    begin 
+      VgaPixCount_enb <= !(VgaPixCount_enb); 
+    end 
+     
+  end 
+   
+@gnras @cnt 0
+@instype none @prtas 3 -
+0 sigIdx
+0 -
+-
+8 sigIdx
+0 -
+-
+36 sigIdx
+0 -
+
+block { rect { 350 -190 40 80 } 
+text { 363 -156 1 B1
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm B1 @arch - @usl - @hrnm B1 work @dffs 0 0 @stt hier @cell -1 -17 @vis F @ptxt 27   // ///////////////////////////////////////////////////// 
+  always  
+    @( posedge CLK or negedge RST_N )  
+  begin 
+    if (RST_N == 1'b0) 
+    begin 
+      VgaPixCount_sig <= 0; 
+    end 
+    else 
+    begin 
+      if (VgaPixCount_clr == 1'b1) 
+      begin 
+        VgaPixCount_sig <= 0; 
+      end 
+      else 
+      begin 
+        if (VgaPixCount_enb == 1'b1) 
+        begin 
+          VgaPixCount_sig <= VgaPixCount_sig + 1; 
+        end 
+         
+      end 
+       
+    end 
+     
+  end 
+   
+@gnras @cnt 0
+@instype none @prtas 5 -
+2 sigIdx
+0 -
+-
+10 sigIdx
+0 -
+-
+35 sigIdx
+0 -
+-
+42 sigIdx
+0 -
+-
+59 sigIdx
+0 -
+
+block { rect { 490 -450 160 380 } 
+text { 563 -266 1 B2
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm B2 @arch - @usl - @hrnm B2 work @dffs 0 0 @stt hier @cell -1 -17 @vis F @ptxt 17   // ///////////////////////////////////////////////////// 
+  assign VgaPixCount_clr = (VgaPixCount_enb == 1'b1 && VgaPixCount_sig == 783) ||  
+         CamHsync_EDGE == 1'b1 ? 1 : 0; 
+  assign VgaPixCount = VgaPixCount_sig; 
+  assign VgaLineCount_enb = (VgaPixCount_sig == 783 && VgaPixCount_enb == 1'b1) ? 1 : 0; 
+  assign VgaLineCount_clr = (VgaPixCount_clr == 1'b1 && VgaLineCount_sig == 509) ? 1 : 0; 
+  assign VgaLineCount = VgaLineCount_sig; 
+  assign VgaVisible_H = (VgaPixCount_sig >= 134 && VgaPixCount_sig < 776) ? 1 : 0; 
+  assign VgaHsync_sig = (VgaPixCount_sig >= 96) ? 1 : 0; 
+  assign VgaHsync_edge = (VgaPixCount_sig == 96) ? 1 : 0; 
+  assign VgaVisible_V = (VgaLineCount_sig >= 17 && VgaLineCount_sig < 498) ? 1 : 0; 
+  assign VgaVsync_sig = (VgaLineCount_sig >= 500 && VgaLineCount_sig <= 501) ? 0 : 1; 
+  assign VgaVisible = VgaVisible_sig; 
+  assign VgaHsync = VgaHsync_tmp; 
+  assign VgaVsync = VgaVsync_tmp; 
+  assign OddFrame = !(VgaFrameCount); 
+   
+@gnras @cnt 0
+@instype none @prtas 22 -
+17 sigIdx
+0 -
+-
+21 sigIdx
+0 -
+-
+23 sigIdx
+0 -
+-
+25 sigIdx
+0 -
+-
+27 sigIdx
+0 -
+-
+29 sigIdx
+0 -
+-
+31 sigIdx
+0 -
+-
+33 sigIdx
+0 -
+-
+37 sigIdx
+0 -
+-
+43 sigIdx
+0 -
+-
+44 sigIdx
+0 -
+-
+47 sigIdx
+0 -
+-
+49 sigIdx
+0 -
+-
+51 sigIdx
+0 -
+-
+53 sigIdx
+0 -
+-
+55 sigIdx
+0 -
+-
+57 sigIdx
+0 -
+-
+60 sigIdx
+0 -
+-
+61 sigIdx
+0 -
+-
+64 sigIdx
+0 -
+-
+66 sigIdx
+0 -
+-
+68 sigIdx
+0 -
+
+block { rect { 890 -190 60 120 } 
+text { 913 -136 1 B3
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm B3 @arch - @usl - @hrnm B3 work @dffs 0 0 @stt hier @cell -1 -17 @vis F @ptxt 19   // ///////////////////////////////////////////////////// 
+  always  
+    @( posedge CLK or negedge RST_N )  
+  begin 
+    if (RST_N == 1'b0) 
+    begin 
+      VgaVsync_tmp <= 0; 
+    end 
+    else 
+    begin 
+      if (VgaPixCount_enb == 1'b1) 
+      begin 
+        VgaVsync_tmp <= VgaVsync_sig; 
+      end 
+       
+    end 
+     
+  end 
+   
+@gnras @cnt 0
+@instype none @prtas 5 -
+3 sigIdx
+0 -
+-
+11 sigIdx
+0 -
+-
+38 sigIdx
+0 -
+-
+54 sigIdx
+0 -
+-
+58 sigIdx
+0 -
+
+block { rect { 890 -330 60 120 } 
+text { 913 -276 1 B4
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm B4 @arch - @usl - @hrnm B4 work @dffs 0 0 @stt hier @cell -1 -17 @vis F @ptxt 19   // ///////////////////////////////////////////////////// 
+  always  
+    @( posedge CLK or negedge RST_N )  
+  begin 
+    if (RST_N == 1'b0) 
+    begin 
+      VgaHsync_tmp <= 0; 
+    end 
+    else 
+    begin 
+      if (VgaPixCount_enb == 1'b1) 
+      begin 
+        VgaHsync_tmp <= VgaHsync_sig; 
+      end 
+       
+    end 
+     
+  end 
+   
+@gnras @cnt 0
+@instype none @prtas 5 -
+4 sigIdx
+0 -
+-
+12 sigIdx
+0 -
+-
+39 sigIdx
+0 -
+-
+52 sigIdx
+0 -
+-
+56 sigIdx
+0 -
+
+block { rect { 890 -490 60 140 } 
+text { 913 -426 1 B5
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm B5 @arch - @usl - @hrnm B5 work @dffs 0 0 @stt hier @cell -1 -17 @vis F @ptxt 19   // ///////////////////////////////////////////////////// 
+  always  
+    @( posedge CLK or negedge RST_N )  
+  begin 
+    if (RST_N == 1'b0) 
+    begin 
+      VgaVisible_sig <= 0; 
+    end 
+    else 
+    begin 
+      if (VgaPixCount_enb == 1'b1) 
+      begin 
+        VgaVisible_sig <= VgaVisible_V & VgaVisible_H; 
+      end 
+       
+    end 
+     
+  end 
+   
+@gnras @cnt 0
+@instype none @prtas 6 -
+5 sigIdx
+0 -
+-
+13 sigIdx
+0 -
+-
+40 sigIdx
+0 -
+-
+48 sigIdx
+0 -
+-
+67 sigIdx
+0 -
+-
+69 sigIdx
+0 -
+
+block { rect { 890 -850 60 120 } 
+text { 913 -796 1 B6
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm B6 @arch - @usl - @hrnm B6 work @dffs 0 0 @stt hier @cell -1 -17 @vis F @ptxt 27   // ///////////////////////////////////////////////////// 
+  always  
+    @( posedge CLK or negedge RST_N )  
+  begin 
+    if (RST_N == 1'b0) 
+    begin 
+      VgaLineCount_sig <= 0; 
+    end 
+    else 
+    begin 
+      if (VgaLineCount_clr == 1'b1 || CamVsync_EDGE == 1'b1) 
+      begin 
+        VgaLineCount_sig <= 0; 
+      end 
+      else 
+      begin 
+        if (VgaLineCount_enb == 1'b1) 
+        begin 
+          VgaLineCount_sig <= VgaLineCount_sig + 1; 
+        end 
+         
+      end 
+       
+    end 
+     
+  end 
+   
+@gnras @cnt 0
+@instype none @prtas 6 -
+6 sigIdx
+0 -
+-
+14 sigIdx
+0 -
+-
+19 sigIdx
+0 -
+-
+46 sigIdx
+0 -
+-
+62 sigIdx
+0 -
+-
+65 sigIdx
+0 -
+
+block { rect { 1100 -930 60 280 } 
+text { 1123 -796 1 B7
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm B7 @arch - @usl - @hrnm B7 work @dffs 0 0 @stt hier @cell -1 -17 @vis F @ptxt 19   // ///////////////////////////////////////////////////// 
+  always  
+    @( posedge CLK or negedge RST_N or posedge CamVsync_EDGE )  
+  begin 
+    if (RST_N == 1'b0 || CamVsync_EDGE == 1'b1) 
+    begin 
+      VgaFrameCount <= 0; 
+    end 
+    else 
+    begin 
+      if (VgaPixCount_enb == 1'b1 && VgaLineCount_enb == 1'b1 && VgaLineCount_sig == 1) 
+      begin 
+        VgaFrameCount <= !(VgaFrameCount); 
+      end 
+       
+    end 
+     
+  end 
+   
+@gnras @cnt 0
+@instype none @prtas 7 -
+7 sigIdx
+0 -
+-
+15 sigIdx
+0 -
+-
+20 sigIdx
+0 -
+-
+41 sigIdx
+0 -
+-
+45 sigIdx
+0 -
+-
+50 sigIdx
+0 -
+-
+63 sigIdx
+0 -
+
+connector { dummy  157 -723  conattr {
+int trans (null) } -
+}
+ connector { dummy  297 -723  conattr {
+int trans (null) } -
+}
+ connector { dummy  827 -723  conattr {
+int trans (null) } -
+}
+ connector { dummy  827 -303  conattr {
+int trans (null) } -
+}
+ connector { dummy  827 -463  conattr {
+int trans (null) } -
+}
+ connector { dummy  167 -703  conattr {
+int trans (null) } -
+}
+ connector { dummy  307 -703  conattr {
+int trans (null) } -
+}
+ connector { dummy  837 -703  conattr {
+int trans (null) } -
+}
+ connector { dummy  837 -283  conattr {
+int trans (null) } -
+}
+ connector { dummy  837 -443  conattr {
+int trans (null) } -
+}
+ connector { dummy  847 -903  conattr {
+int trans (null) } -
+}
+ connector { dummy  287 -443  conattr {
+int trans (null) } -
+}
+ connector { dummy  427 -923  conattr {
+int trans (null) } -
+}
+ connector { dummy  817 -923  conattr {
+int trans (null) } -
+}
+ connector { dummy  817 -323  conattr {
+int trans (null) } -
+}
+ connector { dummy  817 -483  conattr {
+int trans (null) } -
+}
+ connector { dummy  987 -763  conattr {
+int trans (null) } -
+}
+ connector { dummy  847 -683  conattr {
+int trans (null) } -
+}
+ signal { F nameset { text { 310 -718 1 CLK
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 160 -720  160 -440  210 -440 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 210 -440 } 
+ } 
+1 0 -1 -
+-
+
+
+ } 
+ SourceIdx 8 
+ DestIdx 0 
+ } 
+line90 { 0 1 2 40 -720  40 -720  160 -720 
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -720 } 
+ } 
+0 1 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 8 
+ } 
+line90 { 0 1 2 160 -720  160 -720  300 -720  SourceIdx 8 
+ DestIdx 9 
+ } 
+line90 { 0 1 2 300 -720  300 -160  350 -160 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 350 -160 } 
+ } 
+1 2 -1 -
+-
+
+
+ } 
+ SourceIdx 9 
+ DestIdx 1 
+ } 
+line90 { 0 1 2 300 -720  300 -720  830 -720  SourceIdx 9 
+ DestIdx 10 
+ } 
+line90 { 0 1 2 830 -300  830 -160  890 -160 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 890 -160 } 
+ } 
+1 3 -1 -
+-
+
+
+ } 
+ SourceIdx 11 
+ DestIdx 3 
+ } 
+line90 { 0 1 2 830 -300  830 -300  890 -300 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 890 -300 } 
+ } 
+1 4 -1 -
+-
+
+
+ } 
+ SourceIdx 11 
+ DestIdx 4 
+ } 
+line90 { 0 1 2 830 -460  830 -460  890 -460 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 890 -460 } 
+ } 
+1 5 -1 -
+-
+
+
+ } 
+ SourceIdx 12 
+ DestIdx 5 
+ } 
+line90 { 0 1 2 830 -720  830 -820  890 -820 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 890 -820 } 
+ } 
+1 6 -1 -
+-
+
+
+ } 
+ SourceIdx 10 
+ DestIdx 6 
+ } 
+line90 { 0 1 2 830 -460  830 -460  830 -300  SourceIdx 12 
+ DestIdx 11 
+ } 
+line90 { 0 1 2 830 -720  830 -720  830 -460  SourceIdx 10 
+ DestIdx 12 
+ } 
+line90 { 0 1 2 830 -720  830 -720  1100 -720 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1100 -720 } 
+ } 
+1 7 -1 -
+-
+
+
+ } 
+ SourceIdx 10 
+ DestIdx 7 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+0 @attr
+CLK
+wire
+-
+1 
+signal { F nameset { text { 320 -698 1 RST_N
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 170 -700  170 -460  210 -460 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 210 -460 } 
+ } 
+1 8 -1 -
+-
+
+
+ } 
+ SourceIdx 13 
+ DestIdx 0 
+ } 
+line90 { 0 1 2 40 -700  40 -700  170 -700 
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -700 } 
+ } 
+0 9 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 13 
+ } 
+line90 { 0 1 2 170 -700  170 -700  310 -700  SourceIdx 13 
+ DestIdx 14 
+ } 
+line90 { 0 1 2 310 -700  310 -180  350 -180 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 350 -180 } 
+ } 
+1 10 -1 -
+-
+
+
+ } 
+ SourceIdx 14 
+ DestIdx 1 
+ } 
+line90 { 0 1 2 310 -700  310 -700  840 -700  SourceIdx 14 
+ DestIdx 15 
+ } 
+line90 { 0 1 2 840 -280  840 -180  890 -180 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 890 -180 } 
+ } 
+1 11 -1 -
+-
+
+
+ } 
+ SourceIdx 16 
+ DestIdx 3 
+ } 
+line90 { 0 1 2 840 -280  840 -280  890 -280 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 890 -280 } 
+ } 
+1 12 -1 -
+-
+
+
+ } 
+ SourceIdx 16 
+ DestIdx 4 
+ } 
+line90 { 0 1 2 840 -440  840 -440  890 -440 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 890 -440 } 
+ } 
+1 13 -1 -
+-
+
+
+ } 
+ SourceIdx 17 
+ DestIdx 5 
+ } 
+line90 { 0 1 2 840 -700  840 -800  890 -800 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 890 -800 } 
+ } 
+1 14 -1 -
+-
+
+
+ } 
+ SourceIdx 15 
+ DestIdx 6 
+ } 
+line90 { 0 1 2 840 -440  840 -440  840 -280  SourceIdx 17 
+ DestIdx 16 
+ } 
+line90 { 0 1 2 840 -700  840 -700  840 -440  SourceIdx 15 
+ DestIdx 17 
+ } 
+line90 { 0 1 2 840 -700  840 -700  1100 -700 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1100 -700 } 
+ } 
+1 15 -1 -
+-
+
+
+ } 
+ SourceIdx 15 
+ DestIdx 7 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+1 @attr
+RST_N
+wire
+-
+1 
+signal { F nameset { text { 50 -78 1 CamHsync_EDGE
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 40 -80  40 -80  490 -80 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 490 -80 } 
+ } 
+1 17 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -80 } 
+ } 
+0 16 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 2 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+2 @attr
+CamHsync_EDGE
+wire
+-
+1 
+signal { F nameset { text { 50 -898 1 CamVsync_EDGE
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 40 -900  40 -900  850 -900 
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -900 } 
+ } 
+0 18 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 18 
+ } 
+line90 { 0 1 2 850 -900  850 -840  890 -840 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 890 -840 } 
+ } 
+1 19 -1 -
+-
+
+
+ } 
+ SourceIdx 18 
+ DestIdx 6 
+ } 
+line90 { 0 1 2 850 -900  850 -900  1100 -900 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1100 -900 } 
+ } 
+1 20 -1 -
+-
+
+
+ } 
+ SourceIdx 18 
+ DestIdx 7 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+3 @attr
+CamVsync_EDGE
+wire
+-
+1 
+signal { T nameset { text { 696 -637 1 VgaLineCount [8:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 5 650 -380  710 -380  710 -640  1050 -640  1050 -620  1320 -620 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1320 -620 } 
+ } 
+1 22 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -380 } 
+ } 
+0 21 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+4 @attr
+VgaLineCount
+wire
+{ @cnt 1 { @f 8
+@d downto @t 0
+} } 1 
+signal { T nameset { text { 986 -517 1 VgaPixCount [9:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 5 650 -280  760 -280  760 -540  1000 -540  1000 -520  1320 -520 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1320 -520 } 
+ } 
+1 24 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -280 } 
+ } 
+0 23 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+5 @attr
+VgaPixCount
+wire
+{ @cnt 1 { @f 9
+@d downto @t 0
+} } 1 
+signal { F nameset { text { 730 -618 1 VgaVisible
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 5 650 -360  720 -360  720 -620  1040 -620  1040 -600  1320 -600 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1320 -600 } 
+ } 
+1 26 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -360 } 
+ } 
+0 25 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+6 @attr
+VgaVisible
+wire
+-
+1 
+signal { F nameset { text { 1030 -558 1 VgaVsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 5 650 -320  740 -320  740 -580  1020 -580  1020 -560  1320 -560 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1320 -560 } 
+ } 
+1 28 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -320 } 
+ } 
+0 27 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+7 @attr
+VgaVsync
+wire
+-
+1 
+signal { F nameset { text { 1020 -538 1 VgaHsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 5 650 -300  750 -300  750 -560  1010 -560  1010 -540  1320 -540 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1320 -540 } 
+ } 
+1 30 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -300 } 
+ } 
+0 29 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+8 @attr
+VgaHsync
+wire
+-
+1 
+signal { F nameset { text { 740 -598 1 VgaHsync_edge
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 5 650 -340  730 -340  730 -600  1030 -600  1030 -580  1320 -580 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1320 -580 } 
+ } 
+1 32 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -340 } 
+ } 
+0 31 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+9 @attr
+VgaHsync_edge
+wire
+-
+1 
+signal { F nameset { text { 710 -658 1 OddFrame
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 5 650 -400  700 -400  700 -660  1060 -660  1060 -640  1320 -640 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1320 -640 } 
+ } 
+1 34 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -400 } 
+ } 
+0 33 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+10 @attr
+OddFrame
+wire
+-
+1 
+signal { F nameset { text { 440 -918 1 VgaPixCount_enb
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 290 -440  290 -140  350 -140 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 350 -140 } 
+ } 
+1 35 -1 -
+-
+
+
+ } 
+ SourceIdx 19 
+ DestIdx 1 
+ } 
+line90 { 0 1 2 250 -440  250 -440  290 -440 
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 250 -440 } 
+ } 
+2 36 -1 -
+-
+
+
+ } 
+ SourceIdx 0 
+ DestIdx 19 
+ } 
+line90 { 0 1 2 290 -440  290 -920  430 -920  SourceIdx 19 
+ DestIdx 20 
+ } 
+line90 { 0 1 2 430 -920  430 -200  490 -200 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 490 -200 } 
+ } 
+1 37 -1 -
+-
+
+
+ } 
+ SourceIdx 20 
+ DestIdx 2 
+ } 
+line90 { 0 1 2 430 -920  430 -920  820 -920  SourceIdx 20 
+ DestIdx 21 
+ } 
+line90 { 0 1 2 820 -320  820 -140  890 -140 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 890 -140 } 
+ } 
+1 38 -1 -
+-
+
+
+ } 
+ SourceIdx 22 
+ DestIdx 3 
+ } 
+line90 { 0 1 2 820 -320  820 -320  890 -320 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 890 -320 } 
+ } 
+1 39 -1 -
+-
+
+
+ } 
+ SourceIdx 22 
+ DestIdx 4 
+ } 
+line90 { 0 1 2 820 -480  820 -480  890 -480 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 890 -480 } 
+ } 
+1 40 -1 -
+-
+
+
+ } 
+ SourceIdx 23 
+ DestIdx 5 
+ } 
+line90 { 0 1 2 820 -480  820 -480  820 -320  SourceIdx 23 
+ DestIdx 22 
+ } 
+line90 { 0 1 2 820 -920  820 -920  820 -480  SourceIdx 21 
+ DestIdx 23 
+ } 
+line90 { 0 1 2 820 -920  820 -920  1100 -920 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1100 -920 } 
+ } 
+1 41 -1 -
+-
+
+
+ } 
+ SourceIdx 21 
+ DestIdx 7 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+11 @attr
+VgaPixCount_enb
+reg
+-
+1 
+signal { T nameset { text { 400 -177 1 VgaPixCount_sig [9:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 2 390 -180  390 -180  490 -180 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 490 -180 } 
+ } 
+1 43 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 390 -180 } 
+ } 
+2 42 -1 -
+-
+
+
+ } 
+ SourceIdx 1 
+ DestIdx 2 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+12 @attr
+VgaPixCount_sig
+reg
+{ @cnt 1 { @f 9
+@d downto @t 0
+} } 1 
+signal { T nameset { text { 450 -877 1 VgaLineCount_sig [8:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 4 490 -220  440 -220  440 -880  990 -880  990 -760 
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 490 -220 } 
+ } 
+1 44 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx 24 
+ } 
+line90 { 0 3 2 990 -760  990 -740  1100 -740 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1100 -740 } 
+ } 
+1 45 -1 -
+-
+
+
+ } 
+ SourceIdx 24 
+ DestIdx 7 
+ } 
+line90 { 0 3 2 950 -760  950 -760  990 -760 
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 950 -760 } 
+ } 
+2 46 -1 -
+-
+
+
+ } 
+ SourceIdx 6 
+ DestIdx 24 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+13 @attr
+VgaLineCount_sig
+reg
+{ @cnt 1 { @f 8
+@d downto @t 0
+} } 1 
+signal { F nameset { text { 660 -218 1 VgaVisible_sig
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 3 650 -220  790 -220  790 -380  890 -380 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 890 -380 } 
+ } 
+0 48 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -220 } 
+ } 
+1 47 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx 5 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+14 @attr
+VgaVisible_sig
+reg
+-
+1 
+signal { F nameset { text { 460 -518 1 VgaFrameCount
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 7 490 -240  450 -240  450 -520  990 -520  990 -500  1200 -500  1200 -680  1160 -680 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1160 -680 } 
+ } 
+2 50 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 490 -240 } 
+ } 
+1 49 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx 7 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+15 @attr
+VgaFrameCount
+reg
+-
+1 
+signal { F nameset { text { 660 -198 1 VgaHsync_sig
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 3 650 -200  800 -200  800 -260  890 -260 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 890 -260 } 
+ } 
+1 52 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -200 } 
+ } 
+0 51 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx 4 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+16 @attr
+VgaHsync_sig
+wire
+-
+1 
+signal { F nameset { text { 660 -118 1 VgaVsync_sig
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 650 -120  650 -120  890 -120 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 890 -120 } 
+ } 
+1 54 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -120 } 
+ } 
+0 53 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx 3 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+17 @attr
+VgaVsync_sig
+wire
+-
+1 
+signal { F nameset { text { 660 -178 1 VgaHsync_tmp
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 3 650 -180  810 -180  810 -240  890 -240 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 890 -240 } 
+ } 
+0 56 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -180 } 
+ } 
+1 55 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx 4 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+18 @attr
+VgaHsync_tmp
+reg
+-
+1 
+signal { F nameset { text { 660 -98 1 VgaVsync_tmp
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 650 -100  650 -100  890 -100 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 890 -100 } 
+ } 
+0 58 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -100 } 
+ } 
+1 57 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx 3 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+19 @attr
+VgaVsync_tmp
+reg
+-
+1 
+signal { F nameset { text { 400 -158 1 VgaPixCount_clr
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 390 -160  390 -160  490 -160 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 490 -160 } 
+ } 
+2 60 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 390 -160 } 
+ } 
+1 59 -1 -
+-
+
+
+ } 
+ SourceIdx 1 
+ DestIdx 2 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+20 @attr
+VgaPixCount_clr
+wire
+-
+1 
+signal { F nameset { text { 860 -678 1 VgaLineCount_enb
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 650 -430  850 -430  850 -680 
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -430 } 
+ } 
+0 61 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx 25 
+ } 
+line90 { 0 1 2 850 -680  850 -760  890 -760 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 890 -760 } 
+ } 
+1 62 -1 -
+-
+
+
+ } 
+ SourceIdx 25 
+ DestIdx 6 
+ } 
+line90 { 0 1 2 850 -680  850 -680  1100 -680 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1100 -680 } 
+ } 
+1 63 -1 -
+-
+
+
+ } 
+ SourceIdx 25 
+ DestIdx 7 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+21 @attr
+VgaLineCount_enb
+wire
+-
+1 
+signal { F nameset { text { 700 -778 1 VgaLineCount_clr
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 3 650 -440  690 -440  690 -780  890 -780 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 890 -780 } 
+ } 
+1 65 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -440 } 
+ } 
+0 64 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx 6 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+22 @attr
+VgaLineCount_clr
+wire
+-
+1 
+signal { F nameset { text { 660 -238 1 VgaVisible_H
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 3 650 -240  780 -240  780 -400  890 -400 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 890 -400 } 
+ } 
+1 67 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -240 } 
+ } 
+0 66 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx 5 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+23 @attr
+VgaVisible_H
+wire
+-
+1 
+signal { F nameset { text { 660 -258 1 VgaVisible_V
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 3 650 -260  770 -260  770 -420  890 -420 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 890 -420 } 
+ } 
+1 69 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 650 -260 } 
+ } 
+0 68 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx 5 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+24 @attr
+VgaVisible_V
+wire
+-
+1 
+!
+35 B0 18 B1 18 B2 18 B3 18 B4 18 B5 18 B6 18 B7 18 CLK 13 CamHsync_EDGE 13 
+CamVsync_EDGE 13 OddFrame 13 RST_N 13 VgaFrameCount 13 VgaHsync 13 VgaHsync_edge 13 VgaHsync_sig 13 VgaHsync_tmp 13 VgaLineCount 13 VgaLineCount_clr 13 
+VgaLineCount_enb 13 VgaLineCount_sig 13 VgaPixCount 13 VgaPixCount_clr 13 VgaPixCount_enb 13 VgaPixCount_sig 13 VgaVisible 13 VgaVisible_H 13 VgaVisible_V 13 VgaVisible_sig 13 
+VgaVsync 13 VgaVsync_sig 13 VgaVsync_tmp 13 always 18 assign 18 22 24 7 -1 -1 -1 -1 -1 -1 -1 -1 -1 69 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 !
+!

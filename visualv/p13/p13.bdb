@@ -1,0 +1,167 @@
+02.00 00 20 
+00000000 
+0000016E 
+00000000 
+000001B7 
+000001DD 
+00000AB7 
+00000AC7 
+00000ADF 
+00000AFE 
+00000000 
+00000B0E 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000B24 
+00000000 
+00000B1E 
+00000B22 
+00000000 
+00000000 
+00000B3C 
+00000000 
+00000000 
+00000000 
+00000AA7 
+00000000 
+0 22 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 !
+0 
+L { @bl -1 @el -1 @il -1 @nvis } !
+19 { { @n CLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n CamData @t wire @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n CamHsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n CamVsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n PCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n RST_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n S21 @t wire @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n S22 @t wire @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n S23 @t wire @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n SCL @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n SDA @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n SW0 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n SW1 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n VgaDataB @t wire @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n VgaDataG @t wire @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n VgaDataR @t wire @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n VgaHsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n VgaVsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n XCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} L { @nvis } !
+0 L { @nvis } !
+0 L { @nvis } !
+-1 -17 @vis F @ptxt 0 !
+{ @txt -1 -17 @vis F @ptxt 0 } 0 L { @nvis } !
+0 L { @nvis } !
+0 !
+0
+-1 -17 @vis F @ptxt 0 !
+3 

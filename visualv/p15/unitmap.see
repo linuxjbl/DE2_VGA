@@ -1,0 +1,10 @@
+ver 03 
+{ 
+dflt_n SRAM_blk 
+sts NOCMP 
+vendor visual_hdl 
+time 1665455131 0 
+{ 
+obj BLKOBJECT SRAM_blk s0 
+} 
+} 

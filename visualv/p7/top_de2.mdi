@@ -1,0 +1,624 @@
+02.00 00 20 
+00000000 
+0000016E 
+000001B7 
+000002CC 
+00000000 
+00000000 
+00000000 
+00000000 
+00004299 
+00000000 
+000042A9 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+000042B9 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+0 22 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 !
+C0 etc_de2 $NULL 0 
+C1 clk_event_50m $NULL 0 
+C2 clk_event_50m $NULL 0 
+C3 clk_event_50m $NULL 0 
+C4 toggle0 $NULL 0 
+C5 toggle0 $NULL 0 
+C6 toggle0 $NULL 0 
+lcd_inst0 lcd_test00 $NULL 0 
+PwmCtrl0 PwmCtrl $NULL 0 
+VGA00 VGA $NULL 0 
+VideoProc00 VideoProc $NULL 0 
+!
+108 
+{ @pdecl { { @n AUD_ADCDAT @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv AUD_ADCDAT
+} @gr DEF @idx -1 } { @pdecl { { @n AUD_ADCLRCK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv AUD_ADCLRCK
+} @gr DEF @idx -1 } { @pdecl { { @n AUD_BCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv AUD_BCLK
+} @gr DEF @idx -1 } { @pdecl { { @n AUD_DACDAT @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv AUD_DACDAT
+} @gr DEF @idx -1 } { @pdecl { { @n AUD_DACLRCK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv AUD_DACLRCK
+} @gr DEF @idx -1 } { @pdecl { { @n AUD_XCK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv AUD_XCK
+} @gr DEF @idx -1 } { @pdecl { { @n CLOCK_27 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CLOCK_27
+} @gr DEF @idx -1 } { @pdecl { { @n CLOCK_50 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CLOCK_50
+} @gr DEF @idx -1 } { @pdecl { { @n DRAM_ADDR @t wire @bnd { @cnt 1 { @f 11
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv DRAM_ADDR
+} @gr DEF @idx -1 } { @pdecl { { @n DRAM_BA @t wire @bnd { @cnt 1 { @f 1
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv DRAM_BA
+} @gr DEF @idx -1 } { @pdecl { { @n DRAM_CAS_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv DRAM_CAS_N
+} @gr DEF @idx -1 } { @pdecl { { @n DRAM_CKE @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv DRAM_CKE
+} @gr DEF @idx -1 } { @pdecl { { @n DRAM_CLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv DRAM_CLK
+} @gr DEF @idx -1 } { @pdecl { { @n DRAM_CS_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv DRAM_CS_N
+} @gr DEF @idx -1 } { @pdecl { { @n DRAM_DQ @t wire @bnd { @cnt 1 { @f 15
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md inout @iv DRAM_DQ
+} @gr DEF @idx -1 } { @pdecl { { @n DRAM_LDQM @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv DRAM_LDQM
+} @gr DEF @idx -1 } { @pdecl { { @n DRAM_RAS_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv DRAM_RAS_N
+} @gr DEF @idx -1 } { @pdecl { { @n DRAM_UDQM @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv DRAM_UDQM
+} @gr DEF @idx -1 } { @pdecl { { @n DRAM_WE_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv DRAM_WE_N
+} @gr DEF @idx -1 } { @pdecl { { @n ENET_CLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv ENET_CLK
+} @gr DEF @idx -1 } { @pdecl { { @n ENET_CMD @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv ENET_CMD
+} @gr DEF @idx -1 } { @pdecl { { @n ENET_CS_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv ENET_CS_N
+} @gr DEF @idx -1 } { @pdecl { { @n ENET_DATA @t wire @bnd { @cnt 1 { @f 15
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md inout @iv ENET_DATA
+} @gr DEF @idx -1 } { @pdecl { { @n ENET_INT @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv ENET_INT
+} @gr DEF @idx -1 } { @pdecl { { @n ENET_RD_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv ENET_RD_N
+} @gr DEF @idx -1 } { @pdecl { { @n ENET_RST_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv ENET_RST_N
+} @gr DEF @idx -1 } { @pdecl { { @n ENET_WR_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv ENET_WR_N
+} @gr DEF @idx -1 } { @pdecl { { @n EXT_CLOCK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv EXT_CLOCK
+} @gr DEF @idx -1 } { @pdecl { { @n FL_ADDR @t wire @bnd { @cnt 1 { @f 21
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv FL_ADDR
+} @gr DEF @idx -1 } { @pdecl { { @n FL_CE_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv FL_CE_N
+} @gr DEF @idx -1 } { @pdecl { { @n FL_DQ @t wire @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md inout @iv FL_DQ
+} @gr DEF @idx -1 } { @pdecl { { @n FL_OE_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv FL_OE_N
+} @gr DEF @idx -1 } { @pdecl { { @n FL_RST_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv FL_RST_N
+} @gr DEF @idx -1 } { @pdecl { { @n FL_WE_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv FL_WE_N
+} @gr DEF @idx -1 } { @pdecl { { @n GPIO_0 @t wire @bnd { @cnt 1 { @f 20
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv GPIO_0
+} @gr DEF @idx -1 } { @pdecl { { @n GPIO_1 @t wire @bnd { @cnt 1 { @f 35
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv GPIO_1
+} @gr DEF @idx -1 } { @pdecl { { @n HEX0 @t wire @bnd { @cnt 1 { @f 6
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX0
+} @gr DEF @idx -1 } { @pdecl { { @n HEX1 @t wire @bnd { @cnt 1 { @f 6
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX1
+} @gr DEF @idx -1 } { @pdecl { { @n HEX2 @t wire @bnd { @cnt 1 { @f 6
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX2
+} @gr DEF @idx -1 } { @pdecl { { @n HEX3 @t wire @bnd { @cnt 1 { @f 6
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX3
+} @gr DEF @idx -1 } { @pdecl { { @n HEX4 @t wire @bnd { @cnt 1 { @f 6
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX4
+} @gr DEF @idx -1 } { @pdecl { { @n HEX5 @t wire @bnd { @cnt 1 { @f 6
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX5
+} @gr DEF @idx -1 } { @pdecl { { @n HEX6 @t wire @bnd { @cnt 1 { @f 6
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX6
+} @gr DEF @idx -1 } { @pdecl { { @n HEX7 @t wire @bnd { @cnt 1 { @f 6
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv HEX7
+} @gr DEF @idx -1 } { @pdecl { { @n I2C_SCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv I2C_SCLK
+} @gr DEF @idx -1 } { @pdecl { { @n I2C_SDAT @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md inout @iv I2C_SDAT
+} @gr DEF @idx -1 } { @pdecl { { @n IRDA_RXD @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv IRDA_RXD
+} @gr DEF @idx -1 } { @pdecl { { @n IRDA_TXD @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv IRDA_TXD
+} @gr DEF @idx -1 } { @pdecl { { @n KEY @t wire @bnd { @cnt 1 { @f 3
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv KEY
+} @gr DEF @idx -1 } { @pdecl { { @n LCD_BLON @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv LCD_BLON
+} @gr DEF @idx -1 } { @pdecl { { @n LCD_DATA @t wire @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv LCD_DATA
+} @gr DEF @idx -1 } { @pdecl { { @n LCD_EN @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv LCD_EN
+} @gr DEF @idx -1 } { @pdecl { { @n LCD_ON @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv LCD_ON
+} @gr DEF @idx -1 } { @pdecl { { @n LCD_RS @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv LCD_RS
+} @gr DEF @idx -1 } { @pdecl { { @n LCD_RW @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv LCD_RW
+} @gr DEF @idx -1 } { @pdecl { { @n LEDG @t wire @bnd { @cnt 1 { @f 8
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv LEDG
+} @gr DEF @idx -1 } { @pdecl { { @n LEDR @t wire @bnd { @cnt 1 { @f 17
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv LEDR
+} @gr DEF @idx -1 } { @pdecl { { @n OTG_ADDR @t wire @bnd { @cnt 1 { @f 1
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv OTG_ADDR
+} @gr DEF @idx -1 } { @pdecl { { @n OTG_CS_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv OTG_CS_N
+} @gr DEF @idx -1 } { @pdecl { { @n OTG_DACK_N @t wire @bnd { @cnt 1 { @f 1
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv OTG_DACK_N
+} @gr DEF @idx -1 } { @pdecl { { @n OTG_DATA @t wire @bnd { @cnt 1 { @f 15
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md inout @iv OTG_DATA
+} @gr DEF @idx -1 } { @pdecl { { @n OTG_DREQ @t wire @bnd { @cnt 1 { @f 1
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv OTG_DREQ
+} @gr DEF @idx -1 } { @pdecl { { @n OTG_FSPEED @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md inout @iv OTG_FSPEED
+} @gr DEF @idx -1 } { @pdecl { { @n OTG_INT @t wire @bnd { @cnt 1 { @f 1
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv OTG_INT
+} @gr DEF @idx -1 } { @pdecl { { @n OTG_LSPEED @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md inout @iv OTG_LSPEED
+} @gr DEF @idx -1 } { @pdecl { { @n OTG_RD_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv OTG_RD_N
+} @gr DEF @idx -1 } { @pdecl { { @n OTG_RST_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv OTG_RST_N
+} @gr DEF @idx -1 } { @pdecl { { @n OTG_WR_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv OTG_WR_N
+} @gr DEF @idx -1 } { @pdecl { { @n PS2_CLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv PS2_CLK
+} @gr DEF @idx -1 } { @pdecl { { @n PS2_DAT @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md inout @iv PS2_DAT
+} @gr DEF @idx -1 } { @pdecl { { @n SD_CLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv SD_CLK
+} @gr DEF @idx -1 } { @pdecl { { @n SD_CMD @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv SD_CMD
+} @gr DEF @idx -1 } { @pdecl { { @n SD_DAT @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md inout @iv SD_DAT
+} @gr DEF @idx -1 } { @pdecl { { @n SD_DAT3 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md inout @iv SD_DAT3
+} @gr DEF @idx -1 } { @pdecl { { @n SRAM_ADDR @t wire @bnd { @cnt 1 { @f 17
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv SRAM_ADDR
+} @gr DEF @idx -1 } { @pdecl { { @n SRAM_CE_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv SRAM_CE_N
+} @gr DEF @idx -1 } { @pdecl { { @n SRAM_DQ @t wire @bnd { @cnt 1 { @f 15
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md inout @iv SRAM_DQ
+} @gr DEF @idx -1 } { @pdecl { { @n SRAM_LB_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv SRAM_LB_N
+} @gr DEF @idx -1 } { @pdecl { { @n SRAM_OE_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv SRAM_OE_N
+} @gr DEF @idx -1 } { @pdecl { { @n SRAM_UB_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv SRAM_UB_N
+} @gr DEF @idx -1 } { @pdecl { { @n SRAM_WE_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv SRAM_WE_N
+} @gr DEF @idx -1 } { @pdecl { { @n SW @t wire @bnd { @cnt 1 { @f 17
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv SW
+} @gr DEF @idx -1 } { @pdecl { { @n TCK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv TCK
+} @gr DEF @idx -1 } { @pdecl { { @n TCS @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv TCS
+} @gr DEF @idx -1 } { @pdecl { { @n TDI @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv TDI
+} @gr DEF @idx -1 } { @pdecl { { @n TDO @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv TDO
+} @gr DEF @idx -1 } { @pdecl { { @n TD_DATA @t wire @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv TD_DATA
+} @gr DEF @idx -1 } { @pdecl { { @n TD_HS @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv TD_HS
+} @gr DEF @idx -1 } { @pdecl { { @n TD_RESET @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv TD_RESET
+} @gr DEF @idx -1 } { @pdecl { { @n TD_VS @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv TD_VS
+} @gr DEF @idx -1 } { @pdecl { { @n UART_RXD @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv UART_RXD
+} @gr DEF @idx -1 } { @pdecl { { @n UART_TXD @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv UART_TXD
+} @gr DEF @idx -1 } { @pdecl { { @n VGA_B @t wire @bnd { @cnt 1 { @f 9
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VGA_B
+} @gr DEF @idx -1 } { @pdecl { { @n VGA_BLANK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VGA_BLANK
+} @gr DEF @idx -1 } { @pdecl { { @n VGA_CLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VGA_CLK
+} @gr DEF @idx -1 } { @pdecl { { @n VGA_G @t wire @bnd { @cnt 1 { @f 9
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VGA_G
+} @gr DEF @idx -1 } { @pdecl { { @n VGA_HS @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VGA_HS
+} @gr DEF @idx -1 } { @pdecl { { @n VGA_R @t wire @bnd { @cnt 1 { @f 9
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VGA_R
+} @gr DEF @idx -1 } { @pdecl { { @n VGA_SYNC @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VGA_SYNC
+} @gr DEF @idx -1 } { @pdecl { { @n VGA_VS @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VGA_VS
+} @gr DEF @idx -1 } { @pdecl { { @n XCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv XCLK
+} @gr DEF @idx -1 } { @pdecl { { @n SCL @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv SCL
+} @gr DEF @idx -1 } { @pdecl { { @n SDA @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv SDA
+} @gr DEF @idx -1 } { @pdecl { { @n CamHsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamHsync
+} @gr DEF @idx -1 } { @pdecl { { @n CamVsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamVsync
+} @gr DEF @idx -1 } { @pdecl { { @n PCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv PCLK
+} @gr DEF @idx -1 } { @pdecl { { @n CamData @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamData
+} @gr DEF @idx -1 } { @pdecl { { @n CAM_RESET @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv CAM_RESET
+} @gr DEF @idx -1 } L { @bl 39 @el 54 @il 169 @nvis } !
+0 L { @nvis } !
+0 L { @nvis } !
+3 

@@ -1,0 +1,94 @@
+02.00 00 20 
+00000000 
+0000016E 
+00000000 
+000001B7 
+0000060E 
+00000000 
+00000000 
+00000000 
+00000754 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000764 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+0 22 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 !
+7 
+{ @pdecl { { @n CLK @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n CS_N @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n WR_N @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n WRADDR @t wire @bnd { @cnt 1 { @f 9
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n RDADDR @t wire @bnd { @cnt 1 { @f 9
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n WRDATA @t wire @bnd { @cnt 1 { @f 15
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } { @pdecl { { @n RDDATA @t wire @bnd { @cnt 1 { @f 15
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv -
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+2 { { @n RAMDATA @t reg @bnd { @cnt 2 { @f 15
+@d downto @t 0
+} { @f 0
+@d to @t 1024
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} { { @n RDDATA_sig @t reg @bnd { @cnt 1 { @f 15
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv -
+@genInc -
+} L { @nvis } !
+0 L { @nvis } !
+3 

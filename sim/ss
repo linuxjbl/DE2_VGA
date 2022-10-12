@@ -1,3 +1,2 @@
-write format wave -window .wave C:/JBL/DE2_VGA/sim/wave1.do
-
-
+#write format wave -window .wave C:/JBL/DE2_VGA/sim/wave1.do
+write format wave -window .wave D:/Study/FPGA/Altera/DE2/DE2_VGA/sim/wave1.do

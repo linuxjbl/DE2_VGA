@@ -1,0 +1,1780 @@
+02.00 00 04 
+0000003A 
+000068BE 
+000069E3 
+00000000 
+ attrib {  globvis  {  blkunit  blk  {  prefix B  name 1  act 0  gen 0  prior 0  } 
+ sig  {  prefix S  name 1  act 1  } 
+ pin  {  prefix XXX  name 0  act 0  } 
+ comp  {  prefix C  name 1  gen 0  } 
+ tap  {  prefix T  name 0  act 0  } 
+ } 
+ page  { w 11000 h 11000 type vhdstd orient portr  } 
+ } #idit - save unit (named test_VideoProc while saving) on Tue Oct 11 18:38:24 2022
+version: 9 
+block { rect { 210 -130 220 -320 } 
+text { 273 -296 1 testsub_VideoProc
+ angle 0
+fn 0 0 0 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm testsub_VideoProc @arch - @usl - @hrnm testsub_VideoProc work @dffs 1 1 @stt hier @gnras @cnt 0
+@instype module @prtas 16 -
+2 sigIdx
+0 -
+-
+6 sigIdx
+0 -
+-
+10 sigIdx
+0 -
+-
+14 sigIdx
+0 -
+-
+18 sigIdx
+0 -
+-
+20 sigIdx
+0 -
+-
+22 sigIdx
+0 -
+-
+24 sigIdx
+0 -
+-
+29 sigIdx
+0 -
+-
+33 sigIdx
+0 -
+-
+37 sigIdx
+0 -
+-
+41 sigIdx
+0 -
+-
+45 sigIdx
+0 -
+-
+47 sigIdx
+0 -
+-
+51 sigIdx
+0 -
+-
+55 sigIdx
+0 -
+
+comp { compsym { comptype 0 macDesign 0 behav Normal macrodir UpDown scheme SIM flat TRUE macroinit 0 doset { textbox { rect { 786 -397 62 16 } 
+fmttext { 787 -395 1 
+VideoProc 
+angle 0 fn 0 0 0 2 5 0 0 0 0 }
+ vis }  { fiv  @kind 9 
+ } 
+groupobj { doset { rect { 730 -410 180 240 } 
+ } 
+clshapes { closeShape { lines { line { 730 -410 910 -410 } 
+line { 910 -410 910 -170 } 
+line { 910 -170 730 -170 } 
+line { 730 -170 730 -410 } 
+} 
+arcs { } 
+bcol shape  } 
+ } 
+ } 
+ } 
+pinset { sympinel {  text { 873 -233 1 XCLK
+ angle 0
+fn 0 0 0 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 910 -230 } 
+ {  end  930 -230  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n XCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv XCLK
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 881 -253 1 SCL
+ angle 0
+fn 0 0 0 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 910 -250 } 
+ {  end  930 -250  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n SCL @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv SCL
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 879 -273 1 SDA
+ angle 0
+fn 0 0 0 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 910 -270 } 
+ {  end  930 -270  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n SDA @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv SDA
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 851 -293 1 VgaVsync
+ angle 0
+fn 0 0 0 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 910 -290 } 
+ {  end  930 -290  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n VgaVsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaVsync
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 851 -313 1 VgaHsync
+ angle 0
+fn 0 0 0 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 910 -310 } 
+ {  end  930 -310  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n VgaHsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaHsync
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 831 -333 1 VgaDataR[7:0]
+ angle 0
+fn 0 0 0 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 910 -330 } 
+ {  end  930 -330  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n VgaDataR @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaDataR
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 830 -353 1 VgaDataG[7:0]
+ angle 0
+fn 0 0 0 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 910 -350 } 
+ {  end  930 -350  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n VgaDataG @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaDataG
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 831 -373 1 VgaDataB[7:0]
+ angle 0
+fn 0 0 0 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 910 -370 } 
+ {  end  930 -370  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n VgaDataB @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaDataB
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 737 -233 1 CLK
+ angle 0
+fn 0 0 0 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 730 -230 } 
+ {  end  710 -230  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n CLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CLK
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 737 -253 1 RST_N
+ angle 0
+fn 0 0 0 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 730 -250 } 
+ {  end  710 -250  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n RST_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv RST_N
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 737 -273 1 CamHsync
+ angle 0
+fn 0 0 0 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 730 -270 } 
+ {  end  710 -270  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n CamHsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamHsync
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 737 -293 1 CamVsync
+ angle 0
+fn 0 0 0 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 730 -290 } 
+ {  end  710 -290  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n CamVsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamVsync
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 737 -313 1 PCLK
+ angle 0
+fn 0 0 0 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 730 -310 } 
+ {  end  710 -310  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n PCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv PCLK
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 737 -333 1 CamData[7:0]
+ angle 0
+fn 0 0 0 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 730 -330 } 
+ {  end  710 -330  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n CamData @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamData
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 737 -353 1 SW0
+ angle 0
+fn 0 0 0 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 730 -350 } 
+ {  end  710 -350  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n SW0 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv SW0
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 737 -373 1 SW1
+ angle 0
+fn 0 0 0 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 730 -370 } 
+ {  end  710 -370  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n SW1 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv SW1
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+ } 
+angle 0  } 
+text { 813 -165 1 C1
+ angle 0
+fn 0 0 0 2 5 0 0 0 0 }
+ } 
+@conf
+- - @symname
+VideoProc_s @cmpattr
+@kwd @innm C1 @arch - @usl - @hrnm VideoProc work @dffs 0 0 @stt hier @gnras @cnt 0
+@portlist 16 
+{ @port { @pdecl { { @n CamData @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamData
+} @gr DEF @idx -1 } @blist 1 { @cnt 1 { @f 7
+@d downto @t 0
+} } } { @port { @pdecl { { @n CamHsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamHsync
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n CamVsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamVsync
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n CLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CLK
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n PCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv PCLK
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n RST_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv RST_N
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n SCL @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv SCL
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n SDA @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv SDA
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n SW0 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv SW0
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n SW1 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv SW1
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n VgaDataB @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaDataB
+} @gr DEF @idx -1 } @blist 1 { @cnt 1 { @f 7
+@d downto @t 0
+} } } { @port { @pdecl { { @n VgaDataG @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaDataG
+} @gr DEF @idx -1 } @blist 1 { @cnt 1 { @f 7
+@d downto @t 0
+} } } { @port { @pdecl { { @n VgaDataR @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaDataR
+} @gr DEF @idx -1 } @blist 1 { @cnt 1 { @f 7
+@d downto @t 0
+} } } { @port { @pdecl { { @n VgaHsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaHsync
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n VgaVsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaVsync
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n XCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv XCLK
+} @gr DEF @idx -1 } @blist 0 } !
+@instype module @prtas 16 -
+1 sigIdx
+0 XCLK
+-
+5 sigIdx
+0 SCL
+-
+9 sigIdx
+0 SDA
+-
+13 sigIdx
+0 VgaVsync
+-
+17 sigIdx
+0 VgaHsync
+-
+57 sigIdx
+0 VgaDataR
+-
+59 sigIdx
+0 VgaDataG
+-
+61 sigIdx
+0 VgaDataB
+-
+26 sigIdx
+0 CLK
+-
+30 sigIdx
+0 RST_N
+-
+34 sigIdx
+0 CamHsync
+-
+38 sigIdx
+0 CamVsync
+-
+42 sigIdx
+0 PCLK
+-
+48 sigIdx
+0 SW0
+-
+52 sigIdx
+0 SW1
+-
+68 sigIdx
+0 CamData
+16 
+{ @pdecl { { @n CLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CLK
+} @gr DEF @idx -1 } { @pdecl { { @n RST_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv RST_N
+} @gr DEF @idx -1 } { @pdecl { { @n XCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv XCLK
+} @gr DEF @idx -1 } { @pdecl { { @n SCL @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv SCL
+} @gr DEF @idx -1 } { @pdecl { { @n SDA @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv SDA
+} @gr DEF @idx -1 } { @pdecl { { @n CamHsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamHsync
+} @gr DEF @idx -1 } { @pdecl { { @n CamVsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamVsync
+} @gr DEF @idx -1 } { @pdecl { { @n PCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv PCLK
+} @gr DEF @idx -1 } { @pdecl { { @n CamData @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamData
+} @gr DEF @idx -1 } { @pdecl { { @n VgaVsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaVsync
+} @gr DEF @idx -1 } { @pdecl { { @n VgaHsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaHsync
+} @gr DEF @idx -1 } { @pdecl { { @n SW0 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv SW0
+} @gr DEF @idx -1 } { @pdecl { { @n SW1 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv SW1
+} @gr DEF @idx -1 } { @pdecl { { @n VgaDataR @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaDataR
+} @gr DEF @idx -1 } { @pdecl { { @n VgaDataG @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaDataG
+} @gr DEF @idx -1 } { @pdecl { { @n VgaDataB @t - @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaDataB
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+0 L { @nvis } !
+
+block { rect { 520 -490 140 -150 } 
+text { 559 -571 1 testsub_cam
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm testsub_cam @arch - @usl - @hrnm testsub_cam work @dffs 1 1 @stt hier @gnras @cnt 0
+@instype none @prtas 5 -
+64 sigIdx
+0 -
+-
+66 sigIdx
+0 -
+-
+71 sigIdx
+0 -
+-
+73 sigIdx
+0 -
+-
+75 sigIdx
+0 -
+
+signal { F nameset { text { 971 -225 1 XCLK
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+text { 151 -215 1 XCLK
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 930 -230  930 -230  1030 -230 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1030 -230 } 
+ } 
+4 0 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 930 -230 } 
+ } 
+0 1 -1 -
+-
+
+
+ } 
+ SourceIdx 1 
+ DestIdx -1 
+ } 
+line90 { 0 1 2 110 -220  110 -220  210 -220 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 210 -220 } 
+ } 
+1 2 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 110 -220 } 
+ } 
+4 3 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 0 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+-1 @attr
+XCLK
+-
+-
+0 
+signal { F nameset { text { 971 -245 1 SCL
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+text { 151 -235 1 SCL
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 930 -250  930 -250  1030 -250 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1030 -250 } 
+ } 
+4 4 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 930 -250 } 
+ } 
+0 5 -1 -
+-
+
+
+ } 
+ SourceIdx 1 
+ DestIdx -1 
+ } 
+line90 { 0 1 2 110 -240  110 -240  210 -240 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 210 -240 } 
+ } 
+1 6 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 110 -240 } 
+ } 
+4 7 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 0 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+-1 @attr
+SCL
+-
+-
+0 
+signal { F nameset { text { 971 -265 1 SDA
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+text { 151 -255 1 SDA
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 930 -270  930 -270  1030 -270 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1030 -270 } 
+ } 
+4 8 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 930 -270 } 
+ } 
+0 9 -1 -
+-
+
+
+ } 
+ SourceIdx 1 
+ DestIdx -1 
+ } 
+line90 { 0 1 2 110 -260  110 -260  210 -260 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 210 -260 } 
+ } 
+1 10 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 110 -260 } 
+ } 
+4 11 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 0 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+-1 @attr
+SDA
+-
+-
+0 
+signal { F nameset { text { 971 -285 1 VgaVsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+text { 151 -275 1 VgaVsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 930 -290  930 -290  1030 -290 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1030 -290 } 
+ } 
+4 12 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 930 -290 } 
+ } 
+0 13 -1 -
+-
+
+
+ } 
+ SourceIdx 1 
+ DestIdx -1 
+ } 
+line90 { 0 1 2 110 -280  110 -280  210 -280 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 210 -280 } 
+ } 
+1 14 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 110 -280 } 
+ } 
+4 15 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 0 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+-1 @attr
+VgaVsync
+-
+-
+0 
+signal { F nameset { text { 971 -305 1 VgaHsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+text { 151 -295 1 VgaHsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 930 -310  930 -310  1030 -310 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1030 -310 } 
+ } 
+4 16 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 930 -310 } 
+ } 
+0 17 -1 -
+-
+
+
+ } 
+ SourceIdx 1 
+ DestIdx -1 
+ } 
+line90 { 0 1 2 110 -300  110 -300  210 -300 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 210 -300 } 
+ } 
+1 18 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 110 -300 } 
+ } 
+4 19 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 0 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+-1 @attr
+VgaHsync
+-
+-
+0 
+signal { T nameset { text { 151 -315 1 VgaDataR [7:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 2 110 -320  110 -320  210 -320 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 210 -320 } 
+ } 
+1 20 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 110 -320 } 
+ } 
+4 21 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 0 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+-1 @attr
+VgaDataR
+wire
+{ @cnt 1 { @f 7
+@d downto @t 0
+} } 0 
+signal { T nameset { text { 151 -335 1 VgaDataG [7:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 2 110 -340  110 -340  210 -340 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 210 -340 } 
+ } 
+1 22 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 110 -340 } 
+ } 
+4 23 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 0 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+-1 @attr
+VgaDataG
+wire
+{ @cnt 1 { @f 7
+@d downto @t 0
+} } 0 
+signal { T nameset { text { 151 -355 1 VgaDataB [7:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 2 110 -360  110 -360  210 -360 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 210 -360 } 
+ } 
+1 24 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 110 -360 } 
+ } 
+4 25 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 0 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+-1 @attr
+VgaDataB
+wire
+{ @cnt 1 { @f 7
+@d downto @t 0
+} } 0 
+signal { F nameset { text { 651 -225 1 CLK
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+text { 471 -215 1 CLK
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 610 -230  610 -230  710 -230 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 710 -230 } 
+ } 
+1 26 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 610 -230 } 
+ } 
+4 27 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 1 
+ } 
+line90 { 0 1 2 430 -220  430 -220  530 -220 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 530 -220 } 
+ } 
+4 28 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 430 -220 } 
+ } 
+0 29 -1 -
+-
+
+
+ } 
+ SourceIdx 0 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+-1 @attr
+CLK
+-
+-
+0 
+signal { F nameset { text { 651 -245 1 RST_N
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+text { 471 -235 1 RST_N
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+text { 461 -545 1 RST_N
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 610 -250  610 -250  710 -250 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 710 -250 } 
+ } 
+1 30 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 610 -250 } 
+ } 
+4 31 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 1 
+ } 
+line90 { 0 1 2 430 -240  430 -240  530 -240 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 530 -240 } 
+ } 
+4 32 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 430 -240 } 
+ } 
+0 33 -1 -
+-
+
+
+ } 
+ SourceIdx 0 
+ DestIdx -1 
+ } 
+line90 { 0 1 2 420 -550  420 -550  520 -550 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 520 -550 } 
+ } 
+1 66 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 420 -550 } 
+ } 
+4 67 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 2 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+-1 @attr
+RST_N
+-
+-
+0 
+signal { F nameset { text { 651 -265 1 CamHsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+text { 471 -255 1 CamHsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+text { 701 -515 1 CamHsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 610 -270  610 -270  710 -270 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 710 -270 } 
+ } 
+1 34 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 610 -270 } 
+ } 
+4 35 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 1 
+ } 
+line90 { 0 1 2 430 -260  430 -260  530 -260 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 530 -260 } 
+ } 
+4 36 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 430 -260 } 
+ } 
+0 37 -1 -
+-
+
+
+ } 
+ SourceIdx 0 
+ DestIdx -1 
+ } 
+line90 { 0 1 2 660 -520  660 -520  760 -520 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 760 -520 } 
+ } 
+4 70 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 660 -520 } 
+ } 
+0 71 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+-1 @attr
+CamHsync
+-
+-
+0 
+signal { F nameset { text { 651 -285 1 CamVsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+text { 471 -275 1 CamVsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+text { 701 -535 1 CamVsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 610 -290  610 -290  710 -290 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 710 -290 } 
+ } 
+1 38 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 610 -290 } 
+ } 
+4 39 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 1 
+ } 
+line90 { 0 1 2 430 -280  430 -280  530 -280 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 530 -280 } 
+ } 
+4 40 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 430 -280 } 
+ } 
+0 41 -1 -
+-
+
+
+ } 
+ SourceIdx 0 
+ DestIdx -1 
+ } 
+line90 { 0 1 2 660 -540  660 -540  760 -540 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 760 -540 } 
+ } 
+4 72 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 660 -540 } 
+ } 
+0 73 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+-1 @attr
+CamVsync
+-
+-
+0 
+signal { F nameset { text { 651 -305 1 PCLK
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+text { 471 -295 1 PCLK
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+text { 461 -525 1 PCLK
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 610 -310  610 -310  710 -310 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 710 -310 } 
+ } 
+1 42 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 610 -310 } 
+ } 
+4 43 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 1 
+ } 
+line90 { 0 1 2 430 -300  430 -300  530 -300 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 530 -300 } 
+ } 
+4 44 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 430 -300 } 
+ } 
+0 45 -1 -
+-
+
+
+ } 
+ SourceIdx 0 
+ DestIdx -1 
+ } 
+line90 { 0 1 2 420 -530  420 -530  520 -530 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 520 -530 } 
+ } 
+1 64 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 420 -530 } 
+ } 
+4 65 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 2 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+-1 @attr
+PCLK
+-
+-
+0 
+signal { T nameset { text { 471 -315 1 CamData [7:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+text { 651 -325 1 CamData [7:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+text { 701 -565 1 CamData [7:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 2 430 -320  430 -320  530 -320 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 530 -320 } 
+ } 
+4 46 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 430 -320 } 
+ } 
+0 47 -1 -
+-
+
+
+ } 
+ SourceIdx 0 
+ DestIdx -1 
+ } 
+line90 { 0 3 2 610 -330  610 -330  710 -330 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 710 -330 } 
+ } 
+1 68 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 610 -330 } 
+ } 
+4 69 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 1 
+ } 
+line90 { 0 3 2 660 -570  660 -570  760 -570 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 760 -570 } 
+ } 
+4 74 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 660 -570 } 
+ } 
+0 75 -1 -
+-
+
+
+ } 
+ SourceIdx 2 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+-1 @attr
+CamData
+wire
+{ @cnt 1 { @f 7
+@d downto @t 0
+} } 0 
+signal { F nameset { text { 651 -345 1 SW0
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+text { 471 -335 1 SW0
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 610 -350  610 -350  710 -350 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 710 -350 } 
+ } 
+1 48 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 610 -350 } 
+ } 
+4 49 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 1 
+ } 
+line90 { 0 1 2 430 -340  430 -340  530 -340 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 530 -340 } 
+ } 
+4 50 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 430 -340 } 
+ } 
+0 51 -1 -
+-
+
+
+ } 
+ SourceIdx 0 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+-1 @attr
+SW0
+-
+-
+0 
+signal { F nameset { text { 651 -365 1 SW1
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+text { 471 -355 1 SW1
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 610 -370  610 -370  710 -370 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 710 -370 } 
+ } 
+1 52 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 610 -370 } 
+ } 
+4 53 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 1 
+ } 
+line90 { 0 1 2 430 -360  430 -360  530 -360 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 530 -360 } 
+ } 
+4 54 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 430 -360 } 
+ } 
+0 55 -1 -
+-
+
+
+ } 
+ SourceIdx 0 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+-1 @attr
+SW1
+-
+-
+0 
+signal { T nameset { text { 971 -325 1 S21 [7:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 2 930 -330  930 -330  1030 -330 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1030 -330 } 
+ } 
+4 56 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 930 -330 } 
+ } 
+0 57 -1 -
+-
+
+
+ } 
+ SourceIdx 1 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+-1 @attr
+S21
+wire
+{ @cnt 1 { @f 7
+@d downto @t 0
+} } 0 
+signal { T nameset { text { 971 -345 1 S22 [7:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 2 930 -350  930 -350  1030 -350 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1030 -350 } 
+ } 
+4 58 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 930 -350 } 
+ } 
+0 59 -1 -
+-
+
+
+ } 
+ SourceIdx 1 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+-1 @attr
+S22
+wire
+{ @cnt 1 { @f 7
+@d downto @t 0
+} } 0 
+signal { T nameset { text { 971 -365 1 S23 [7:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 2 930 -370  930 -370  1030 -370 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 1030 -370 } 
+ } 
+4 60 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 930 -370 } 
+ } 
+0 61 -1 -
+-
+
+
+ } 
+ SourceIdx 1 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+-1 @attr
+S23
+wire
+{ @cnt 1 { @f 7
+@d downto @t 0
+} } 0 
+!
+22 C1 36 CLK 13 CamData 13 CamHsync 13 CamVsync 13 PCLK 13 RST_N 13 S21 13 S22 13 S23 13 
+SCL 13 SDA 13 SW0 13 SW1 13 VgaDataB 13 VgaDataG 13 VgaDataR 13 VgaHsync 13 VgaVsync 13 XCLK 13 
+testsub_VideoProc 18 testsub_cam 18 22 -1 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 75 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 !
+testsub_VideoProc testsub_VideoProc work 0 
+C1 VideoProc work 0 
+testsub_cam testsub_cam work 0 
+!

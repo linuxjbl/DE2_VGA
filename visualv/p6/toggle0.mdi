@@ -1,0 +1,60 @@
+02.00 00 20 
+00000000 
+0000016E 
+000001B7 
+000001B9 
+00000000 
+00000000 
+00000000 
+00000000 
+00000410 
+00000000 
+00000420 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000430 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+0 22 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 !
+!
+4 
+{ @pdecl { { @n clk @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv clk
+} @gr DEF @idx -1 } { @pdecl { { @n rstn @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv rstn
+} @gr DEF @idx -1 } { @pdecl { { @n toggle_en @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv toggle_en
+} @gr DEF @idx -1 } { @pdecl { { @n o_toggle @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv o_toggle
+} @gr DEF @idx -1 } L { @bl 20 @el 20 @il 25 @nvis } !
+0 L { @nvis } !
+0 L { @nvis } !
+3 

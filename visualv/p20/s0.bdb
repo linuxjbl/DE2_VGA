@@ -1,0 +1,753 @@
+02.00 00 04 
+0000003A 
+000025BF 
+000026BA 
+00000000 
+ attrib {  globvis  {  blkunit  blk  {  prefix B  name 1  act 0  gen 0  prior 0  } 
+ sig  {  prefix S  name 1  act 1  } 
+ pin  {  prefix XXX  name 0  act 0  } 
+ comp  {  prefix C  name 1  gen 0  } 
+ tap  {  prefix T  name 0  act 0  } 
+ } 
+ page  { w 11000 h 11000 type vhdstd orient portr  } 
+ } #idit - save unit (named VideoProc_blk while saving) on Tue Oct 11 11:25:32 2022
+version: 9 
+block { rect { 160 -250 180 180 } 
+text { 200 -166 1 VideoProcCore_inst
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+displayblockcontent { FALSE } 
+ } 
+@kwd @innm VideoProcCore_inst @arch - @usl - @hrnm VideoProcCore_blk DE2_VGA @dffs 0 0 @stt hier @gnras @cnt 0
+@portlist 14 
+{ @port { @pdecl { { @n CLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n RST_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n XCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n CamHsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n CamVsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n PCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n CamData @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n VgaVsync @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n VgaHsync @t wire @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n SW0 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n SW1 @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n VgaDataR @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n VgaDataG @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv -
+} @gr DEF @idx -1 } @blist 0 } { @port { @pdecl { { @n VgaDataB @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv -
+} @gr DEF @idx -1 } @blist 0 } !
+@instype none @prtas 14 -
+1 sigIdx
+0 CLK
+-
+3 sigIdx
+0 RST_N
+-
+4 sigIdx
+0 XCLK
+-
+7 sigIdx
+0 CamHsync
+-
+9 sigIdx
+0 CamVsync
+-
+11 sigIdx
+0 PCLK
+-
+13 sigIdx
+0 CamData
+-
+14 sigIdx
+0 VgaVsync
+-
+16 sigIdx
+0 VgaHsync
+-
+19 sigIdx
+0 SW0
+-
+21 sigIdx
+0 SW1
+-
+22 sigIdx
+0 VgaDataR
+-
+24 sigIdx
+0 VgaDataG
+-
+26 sigIdx
+0 VgaDataB
+
+signal { F nameset { text { 50 -238 1 CLK
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 40 -240  40 -240  160 -240 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 160 -240 } 
+ } 
+1 1 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -240 } 
+ } 
+0 0 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 0 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+0 @attr
+CLK
+wire
+-
+1 
+signal { F nameset { text { 50 -98 1 RST_N
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 40 -100  40 -100  160 -100 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 160 -100 } 
+ } 
+1 3 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -100 } 
+ } 
+0 2 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 0 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+1 @attr
+RST_N
+wire
+-
+1 
+signal { F nameset { text { 350 -198 1 XCLK
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 340 -200  340 -200  460 -200 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 460 -200 } 
+ } 
+1 5 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 340 -200 } 
+ } 
+0 4 -1 -
+-
+
+
+ } 
+ SourceIdx 0 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+2 @attr
+XCLK
+wire
+-
+1 
+signal { F nameset { text { 50 -118 1 CamHsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 40 -120  40 -120  160 -120 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 160 -120 } 
+ } 
+1 7 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -120 } 
+ } 
+0 6 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 0 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+5 @attr
+CamHsync
+wire
+-
+1 
+signal { F nameset { text { 50 -138 1 CamVsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 40 -140  40 -140  160 -140 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 160 -140 } 
+ } 
+1 9 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -140 } 
+ } 
+0 8 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 0 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+6 @attr
+CamVsync
+wire
+-
+1 
+signal { F nameset { text { 50 -158 1 PCLK
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 40 -160  40 -160  160 -160 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 160 -160 } 
+ } 
+1 11 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -160 } 
+ } 
+0 10 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 0 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+7 @attr
+PCLK
+wire
+-
+1 
+signal { T nameset { text { 50 -177 1 CamData [7:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 2 40 -180  40 -180  160 -180 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 160 -180 } 
+ } 
+1 13 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -180 } 
+ } 
+0 12 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 0 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+8 @attr
+CamData
+wire
+{ @cnt 1 { @f 7
+@d downto @t 0
+} } 1 
+signal { F nameset { text { 350 -98 1 VgaVsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 340 -100  340 -100  460 -100 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 460 -100 } 
+ } 
+1 15 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 340 -100 } 
+ } 
+0 14 -1 -
+-
+
+
+ } 
+ SourceIdx 0 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+9 @attr
+VgaVsync
+wire
+-
+1 
+signal { F nameset { text { 350 -118 1 VgaHsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 340 -120  340 -120  460 -120 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 460 -120 } 
+ } 
+1 17 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 340 -120 } 
+ } 
+0 16 -1 -
+-
+
+
+ } 
+ SourceIdx 0 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+10 @attr
+VgaHsync
+wire
+-
+1 
+signal { F nameset { text { 50 -198 1 SW0
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 40 -200  40 -200  160 -200 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 160 -200 } 
+ } 
+1 19 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -200 } 
+ } 
+0 18 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 0 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+11 @attr
+SW0
+wire
+-
+1 
+signal { F nameset { text { 50 -218 1 SW1
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 40 -220  40 -220  160 -220 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 160 -220 } 
+ } 
+1 21 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -220 } 
+ } 
+0 20 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx 0 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+12 @attr
+SW1
+wire
+-
+1 
+signal { T nameset { text { 326 -137 1 VgaDataR [7:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 2 340 -140  340 -140  460 -140 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 460 -140 } 
+ } 
+1 23 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 340 -140 } 
+ } 
+0 22 -1 -
+-
+
+
+ } 
+ SourceIdx 0 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+13 @attr
+VgaDataR
+wire
+{ @cnt 1 { @f 7
+@d downto @t 0
+} } 1 
+signal { T nameset { text { 326 -157 1 VgaDataG [7:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 2 340 -160  340 -160  460 -160 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 460 -160 } 
+ } 
+1 25 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 340 -160 } 
+ } 
+0 24 -1 -
+-
+
+
+ } 
+ SourceIdx 0 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+14 @attr
+VgaDataG
+wire
+{ @cnt 1 { @f 7
+@d downto @t 0
+} } 1 
+signal { T nameset { text { 326 -177 1 VgaDataB [7:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 3 2 340 -180  340 -180  460 -180 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 460 -180 } 
+ } 
+1 27 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 340 -180 } 
+ } 
+0 26 -1 -
+-
+
+
+ } 
+ SourceIdx 0 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+15 @attr
+VgaDataB
+wire
+{ @cnt 1 { @f 7
+@d downto @t 0
+} } 1 
+signal { F nameset { text { 106 -285 1 SCL
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 40 -290  40 -290  190 -290 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 190 -290 } 
+ } 
+1 29 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -290 } 
+ } 
+4 28 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+3 @attr
+SCL
+wire
+-
+1 
+signal { F nameset { text { 106 -325 1 SDA
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+} line90 { 0 1 2 40 -330  40 -330  190 -330 
+ Firstpin {
+  blockpin {   nnvis  pnvis pin { 190 -330 } 
+ } 
+1 31 -1 -
+-
+
+
+ } 
+
+ Secondpin {
+  blockpin {   nnvis  pnvis pin { 40 -330 } 
+ } 
+4 30 -1 -
+-
+
+
+ } 
+ SourceIdx -1 
+ DestIdx -1 
+ } 
+ } 
+@kwd
+@iv
+-
+@strngth
+none @exprng
+none @dly
+-
+@sidx
+4 @attr
+SDA
+wire
+-
+1 
+!
+17 CLK 13 CamData 13 CamHsync 13 CamVsync 13 PCLK 13 RST_N 13 SCL 13 SDA 13 SW0 13 SW1 13 
+VgaDataB 13 VgaDataG 13 VgaDataR 13 VgaHsync 13 VgaVsync 13 VideoProcCore_inst 18 XCLK 13 22 15 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 31 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 !
+VideoProcCore_inst VideoProcCore_blk DE2_VGA 0 
+!

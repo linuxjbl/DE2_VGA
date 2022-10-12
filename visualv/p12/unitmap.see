@@ -1,0 +1,10 @@
+ver 03 
+{ 
+dflt_n system_de2_vga 
+sts NOCMP 
+vendor visual_hdl 
+time 1665454630 0 
+{ 
+obj BLKOBJECT system_de2_vga s0 
+} 
+} 

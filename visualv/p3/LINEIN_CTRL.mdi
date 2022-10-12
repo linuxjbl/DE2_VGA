@@ -1,0 +1,87 @@
+02.00 00 20 
+00000000 
+0000016E 
+000001B7 
+000001E5 
+00000000 
+00000000 
+00000000 
+00000000 
+0000071D 
+00000000 
+0000072D 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+0000073D 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+0 22 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 !
+SRAM_A SRAM $NULL 0 
+SRAM_B SRAM $NULL 0 
+!
+8 
+{ @pdecl { { @n CLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CLK
+} @gr DEF @idx -1 } { @pdecl { { @n RST_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv RST_N
+} @gr DEF @idx -1 } { @pdecl { { @n LB_WR_ADDR @t - @bnd { @cnt 1 { @f 9
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv LB_WR_ADDR
+} @gr DEF @idx -1 } { @pdecl { { @n LB_WR_DATA @t - @bnd { @cnt 1 { @f 15
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv LB_WR_DATA
+} @gr DEF @idx -1 } { @pdecl { { @n LB_WR_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv LB_WR_N
+} @gr DEF @idx -1 } { @pdecl { { @n VgaLineCount @t - @bnd { @cnt 1 { @f 8
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv VgaLineCount
+} @gr DEF @idx -1 } { @pdecl { { @n VgaPixCount @t - @bnd { @cnt 1 { @f 9
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv VgaPixCount
+} @gr DEF @idx -1 } { @pdecl { { @n buf_RGB @t reg @bnd { @cnt 1 { @f 15
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv buf_RGB
+} @gr DEF @idx -1 } L { @bl 1 @el 9 @il 29 @nvis } !
+0 L { @nvis } !
+0 L { @nvis } !
+3 

@@ -1,0 +1,97 @@
+02.00 00 20 
+00000000 
+0000016E 
+000001B7 
+000001B9 
+00000000 
+00000000 
+00000000 
+00000000 
+00000857 
+00000000 
+00000867 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000877 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+0 22 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 !
+!
+11 
+{ @pdecl { { @n CLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CLK
+} @gr DEF @idx -1 } { @pdecl { { @n RST_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv RST_N
+} @gr DEF @idx -1 } { @pdecl { { @n CamHsync_EDGE @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamHsync_EDGE
+} @gr DEF @idx -1 } { @pdecl { { @n CamVsync_EDGE @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv CamVsync_EDGE
+} @gr DEF @idx -1 } { @pdecl { { @n VgaLineCount @t - @bnd { @cnt 1 { @f 8
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaLineCount
+} @gr DEF @idx -1 } { @pdecl { { @n VgaPixCount @t - @bnd { @cnt 1 { @f 9
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaPixCount
+} @gr DEF @idx -1 } { @pdecl { { @n VgaVisible @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaVisible
+} @gr DEF @idx -1 } { @pdecl { { @n VgaVsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaVsync
+} @gr DEF @idx -1 } { @pdecl { { @n VgaHsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaHsync
+} @gr DEF @idx -1 } { @pdecl { { @n VgaHsync_edge @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv VgaHsync_edge
+} @gr DEF @idx -1 } { @pdecl { { @n OddFrame @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv OddFrame
+} @gr DEF @idx -1 } L { @bl 1 @el 12 @il 20 @nvis } !
+0 L { @nvis } !
+0 L { @nvis } !
+3 
