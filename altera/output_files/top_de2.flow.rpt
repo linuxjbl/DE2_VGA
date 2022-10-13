@@ -1,5 +1,5 @@
 Flow report for top_de2
-Mon Oct 10 15:06:05 2022
+Wed Oct 12 22:39:17 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,15 +40,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Mon Oct 10 15:06:00 2022           ;
+; Flow Status                        ; Successful - Wed Oct 12 22:39:11 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; top_de2                                         ;
 ; Top-level Entity Name              ; top_de2                                         ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 4,602 / 33,216 ( 14 % )                         ;
-;     Total combinational functions  ; 4,374 / 33,216 ( 13 % )                         ;
+; Total logic elements               ; 4,604 / 33,216 ( 14 % )                         ;
+;     Total combinational functions  ; 4,378 / 33,216 ( 13 % )                         ;
 ;     Dedicated logic registers      ; 2,759 / 33,216 ( 8 % )                          ;
 ; Total registers                    ; 2759                                            ;
 ; Total pins                         ; 425 / 475 ( 89 % )                              ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/10/2022 15:05:02 ;
+; Start date & time ; 10/12/2022 22:38:10 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; top_de2             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------------------------+---------------+------------------------------------------------+------------+
 ; Assignment Name                     ; Value                                                   ; Default Value ; Entity Name                                    ; Section Id ;
 +-------------------------------------+---------------------------------------------------------+---------------+------------------------------------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 115410753088224.166538190114100                         ; --            ; --                                             ; --         ;
+; COMPILER_SIGNATURE_ID               ; 115410753088224.166558188902292                         ; --            ; --                                             ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                    ; --            ; altera_avalon_sc_fifo                          ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                    ; --            ; altera_merlin_burst_adapter                    ; --         ;
 ; IP_TOOL_ENV                         ; Qsys                                                    ; --            ; altera_merlin_master_agent                     ; --         ;
@@ -206,11 +206,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:26     ; 1.0                     ; 4807 MB             ; 00:00:26                           ;
-; Fitter                    ; 00:00:25     ; 1.2                     ; 5071 MB             ; 00:00:31                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 4605 MB             ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4689 MB             ; 00:00:04                           ;
-; Total                     ; 00:00:58     ; --                      ; --                  ; 00:01:04                           ;
+; Analysis & Synthesis      ; 00:00:28     ; 1.0                     ; 4800 MB             ; 00:00:25                           ;
+; Fitter                    ; 00:00:25     ; 1.2                     ; 5079 MB             ; 00:00:30                           ;
+; Assembler                 ; 00:00:03     ; 1.0                     ; 4604 MB             ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:05     ; 1.0                     ; 4680 MB             ; 00:00:04                           ;
+; Total                     ; 00:01:01     ; --                      ; --                  ; 00:01:02                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

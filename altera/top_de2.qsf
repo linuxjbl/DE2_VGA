@@ -413,42 +413,42 @@ set_location_assignment PIN_B21 -to ENET_INT
 set_location_assignment PIN_A22 -to ENET_RD_N
 set_location_assignment PIN_B22 -to ENET_WR_N
 set_location_assignment PIN_B23 -to ENET_RST_N
-set_location_assignment PIN_D25 -to GPIO_0[0]
-set_location_assignment PIN_J22 -to GPIO_0[1]
-set_location_assignment PIN_E26 -to GPIO_0[2]
+set_location_assignment PIN_D25 -to CAm_PWDN
+set_location_assignment PIN_J22 -to GPIO_0[0]
+set_location_assignment PIN_E26 -to GPIO_0[1]
 set_location_assignment PIN_E25 -to CAM_RESET
 set_location_assignment PIN_F24 -to CamData[0]
-set_location_assignment PIN_F23 -to GPIO_0[3]
-set_location_assignment PIN_J21 -to GPIO_0[4]
+set_location_assignment PIN_F23 -to GPIO_0[2]
+set_location_assignment PIN_J21 -to GPIO_0[3]
 set_location_assignment PIN_J20 -to CamData[1]
 set_location_assignment PIN_F25 -to CamData[2]
-set_location_assignment PIN_F26 -to GPIO_0[5]
+set_location_assignment PIN_F26 -to GPIO_0[4]
 set_location_assignment PIN_N18 -to CamData[3]
-set_location_assignment PIN_P18 -to GPIO_0[6]
-set_location_assignment PIN_G23 -to GPIO_0[7]
+set_location_assignment PIN_P18 -to GPIO_0[5]
+set_location_assignment PIN_G23 -to GPIO_0[6]
 set_location_assignment PIN_G24 -to CamData[4]
 set_location_assignment PIN_K22 -to CamData[5]
-set_location_assignment PIN_G25 -to GPIO_0[8]
-set_location_assignment PIN_H23 -to GPIO_0[9]
+set_location_assignment PIN_G25 -to GPIO_0[7]
+set_location_assignment PIN_H23 -to GPIO_0[8]
 set_location_assignment PIN_H24 -to CamData[6]
 set_location_assignment PIN_J23 -to CamData[7]
-set_location_assignment PIN_J24 -to GPIO_0[10]
-set_location_assignment PIN_H25 -to GPIO_0[11]
+set_location_assignment PIN_J24 -to GPIO_0[9]
+set_location_assignment PIN_H25 -to GPIO_0[10]
 set_location_assignment PIN_H26 -to XCLK
 set_location_assignment PIN_H19 -to PCLK
-set_location_assignment PIN_K18 -to GPIO_0[12]
-set_location_assignment PIN_K19 -to GPIO_0[13]
-set_location_assignment PIN_K21 -to GPIO_0[14]
-set_location_assignment PIN_K23 -to GPIO_0[15]
-set_location_assignment PIN_K24 -to GPIO_0[16]
-set_location_assignment PIN_L21 -to GPIO_0[17]
-set_location_assignment PIN_L20 -to GPIO_0[18]
+set_location_assignment PIN_K18 -to GPIO_0[11]
+set_location_assignment PIN_K19 -to GPIO_0[12]
+set_location_assignment PIN_K21 -to GPIO_0[13]
+set_location_assignment PIN_K23 -to GPIO_0[14]
+set_location_assignment PIN_K24 -to GPIO_0[15]
+set_location_assignment PIN_L21 -to GPIO_0[16]
+set_location_assignment PIN_L20 -to GPIO_0[17]
 set_location_assignment PIN_J25 -to CamVsync
 set_location_assignment PIN_J26 -to CamHsync
-set_location_assignment PIN_L23 -to GPIO_0[19]
+set_location_assignment PIN_L23 -to GPIO_0[18]
 set_location_assignment PIN_L24 -to SDA
 set_location_assignment PIN_L25 -to SCL
-set_location_assignment PIN_L19 -to GPIO_0[20]
+set_location_assignment PIN_L19 -to GPIO_0[19]
 set_location_assignment PIN_K25 -to GPIO_1[0]
 set_location_assignment PIN_K26 -to GPIO_1[1]
 set_location_assignment PIN_M22 -to GPIO_1[2]
@@ -505,7 +505,6 @@ set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to GPIO_0[16]
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to GPIO_0[17]
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to GPIO_0[18]
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to GPIO_0[19]
-set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to GPIO_0[20]
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to GPIO_1[0]
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to GPIO_1[1]
 set_instance_assignment -name WEAK_PULL_UP_RESISTOR ON -to GPIO_1[2]
@@ -563,4 +562,5 @@ set_global_assignment -name CDF_FILE output_files/Chain1.cdf
 
 
 set_global_assignment -name CDF_FILE output_files/Chain2.cdf
+
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -322,7 +322,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : D21       :        :                   :      
 VCCIO4                       : D22       : power  :                   : 3.3V    : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : D23       :        :                   :         : 5         :                
 GND                          : D24       : gnd    :                   :         :           :                
-GPIO_0[0]                    : D25       : input  : 3.3-V LVTTL       :         : 5         : Y              
+CAM_PWDN                     : D25       : output : 3.3-V LVTTL       :         : 5         : N              
 PS2_CLK                      : D26       : output : 3.3-V LVTTL       :         : 5         : Y              
 OTG_DATA[9]                  : E1        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
 OTG_DATA[8]                  : E2        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
@@ -349,7 +349,7 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : E22       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : E23       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : E24       :        :                   :         : 5         :                
 CAM_RESET                    : E25       : output : 3.3-V LVTTL       :         : 5         : Y              
-GPIO_0[2]                    : E26       : input  : 3.3-V LVTTL       :         : 5         : Y              
+GPIO_0[1]                    : E26       : input  : 3.3-V LVTTL       :         : 5         : Y              
 OTG_CS_N                     : F1        : output : 3.3-V LVTTL       :         : 2         : Y              
 OTG_ADDR[1]                  : F2        : output : 3.3-V LVTTL       :         : 2         : Y              
 OTG_FSPEED                   : F3        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
@@ -372,10 +372,10 @@ GNDA_PLL2                    : F19       : gnd    :                   :         
 RESERVED_INPUT_WITH_WEAK_PULLUP : F20       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : F21       :        :                   :         : 5         :                
 VCCIO5                       : F22       : power  :                   : 3.3V    : 5         :                
-GPIO_0[3]                    : F23       : input  : 3.3-V LVTTL       :         : 5         : Y              
+GPIO_0[2]                    : F23       : input  : 3.3-V LVTTL       :         : 5         : Y              
 CamData[0]                   : F24       : input  : 3.3-V LVTTL       :         : 5         : Y              
 CamData[2]                   : F25       : input  : 3.3-V LVTTL       :         : 5         : Y              
-GPIO_0[5]                    : F26       : input  : 3.3-V LVTTL       :         : 5         : Y              
+GPIO_0[4]                    : F26       : input  : 3.3-V LVTTL       :         : 5         : Y              
 OTG_WR_N                     : G1        : output : 3.3-V LVTTL       :         : 2         : Y              
 OTG_RD_N                     : G2        : output : 3.3-V LVTTL       :         : 2         : Y              
 OTG_DATA[13]                 : G3        : bidir  : 3.3-V LVTTL       :         : 2         : Y              
@@ -398,9 +398,9 @@ VCCA_PLL2                    : G19       : power  :                   : 1.2V    
 GND_PLL2                     : G20       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G21       :        :                   :         : 5         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : G22       :        :                   :         : 5         :                
-GPIO_0[7]                    : G23       : input  : 3.3-V LVTTL       :         : 5         : Y              
+GPIO_0[6]                    : G23       : input  : 3.3-V LVTTL       :         : 5         : Y              
 CamData[4]                   : G24       : input  : 3.3-V LVTTL       :         : 5         : Y              
-GPIO_0[8]                    : G25       : input  : 3.3-V LVTTL       :         : 5         : Y              
+GPIO_0[7]                    : G25       : input  : 3.3-V LVTTL       :         : 5         : Y              
 KEY[0]                       : G26       : input  : 3.3-V LVTTL       :         : 5         : Y              
 LCD_DATA[2]                  : H1        : output : 3.3-V LVTTL       :         : 2         : Y              
 LCD_DATA[3]                  : H2        : output : 3.3-V LVTTL       :         : 2         : Y              
@@ -424,9 +424,9 @@ PCLK                         : H19       : input  : 3.3-V LVTTL       :         
 VCCD_PLL2                    : H20       : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : H21       :        :                   :         : 5         :                
 GND                          : H22       : gnd    :                   :         :           :                
-GPIO_0[9]                    : H23       : input  : 3.3-V LVTTL       :         : 5         : Y              
+GPIO_0[8]                    : H23       : input  : 3.3-V LVTTL       :         : 5         : Y              
 CamData[6]                   : H24       : input  : 3.3-V LVTTL       :         : 5         : Y              
-GPIO_0[11]                   : H25       : input  : 3.3-V LVTTL       :         : 5         : Y              
+GPIO_0[10]                   : H25       : input  : 3.3-V LVTTL       :         : 5         : Y              
 XCLK                         : H26       : output : 3.3-V LVTTL       :         : 5         : Y              
 LCD_DATA[0]                  : J1        : output : 3.3-V LVTTL       :         : 2         : Y              
 LCD_DATA[1]                  : J2        : output : 3.3-V LVTTL       :         : 2         : Y              
@@ -448,10 +448,10 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : J17       :        :                   :      
 RESERVED_INPUT_WITH_WEAK_PULLUP : J18       :        :                   :         : 4         :                
 VCCIO5                       : J19       : power  :                   : 3.3V    : 5         :                
 CamData[1]                   : J20       : input  : 3.3-V LVTTL       :         : 5         : Y              
-GPIO_0[4]                    : J21       : input  : 3.3-V LVTTL       :         : 5         : Y              
-GPIO_0[1]                    : J22       : input  : 3.3-V LVTTL       :         : 5         : Y              
+GPIO_0[3]                    : J21       : input  : 3.3-V LVTTL       :         : 5         : Y              
+GPIO_0[0]                    : J22       : input  : 3.3-V LVTTL       :         : 5         : Y              
 CamData[7]                   : J23       : input  : 3.3-V LVTTL       :         : 5         : Y              
-GPIO_0[10]                   : J24       : input  : 3.3-V LVTTL       :         : 5         : Y              
+GPIO_0[9]                    : J24       : input  : 3.3-V LVTTL       :         : 5         : Y              
 CamVsync                     : J25       : input  : 3.3-V LVTTL       :         : 5         : Y              
 CamHsync                     : J26       : input  : 3.3-V LVTTL       :         : 5         : Y              
 LCD_RS                       : K1        : output : 3.3-V LVTTL       :         : 2         : Y              
@@ -471,13 +471,13 @@ VCCINT                       : K14       : power  :                   : 1.2V    
 VCCINT                       : K15       : power  :                   : 1.2V    :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K16       :        :                   :         : 4         :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : K17       :        :                   :         : 4         :                
-GPIO_0[12]                   : K18       : input  : 3.3-V LVTTL       :         : 5         : Y              
-GPIO_0[13]                   : K19       : input  : 3.3-V LVTTL       :         : 5         : Y              
+GPIO_0[11]                   : K18       : input  : 3.3-V LVTTL       :         : 5         : Y              
+GPIO_0[12]                   : K19       : input  : 3.3-V LVTTL       :         : 5         : Y              
 GND                          : K20       : gnd    :                   :         :           :                
-GPIO_0[14]                   : K21       : input  : 3.3-V LVTTL       :         : 5         : Y              
+GPIO_0[13]                   : K21       : input  : 3.3-V LVTTL       :         : 5         : Y              
 CamData[5]                   : K22       : input  : 3.3-V LVTTL       :         : 5         : Y              
-GPIO_0[15]                   : K23       : input  : 3.3-V LVTTL       :         : 5         : Y              
-GPIO_0[16]                   : K24       : input  : 3.3-V LVTTL       :         : 5         : Y              
+GPIO_0[14]                   : K23       : input  : 3.3-V LVTTL       :         : 5         : Y              
+GPIO_0[15]                   : K24       : input  : 3.3-V LVTTL       :         : 5         : Y              
 GPIO_1[0]                    : K25       : input  : 3.3-V LVTTL       :         : 5         : Y              
 GPIO_1[1]                    : K26       : input  : 3.3-V LVTTL       :         : 5         : Y              
 VCCIO2                       : L1        : power  :                   : 3.3V    : 2         :                
@@ -498,11 +498,11 @@ GND                          : L15       : gnd    :                   :         
 VCCINT                       : L16       : power  :                   : 1.2V    :           :                
 VCCINT                       : L17       : power  :                   : 1.2V    :           :                
 VCCINT                       : L18       : power  :                   : 1.2V    :           :                
-GPIO_0[20]                   : L19       : input  : 3.3-V LVTTL       :         : 5         : Y              
-GPIO_0[18]                   : L20       : input  : 3.3-V LVTTL       :         : 5         : Y              
-GPIO_0[17]                   : L21       : input  : 3.3-V LVTTL       :         : 5         : Y              
+GPIO_0[19]                   : L19       : input  : 3.3-V LVTTL       :         : 5         : Y              
+GPIO_0[17]                   : L20       : input  : 3.3-V LVTTL       :         : 5         : Y              
+GPIO_0[16]                   : L21       : input  : 3.3-V LVTTL       :         : 5         : Y              
 GND                          : L22       : gnd    :                   :         :           :                
-GPIO_0[19]                   : L23       : input  : 3.3-V LVTTL       :         : 5         : Y              
+GPIO_0[18]                   : L23       : input  : 3.3-V LVTTL       :         : 5         : Y              
 SDA                          : L24       : output : 3.3-V LVTTL       :         : 5         : Y              
 SCL                          : L25       : output : 3.3-V LVTTL       :         : 5         : Y              
 VCCIO5                       : L26       : power  :                   : 3.3V    : 5         :                
@@ -575,7 +575,7 @@ GND                          : P14       : gnd    :                   :         
 GND                          : P15       : gnd    :                   :         :           :                
 GND                          : P16       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : P17       :        :                   :         : 6         :                
-GPIO_0[6]                    : P18       : input  : 3.3-V LVTTL       :         : 5         : Y              
+GPIO_0[5]                    : P18       : input  : 3.3-V LVTTL       :         : 5         : Y              
 GND                          : P19       : gnd    :                   :         :           :                
 MSEL0                        : P20       :        :                   :         : 6         :                
 MSEL1                        : P21       :        :                   :         : 6         :                

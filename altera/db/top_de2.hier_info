@@ -123,7 +123,6 @@ GPIO_0[16] => w_GPIO_0[16].IN1
 GPIO_0[17] => w_GPIO_0[17].IN1
 GPIO_0[18] => w_GPIO_0[18].IN1
 GPIO_0[19] => w_GPIO_0[19].IN1
-GPIO_0[20] => w_GPIO_0[20].IN1
 GPIO_1[0] => GPIO_1[0].IN1
 GPIO_1[1] => GPIO_1[1].IN1
 GPIO_1[2] => GPIO_1[2].IN1
@@ -423,7 +422,8 @@ CamData[4] => CamData[4].IN1
 CamData[5] => CamData[5].IN1
 CamData[6] => CamData[6].IN1
 CamData[7] => CamData[7].IN1
-CAM_RESET <= <GND>
+CAM_RESET <= SW[0].DB_MAX_OUTPUT_PORT_TYPE
+CAM_PWDN <= SW[1].DB_MAX_OUTPUT_PORT_TYPE
 
 
 |top_de2|etc_de2:C0

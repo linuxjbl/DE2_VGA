@@ -1,5 +1,5 @@
 module SRAM (
-	CLK,
+  CLK,
   CS_N,
   WR_N,
   WRADDR,

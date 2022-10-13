@@ -51,7 +51,7 @@ module top_de2 (AUD_ADCDAT, AUD_ADCLRCK, AUD_BCLK, AUD_DACDAT, AUD_DACLRCK,
                 SRAM_LB_N, SRAM_OE_N, SRAM_UB_N, SRAM_WE_N, SW, TCK, TCS, TDI,
                 TDO, TD_DATA, TD_HS, TD_RESET, TD_VS, UART_RXD, UART_TXD,
                 VGA_B, VGA_BLANK, VGA_CLK, VGA_G, VGA_HS, VGA_R, VGA_SYNC, VGA_VS,
-               	XCLK, SCL, SDA, CamHsync, CamVsync, PCLK, CamData, CAM_RESET
+               	XCLK, SCL, SDA, CamHsync, CamVsync, PCLK, CamData, CAM_RESET, CAM_PWDN
                 );
  
   input AUD_ADCDAT;
@@ -88,7 +88,7 @@ module top_de2 (AUD_ADCDAT, AUD_ADCLRCK, AUD_BCLK, AUD_DACDAT, AUD_DACLRCK,
   output FL_OE_N;
   output FL_RST_N;
   output FL_WE_N;
-  input [20:0] GPIO_0; wire [20:0] GPIO_0;
+  input [19:0] GPIO_0; wire [19:0] GPIO_0;
   input [35:0] GPIO_1; wire [35:0] GPIO_1;
   output [6:0] HEX0; wire [6:0] HEX0;
   output [6:0] HEX1; wire [6:0] HEX1;
@@ -137,8 +137,7 @@ module top_de2 (AUD_ADCDAT, AUD_ADCLRCK, AUD_BCLK, AUD_DACDAT, AUD_DACLRCK,
   output SRAM_OE_N;
   output SRAM_UB_N;
   output SRAM_WE_N;
-  input [17:0] SW;
-  wire [17:0] SW;
+  input [17:0] SW; wire [17:0] SW;
   input TCK;
   input TCS;
   input TDI;
@@ -166,6 +165,7 @@ module top_de2 (AUD_ADCDAT, AUD_ADCLRCK, AUD_BCLK, AUD_DACDAT, AUD_DACLRCK,
   input         PCLK;
   input [7:0]   CamData;
   output        CAM_RESET;
+  output        CAM_PWDN;
 
   wire [2:0] clk_toggle;
   wire rstn;
@@ -306,7 +306,7 @@ module top_de2 (AUD_ADCDAT, AUD_ADCLRCK, AUD_BCLK, AUD_DACDAT, AUD_DACLRCK,
      .GPIO_0(w_GPIO_0),
      .GPIO_1(GPIO_1[35:0]));
  
-     assign w_GPIO_0 = {15'h0, GPIO_0};
+     assign w_GPIO_0 = {16'h0, GPIO_0};
 
   clk_event_50m  C1
     (
@@ -477,7 +477,8 @@ lcd_test00 lcd_inst0 (
     assign VGA_R = {w_VgaDataR, 2'h0};
     assign VGA_G = {w_VgaDataG, 2'h0};
     assign VGA_B = {w_VgaDataB, 2'h0};
-    assign CAM_RESET = 1'b0;
+    assign CAM_RESET = SW[0];
+    assign CAM_PWDN  = SW[1];
 
 endmodule
 

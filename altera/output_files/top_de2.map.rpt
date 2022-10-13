@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_de2
-Mon Oct 10 15:05:28 2022
+Wed Oct 12 22:38:38 2022
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -394,13 +394,13 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Oct 10 15:05:28 2022           ;
+; Analysis & Synthesis Status        ; Successful - Wed Oct 12 22:38:38 2022           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; top_de2                                         ;
 ; Top-level Entity Name              ; top_de2                                         ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 5,166                                           ;
-;     Total combinational functions  ; 4,368                                           ;
+; Total logic elements               ; 5,170                                           ;
+;     Total combinational functions  ; 4,372                                           ;
 ;     Dedicated logic registers      ; 2,759                                           ;
 ; Total registers                    ; 2759                                            ;
 ; Total pins                         ; 425                                             ;
@@ -603,16 +603,16 @@ applicable agreement for further details.
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimated Total logic elements              ; 5,166    ;
+; Estimated Total logic elements              ; 5,170    ;
 ;                                             ;          ;
-; Total combinational functions               ; 4368     ;
+; Total combinational functions               ; 4372     ;
 ; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 1709     ;
-;     -- 3 input functions                    ; 1564     ;
+;     -- 4 input functions                    ; 1714     ;
+;     -- 3 input functions                    ; 1563     ;
 ;     -- <=2 input functions                  ; 1095     ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 3216     ;
+;     -- normal mode                          ; 3220     ;
 ;     -- arithmetic mode                      ; 1152     ;
 ;                                             ;          ;
 ; Total registers                             ; 2759     ;
@@ -624,7 +624,7 @@ applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0        ;
 ; Maximum fan-out node                        ; CLOCK_50 ;
 ; Maximum fan-out                             ; 2691     ;
-; Total fan-out                               ; 25968    ;
+; Total fan-out                               ; 25987    ;
 ; Average fan-out                             ; 3.37     ;
 +---------------------------------------------+----------+
 
@@ -634,7 +634,7 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                         ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                                             ; Library Name ;
 +--------------------------------------------------------------------------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------+
-; |top_de2                                                                                                           ; 4368 (1)          ; 2759 (0)     ; 174080      ; 0            ; 0       ; 0         ; 425  ; 0            ; |top_de2                                                                                                                                                                                                                                                                                                                                                                        ; work         ;
+; |top_de2                                                                                                           ; 4372 (1)          ; 2759 (0)     ; 174080      ; 0            ; 0       ; 0         ; 425  ; 0            ; |top_de2                                                                                                                                                                                                                                                                                                                                                                        ; work         ;
 ;    |PwmCtrl:PwmCtrl0|                                                                                              ; 3703 (912)        ; 2325 (224)   ; 141312      ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|PwmCtrl:PwmCtrl0                                                                                                                                                                                                                                                                                                                                                       ; work         ;
 ;       |nios2:u0|                                                                                                   ; 2791 (0)          ; 2101 (0)     ; 141312      ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|PwmCtrl:PwmCtrl0|nios2:u0                                                                                                                                                                                                                                                                                                                                              ; nios2        ;
 ;          |altera_avalon_sc_fifo:decode0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|                     ; 5 (5)             ; 4 (4)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|PwmCtrl:PwmCtrl0|nios2:u0|altera_avalon_sc_fifo:decode0_s1_translator_avalon_universal_slave_0_agent_rsp_fifo                                                                                                                                                                                                                                                          ; nios2        ;
@@ -796,8 +796,8 @@ applicable agreement for further details.
 ;    |lcd_test00:lcd_inst0|                                                                                          ; 226 (0)           ; 57 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|lcd_test00:lcd_inst0                                                                                                                                                                                                                                                                                                                                                   ; work         ;
 ;       |lcd_controller:C0|                                                                                          ; 212 (212)         ; 45 (45)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|lcd_test00:lcd_inst0|lcd_controller:C0                                                                                                                                                                                                                                                                                                                                 ; work         ;
 ;       |lcd_user_logic:C1|                                                                                          ; 14 (14)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|lcd_test00:lcd_inst0|lcd_user_logic:C1                                                                                                                                                                                                                                                                                                                                 ; work         ;
-;    |sld_hub:auto_hub|                                                                                              ; 110 (1)           ; 78 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                                                       ; work         ;
-;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                                                               ; 109 (73)          ; 78 (50)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                                                                                                                                                          ; work         ;
+;    |sld_hub:auto_hub|                                                                                              ; 114 (1)           ; 78 (0)       ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sld_hub:auto_hub                                                                                                                                                                                                                                                                                                                                                       ; work         ;
+;       |sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|                                                               ; 113 (77)          ; 78 (50)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst                                                                                                                                                                                                                                                                                                          ; work         ;
 ;          |sld_rom_sr:hub_info_reg|                                                                                 ; 19 (19)           ; 9 (9)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg                                                                                                                                                                                                                                                                                  ; work         ;
 ;          |sld_shadow_jsm:shadow_jsm|                                                                               ; 17 (17)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_shadow_jsm:shadow_jsm                                                                                                                                                                                                                                                                                ; work         ;
 ;    |toggle0:C4|                                                                                                    ; 1 (1)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_de2|toggle0:C4                                                                                                                                                                                                                                                                                                                                                             ; work         ;
@@ -1640,10 +1640,10 @@ Encoding Type:  One-Hot
 ; PwmCtrl:PwmCtrl0|nios2:u0|altera_merlin_slave_agent:decode2_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor|burst_uncompress_byte_counter[1]                                                                                                                                ; Merged with PwmCtrl:PwmCtrl0|nios2:u0|altera_merlin_slave_agent:decode2_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor|burst_uncompress_byte_counter[0]                                                                                                                                ;
 ; PwmCtrl:PwmCtrl0|nios2:u0|altera_merlin_slave_agent:decode1_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor|burst_uncompress_byte_counter[1]                                                                                                                                ; Merged with PwmCtrl:PwmCtrl0|nios2:u0|altera_merlin_slave_agent:decode1_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor|burst_uncompress_byte_counter[0]                                                                                                                                ;
 ; PwmCtrl:PwmCtrl0|nios2:u0|altera_merlin_slave_agent:period7_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor|burst_uncompress_byte_counter[1]                                                                                                                                ; Merged with PwmCtrl:PwmCtrl0|nios2:u0|altera_merlin_slave_agent:period7_s1_translator_avalon_universal_slave_0_agent|altera_merlin_burst_uncompressor:uncompressor|burst_uncompress_byte_counter[0]                                                                                                                                ;
-; PwmCtrl:PwmCtrl0|nios2:u0|altera_avalon_sc_fifo:decode3_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][67]                                                                                                                                                                                               ; Merged with PwmCtrl:PwmCtrl0|nios2:u0|altera_avalon_sc_fifo:decode3_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][61]                                                                                                                                                                                               ;
-; PwmCtrl:PwmCtrl0|nios2:u0|altera_avalon_sc_fifo:decode3_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][68]                                                                                                                                                                                               ; Merged with PwmCtrl:PwmCtrl0|nios2:u0|altera_avalon_sc_fifo:decode3_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][61]                                                                                                                                                                                               ;
 ; PwmCtrl:PwmCtrl0|nios2:u0|altera_avalon_sc_fifo:decode2_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][67]                                                                                                                                                                                               ; Merged with PwmCtrl:PwmCtrl0|nios2:u0|altera_avalon_sc_fifo:decode2_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][61]                                                                                                                                                                                               ;
 ; PwmCtrl:PwmCtrl0|nios2:u0|altera_avalon_sc_fifo:decode2_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][68]                                                                                                                                                                                               ; Merged with PwmCtrl:PwmCtrl0|nios2:u0|altera_avalon_sc_fifo:decode2_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][61]                                                                                                                                                                                               ;
+; PwmCtrl:PwmCtrl0|nios2:u0|altera_avalon_sc_fifo:decode3_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][67]                                                                                                                                                                                               ; Merged with PwmCtrl:PwmCtrl0|nios2:u0|altera_avalon_sc_fifo:decode3_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][61]                                                                                                                                                                                               ;
+; PwmCtrl:PwmCtrl0|nios2:u0|altera_avalon_sc_fifo:decode3_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][68]                                                                                                                                                                                               ; Merged with PwmCtrl:PwmCtrl0|nios2:u0|altera_avalon_sc_fifo:decode3_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][61]                                                                                                                                                                                               ;
 ; PwmCtrl:PwmCtrl0|nios2:u0|altera_avalon_sc_fifo:decode1_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][67]                                                                                                                                                                                               ; Merged with PwmCtrl:PwmCtrl0|nios2:u0|altera_avalon_sc_fifo:decode1_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][61]                                                                                                                                                                                               ;
 ; PwmCtrl:PwmCtrl0|nios2:u0|altera_avalon_sc_fifo:decode1_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][68]                                                                                                                                                                                               ; Merged with PwmCtrl:PwmCtrl0|nios2:u0|altera_avalon_sc_fifo:decode1_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][61]                                                                                                                                                                                               ;
 ; PwmCtrl:PwmCtrl0|nios2:u0|altera_avalon_sc_fifo:period7_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][67]                                                                                                                                                                                               ; Merged with PwmCtrl:PwmCtrl0|nios2:u0|altera_avalon_sc_fifo:period7_s1_translator_avalon_universal_slave_0_agent_rsp_fifo|mem[0][61]                                                                                                                                                                                               ;
@@ -2618,6 +2618,12 @@ Encoding Type:  One-Hot
 ; 4:1                ; 31 bits   ; 62 LEs        ; 62 LEs               ; 0 LEs                  ; No         ; |top_de2|PwmCtrl:PwmCtrl0|nios2:u0|nios2_nios2_qsys_0:nios2_qsys_0|W_rf_wr_data[27]                                                                                                                                                                                                                                         ;
 ; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; No         ; |top_de2|PwmCtrl:PwmCtrl0|nios2:u0|nios2_nios2_qsys_0:nios2_qsys_0|D_dst_regnum[0]                                                                                                                                                                                                                                          ;
 ; 26:1               ; 2 bits    ; 34 LEs        ; 4 LEs                ; 30 LEs                 ; No         ; |top_de2|PwmCtrl:PwmCtrl0|nios2:u0|nios2_addr_router_001:addr_router_001|src_channel[0]                                                                                                                                                                                                                                     ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top_de2|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|hub_minor_ver_reg[0]                                                                                                                                                                                                                                 ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |top_de2|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|mixer_addr_reg[4]                                                                                                                                                                                                                                    ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 5 LEs                ; 10 LEs                 ; Yes        ; |top_de2|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|word_counter[1]                                                                                                                                                                                                              ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 3 LEs                ; 9 LEs                  ; Yes        ; |top_de2|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|irsr_reg[2]                                                                                                                                                                                                                                          ;
+; 34:1               ; 4 bits    ; 88 LEs        ; 60 LEs               ; 28 LEs                 ; Yes        ; |top_de2|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|design_hash_reg[3]                                                                                                                                                                                                                                   ;
+; 20:1               ; 4 bits    ; 52 LEs        ; 40 LEs               ; 12 LEs                 ; Yes        ; |top_de2|sld_hub:auto_hub|sld_jtag_hub:\jtag_hub_gen:sld_jtag_hub_inst|sld_rom_sr:hub_info_reg|WORD_SR[1]                                                                                                                                                                                                                   ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -9882,17 +9888,18 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; VGA_B          ; Output ; Info     ; Explicitly unconnected                                                              ;
 ; VGA_HS         ; Output ; Info     ; Explicitly unconnected                                                              ;
 ; VGA_VS         ; Output ; Info     ; Explicitly unconnected                                                              ;
-; GPIO_0[35..21] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; GPIO_0[35..20] ; Input  ; Info     ; Stuck at GND                                                                        ;
 +----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:14     ;
-+----------------+--------------+
++---------------------------------+
+; Elapsed Time Per Partition      ;
++------------------+--------------+
+; Partition Name   ; Elapsed Time ;
++------------------+--------------+
+; Top              ; 00:00:14     ;
+; sld_hub:auto_hub ; 00:00:00     ;
++------------------+--------------+
 
 
 +-------------------------------+
@@ -9901,7 +9908,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Mon Oct 10 15:05:00 2022
+    Info: Processing started: Wed Oct 12 22:38:08 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off top_de2 -c top_de2
 Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 1 design units, including 1 entities, in source file /jbl/de2_vga/src/videoproccore.v
@@ -10497,12 +10504,15 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_SYNC" is stuck at GND
     Warning (13410): Pin "SCL" is stuck at GND
     Warning (13410): Pin "SDA" is stuck at GND
-    Warning (13410): Pin "CAM_RESET" is stuck at GND
 Info (17049): 376 registers lost all their fanouts during netlist optimizations.
+Info (13000): Registers with preset signals will power-up high
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "sld_hub:auto_hub|receive[0][0]" is stuck at GND
 Info (144001): Generated suppressed messages file C:/JBL/DE2_VGA/altera/output_files/top_de2.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 65 input pin(s) that do not drive logic
+Warning (21074): Design contains 62 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "GPIO_0[0]"
     Warning (15610): No output dependent on input pin "GPIO_0[1]"
     Warning (15610): No output dependent on input pin "GPIO_0[2]"
@@ -10523,7 +10533,6 @@ Warning (21074): Design contains 65 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "GPIO_0[17]"
     Warning (15610): No output dependent on input pin "GPIO_0[18]"
     Warning (15610): No output dependent on input pin "GPIO_0[19]"
-    Warning (15610): No output dependent on input pin "GPIO_0[20]"
     Warning (15610): No output dependent on input pin "GPIO_1[0]"
     Warning (15610): No output dependent on input pin "GPIO_1[1]"
     Warning (15610): No output dependent on input pin "GPIO_1[2]"
@@ -10560,24 +10569,22 @@ Warning (21074): Design contains 65 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "GPIO_1[33]"
     Warning (15610): No output dependent on input pin "GPIO_1[34]"
     Warning (15610): No output dependent on input pin "GPIO_1[35]"
-    Warning (15610): No output dependent on input pin "SW[0]"
-    Warning (15610): No output dependent on input pin "SW[1]"
     Warning (15610): No output dependent on input pin "SW[2]"
     Warning (15610): No output dependent on input pin "SW[3]"
     Warning (15610): No output dependent on input pin "SW[4]"
     Warning (15610): No output dependent on input pin "SW[5]"
     Warning (15610): No output dependent on input pin "SW[6]"
     Warning (15610): No output dependent on input pin "SW[7]"
-Info (21057): Implemented 5909 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 117 input pins
-    Info (21059): Implemented 234 output pins
+Info (21057): Implemented 5913 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 116 input pins
+    Info (21059): Implemented 235 output pins
     Info (21060): Implemented 78 bidirectional pins
-    Info (21061): Implemented 5319 logic cells
+    Info (21061): Implemented 5323 logic cells
     Info (21064): Implemented 160 RAM segments
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 247 warnings
-    Info: Peak virtual memory: 4807 megabytes
-    Info: Processing ended: Mon Oct 10 15:05:28 2022
-    Info: Elapsed time: 00:00:28
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 245 warnings
+    Info: Peak virtual memory: 4800 megabytes
+    Info: Processing ended: Wed Oct 12 22:38:39 2022
+    Info: Elapsed time: 00:00:31
     Info: Total CPU time (on all processors): 00:00:28
 
 
