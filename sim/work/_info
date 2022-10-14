@@ -11,21 +11,21 @@ z2
 cModel Technology
 Z0 dC:/JBL/DE2_VGA/sim
 vCAM_CTRL
-Z1 !s110 1665456313
+Z1 !s110 1665732406
 !i10b 1
-!s100 >C>]2bF:VY6iHd48Xof;N0
-IZJ7COcXJLP>GzAm`b_`zY3
+!s100 HRzmV:>0S:gIKENC:hj>D1
+IL;j<>61?eHJ]6l3CIPn0k2
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 Z3 dD:/Study/FPGA/Altera/DE2/DE2_VGA/sim
-Z4 w1665456308
+Z4 w1665732397
 Z5 8D:/Study/FPGA/Altera/DE2/DE2_VGA/sim/test_VideoProc.v
 Z6 FD:/Study/FPGA/Altera/DE2/DE2_VGA/sim/test_VideoProc.v
-L0 192
+L0 383
 Z7 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z8 !s108 1665456313.000000
+Z8 !s108 1665732406.000000
 Z9 !s107 D:/Study/FPGA/Altera/DE2/DE2_VGA/sim/test_VideoProc.v|
 Z10 !s90 -reportprogress|300|D:/Study/FPGA/Altera/DE2/DE2_VGA/sim/test_VideoProc.v|
 !i113 1
@@ -120,14 +120,14 @@ R24
 vLINEIN_CTRL
 R1
 !i10b 1
-!s100 G9jHL@FYR[iW]PjBe4L`N0
-IFWYcT3kB=lDN?;B_nCL:c3
+!s100 LEgOOZLcCc6jiF:PGX2>Q2
+I5l<MHQkGM7>^>RGVV6P2^1
 R2
 R3
 R4
 R5
 R6
-L0 427
+L0 621
 R7
 r1
 !s85 0
@@ -141,14 +141,14 @@ n@l@i@n@e@i@n_@c@t@r@l
 vSRAM
 R1
 !i10b 1
-!s100 >6j2L<j@XI1MQb0e=CX3_2
-IER55S>OCW@<4NM;0b[Jz30
+!s100 kS64==G2SPB=Y;62PnNId2
+IHHN1Y70k7HFPIM62;<5cF0
 R2
 R3
 R4
 R5
 R6
-L0 373
+L0 567
 R7
 r1
 !s85 0
@@ -230,14 +230,14 @@ ntest_@v@g@a
 vtest_VideoProc
 R1
 !i10b 1
-!s100 Gccb8zFZfE@Gogi990aJf3
-Ij[3TX2bmGb2699WgVOlaR1
+!s100 O_22UK8^?UV[TiFlEUaNm2
+IhdVh3[I9X98R05gKA]QI30
 R2
 R3
 R4
 R5
 R6
-L0 770
+L0 891
 R7
 r1
 !s85 0
@@ -248,6 +248,26 @@ R10
 !i113 1
 R11
 ntest_@video@proc
+vtestsub_cam
+R1
+!i10b 1
+!s100 ;VWNW0LVQQhQgn^0d5S:X3
+I3V:ONO0iPC54^M?H0Mmz>0
+R2
+R3
+R4
+R5
+R6
+L0 50
+R7
+r1
+!s85 0
+31
+R8
+R9
+R10
+!i113 1
+R11
 Etestsub_lcd
 R12
 R25
@@ -319,14 +339,14 @@ ntestsub_@v@g@a
 vtestsub_VideoProc
 R1
 !i10b 1
-!s100 ORoan]meQBd_z[K6>R^3;0
-IS]`SACH2cgNlkg5nJKK8U2
+!s100 5PM;17MEK4;0ZZUhMP:?L0
+Ih`kQ0i7MG1m]L0:`KhW@V0
 R2
 R3
 R4
 R5
 R6
-L0 701
+L0 161
 R7
 r1
 !s85 0
@@ -363,14 +383,14 @@ n@v@g@a
 vVGA_CTRL
 R1
 !i10b 1
-!s100 n[]YIRc7QV7hPT>97Mlf@3
-IE7go`FCSHSjF:JbhPNeHe2
+!s100 [@n[cfQmfLV]jS3l[IlHK0
+I2@OG:2mPQP]^cI1_D7]Oa1
 R2
 R3
 R4
 R5
 R6
-L0 37
+L0 228
 R7
 r1
 !s85 0
@@ -384,14 +404,14 @@ n@v@g@a_@c@t@r@l
 vVideoProc
 R1
 !i10b 1
-!s100 Go@z[6FO87=D6_FcoNZ9Q1
-IRSC78`El9Z7SBO8mSfb002
+!s100 mcDFU0MK1c4X9ngPSTPiV3
+I95nhbdSJQFJ5KHjY_h=M@3
 R2
 R3
 R4
 R5
 R6
-L0 630
+L0 826
 R7
 r1
 !s85 0
@@ -405,14 +425,14 @@ n@video@proc
 vVideoProcCore
 R1
 !i10b 1
-!s100 [Y4`8V4P[eQ@o`f2]KE2D2
-IlA:L32Ygz?e[3GZ1e7DN;1
+!s100 _hY_CGhN4C?7FW9T;f6Gf0
+IMPONFMHFhZAL_;WG50lXL3
 R2
 R3
 R4
 R5
 R6
-L0 526
+L0 720
 R7
 r1
 !s85 0

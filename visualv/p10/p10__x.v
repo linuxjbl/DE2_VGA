@@ -1,5 +1,6 @@
  
  
+`timescale  1ns/10ps
 module VideoProc (CLK, RST_N, XCLK, SCL, SDA, CamHsync, CamVsync, PCLK, CamData,
                   VgaVsync, VgaHsync, SW0, SW1, VgaDataR, VgaDataG, VgaDataB);
   reg visual_null;
@@ -19,6 +20,8 @@ module VideoProc (CLK, RST_N, XCLK, SCL, SDA, CamHsync, CamVsync, PCLK, CamData,
   output [7:0] VgaDataR;
   output [7:0] VgaDataG;
   output [7:0] VgaDataB;
+  assign SCL = 1'b0;
+  assign SDA = 1'b0;
  
   VideoProcCore  VideoProcCore_inst
     (

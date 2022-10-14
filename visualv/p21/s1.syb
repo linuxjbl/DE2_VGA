@@ -1,0 +1,139 @@
+02.00 00 04 
+0000003A 
+00000D32 
+00000000 
+00000000 
+ attrib {  plist 5 
+{ @pdecl { { @n PCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv PCLK
+} @gr DEF @idx -1 } { @pdecl { { @n RST_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv RST_N
+} @gr DEF @idx -1 } { @pdecl { { @n CamHsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv CamHsync
+} @gr DEF @idx -1 } { @pdecl { { @n CamVsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv CamVsync
+} @gr DEF @idx -1 } { @pdecl { { @n CamData @t wire @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv CamData
+} @gr DEF @idx -1 } L { @bl 13 @el 13 @il 19 @nvis } !
+ flags 29  } #idit - save unit (named untitled01 while saving) on Fri Oct 14 15:54:52 2022
+version: 9 
+symbolel { compsym { comptype 0 macDesign 0 behav Normal macrodir UpDown scheme SIM flat TRUE macroinit 0 doset { textbox { rect { 155 -190 72 16 } 
+fmttext { 156 -185 1 
+testsub_cam 
+angle 0 fn 0 0 0 2 5 0 0 0 0 }
+ vis }  { fiv  @kind 9 
+ } 
+groupobj { doset { rect { 120 -200 140 130 } 
+ } 
+clshapes { closeShape { lines { line { 120 -200 260 -200 } 
+line { 260 -200 260 -70 } 
+line { 260 -70 120 -70 } 
+line { 120 -70 120 -200 } 
+} 
+arcs { } 
+bcol shape  } 
+ } 
+ } 
+ } 
+pinset { sympinel {  text { 198 -113 1 CamHsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 260 -110 } 
+ {  end  280 -110  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n CamHsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv CamHsync
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 198 -133 1 CamVsync
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 260 -130 } 
+ {  end  280 -130  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n CamVsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv CamVsync
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 186 -153 1 CamData[7:0]
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 260 -150 } 
+ {  end  280 -150  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n CamData @t wire @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv CamData
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 127 -133 1 PCLK
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 120 -130 } 
+ {  end  100 -130  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n PCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv PCLK
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+sympinel {  text { 127 -153 1 RST_N
+ angle 0
+fn 0 0 160 2 5 0 0 0 0 }
+invert FALSE visible TRUE typepin 0 pin { 120 -150 } 
+ {  end  100 -150  } 
+ } 
+@spattr {
+@plist 1 
+{ @pdecl { { @n RST_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv RST_N
+} @gr DEF @idx -1 } L { @bl -1 @el -1 @il -1 @nvis } !
+@blist 1 { @cnt 0 } @flags 77 }
+
+ } 
+angle 0  } 
+ } 
+!
+0 22 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 !

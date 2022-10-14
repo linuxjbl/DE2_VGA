@@ -1,5 +1,6 @@
  
  
+`timescale  1ns/10ps
 module testsub_VideoProc (XCLK, SCL, SDA, VgaVsync, VgaHsync, VgaDataR, VgaDataG,
                           VgaDataB, CLK, RST_N, CamHsync, CamVsync, PCLK, CamData, SW0,
                           SW1);

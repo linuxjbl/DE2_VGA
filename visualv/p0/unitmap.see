@@ -1,6 +1,6 @@
 ver 03 
 { 
-sts NOCMP 
+sts SUCMP 
 vendor visual_hdl 
 time 1665480318 0 
 } 

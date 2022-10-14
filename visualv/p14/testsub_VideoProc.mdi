@@ -118,7 +118,7 @@
 @nregout @strngth none @exprng none @dly -
 @block -
 } @md output @iv SW1
-} @gr DEF @idx -1 } L { @bl 13 @el 13 @il 30 @nvis } !
+} @gr DEF @idx -1 } L { @bl 14 @el 14 @il 31 @nvis } !
 0 L { @nvis } !
 0 L { @nvis } !
 3 

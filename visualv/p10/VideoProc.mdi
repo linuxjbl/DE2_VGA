@@ -119,7 +119,7 @@ VideoProcCore_inst VideoProcCore $NULL 0
 @nregout @strngth none @exprng none @dly -
 @block -
 } @md output @iv VgaDataB
-} @gr DEF @idx -1 } L { @bl 1 @el 17 @il 34 @nvis } !
+} @gr DEF @idx -1 } L { @bl 3 @el 19 @il 36 @nvis } !
 0 L { @nvis } !
 0 L { @nvis } !
 3 

@@ -94,7 +94,7 @@ module CAM_CTRL (CLK, RST_N, PCLK, CamHsync, CamVsync, CamData, LB_WR_ADDR, LB_W
     end
     else
     begin
-      if (CamPixCount4x_sig == 3135 || CamHsync_edge_sig == 1'b1)
+      if (CamPixCount4x_sig == 1567 || CamHsync_edge_sig == 1'b1)
       begin
         CamPixCount4x_sig <= 0;
       end

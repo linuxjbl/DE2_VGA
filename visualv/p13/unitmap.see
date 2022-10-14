@@ -1,9 +1,9 @@
 ver 03 
 { 
 dflt_n test_VideoProc 
-sts NOCMP 
+sts SUCMP 
 vendor visual_hdl 
-time 1665481104 0 
+time 1665732396 0 
 { 
 obj BLKOBJECT test_VideoProc s0 
 } 

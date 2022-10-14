@@ -2,5 +2,9 @@ ver 03
 { 
 sts SUCMP 
 vendor visual_hdl 
-time 1665456292 0 
+time 1665732365 0 
+pref_sym testsub_VideoProc_s 
+{ 
+obj SYMOBJECT testsub_VideoProc_s s1 
+} 
 } 

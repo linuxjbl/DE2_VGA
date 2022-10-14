@@ -1,0 +1,108 @@
+02.00 00 20 
+00000000 
+0000016E 
+000001B7 
+000001B9 
+00000000 
+00000000 
+00000000 
+00000000 
+000004B7 
+00000000 
+000004C7 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+000007E3 
+00000000 
+00000000 
+00000000 
+00000000 
+00000000 
+0 22 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 !
+!
+5 
+{ @pdecl { { @n PCLK @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv PCLK
+} @gr DEF @idx -1 } { @pdecl { { @n RST_N @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md input @iv RST_N
+} @gr DEF @idx -1 } { @pdecl { { @n CamHsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv CamHsync
+} @gr DEF @idx -1 } { @pdecl { { @n CamVsync @t - @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv CamVsync
+} @gr DEF @idx -1 } { @pdecl { { @n CamData @t wire @bnd { @cnt 1 { @f 7
+@d downto @t 0
+} } @das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @md output @iv CamData
+} @gr DEF @idx -1 } L { @bl 14 @el 14 @il 20 @nvis } !
+0 L { @nvis } !
+7 { { @n HEND @t integer @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv  'd1567
+@genInc -
+} { { @n HON @t integer @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv 287
+@genInc -
+} { { @n VEND @t integer @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv 509
+@genInc -
+} { { @n VPEND @t integer @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv 2
+@genInc -
+} { { @n VBEND @t integer @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv 19
+@genInc -
+} { { @n HWIDTH @t integer @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv 11
+@genInc -
+} { { @n VWIDTH @t integer @bnd -
+@das -
+@nregout @strngth none @exprng none @dly -
+@block -
+} @iv 9
+@genInc -
+} L { @nvis } !
+3 

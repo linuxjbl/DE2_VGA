@@ -4,14 +4,12 @@
 00000000 
 000001B7 
 000001DD 
-00000AB7 
-00000AC7 
-00000ADF 
-00000AFE 
+00000919 
+00000929 
+00000941 
+00000960 
 00000000 
-00000B0E 
-00000000 
-00000000 
+00000970 
 00000000 
 00000000 
 00000000 
@@ -19,22 +17,24 @@
 00000000 
 00000000 
 00000000 
-00000B24 
-00000000 
-00000B1E 
-00000B22 
 00000000 
 00000000 
-00000B3C 
+00000986 
+00000000 
+00000980 
+00000984 
+00000000 
+00000000 
+0000099E 
 00000000 
 00000000 
 00000000 
-00000AA7 
+00000909 
 00000000 
 0 22 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 !
 0 
 L { @bl -1 @el -1 @il -1 @nvis } !
-19 { { @n CLK @t - @bnd -
+16 { { @n CLK @t - @bnd -
 @das -
 @nregout @strngth none @exprng none @dly -
 @block -
@@ -67,27 +67,6 @@ L { @bl -1 @el -1 @il -1 @nvis } !
 @genInc -
 } { { @n RST_N @t - @bnd -
 @das -
-@nregout @strngth none @exprng none @dly -
-@block -
-} @iv -
-@genInc -
-} { { @n S21 @t wire @bnd { @cnt 1 { @f 7
-@d downto @t 0
-} } @das -
-@nregout @strngth none @exprng none @dly -
-@block -
-} @iv -
-@genInc -
-} { { @n S22 @t wire @bnd { @cnt 1 { @f 7
-@d downto @t 0
-} } @das -
-@nregout @strngth none @exprng none @dly -
-@block -
-} @iv -
-@genInc -
-} { { @n S23 @t wire @bnd { @cnt 1 { @f 7
-@d downto @t 0
-} } @das -
 @nregout @strngth none @exprng none @dly -
 @block -
 } @iv -

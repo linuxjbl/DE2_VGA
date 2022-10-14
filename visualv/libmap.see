@@ -64,4 +64,7 @@ unit VideoProcCore_blk p19 BLKUNIT
 { 
 unit VideoProc_blk p20 BLKUNIT 
 } 
+{ 
+unit testsub_cam p21 VMODUNIT 
+} 
 } 
