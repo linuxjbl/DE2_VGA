@@ -1,7 +1,8 @@
 ##
 #vcom C:/JBL/DE2_VGA/sim/test_lcd.vhd
 #vlog C:/JBL/DE2_VGA/sim/test_VGA.v
-vlog D:/Study/FPGA/Altera/DE2/DE2_VGA/sim/test_VideoProc.v
+#vlog D:/Study/FPGA/Altera/DE2/DE2_VGA/sim/test_VideoProc.v
+vlog D:/Study/FPGA/Altera/DE2/DE2_VGA/sim/test_VideoProc.sv
 
 #vsim work.test_lcd
 #vsim work.test_VGA

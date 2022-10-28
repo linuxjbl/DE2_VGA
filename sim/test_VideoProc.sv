@@ -34,13 +34,30 @@
 //  Unit    Type :  Block Diagram
 //  
 //----------------------------------------------------
- 
- 
 module test_VideoProc;
+ 
   wire [7:0] CamData;
-  wire [7:0] VgaDataB;
-  wire [7:0] VgaDataG;
-  wire [7:0] VgaDataR;
+  logic [7:0] VgaDataB;
+  logic [7:0] VgaDataG;
+  logic [7:0] VgaDataR;
+
+
+  typedef struct {
+    string fruit;
+    int     count;
+    byte    expiry;
+  }st_fruit;
+
+  initial begin
+      st_fruit fruit1 = { "apple", 4, 15 };
+      st_fruit fruit2 ;
+
+      $display("Test display by JBL");
+
+      fruit2.count = 7;
+
+      $display("fruit1 = %p fruit2 = %p", fruit1, fruit2);
+  end
  
   VideoProc  C1_VideoProc
     (
